@@ -92,7 +92,7 @@ Having determined how to calculate their indicators, they proceeded to build the
 
 ## Building cohort queries
 
-TheCohort Querymanagement page shows you the different types of queries available. Clicking on any of the\[+\]links lets you create a new query of that type.
+The **Cohort Query** management page shows you the different types of queries available. Clicking on any of the\[+\]links lets you create a new query of that type.
 
 ![](http://write.flossmanuals.net/openmrs/reporting/static/report%20cohort%20queries.png)
 
@@ -100,7 +100,7 @@ The simplest query built by Amani Clinic included only female patients:
 
 ![](http://write.flossmanuals.net/openmrs/reporting/static/report%20females.png)
 
-The rest of the queries needed to include parameters. For example, the query to find patients with any encounter between two given dates, the "on or after" and "on or before" fields were set as aParameter\[1\] and user-friendly names "Start Date" and "End Date" were provided.
+The rest of the queries needed to include parameters. For example, the query to find patients with any encounter between two given dates, the "on or after" and "on or before" fields were set as a **Parameter** \[1\] and user-friendly names "Start Date" and "End Date" were provided.
 
 ![](http://write.flossmanuals.net/openmrs/reporting/static/report%20encounters.png)
 
