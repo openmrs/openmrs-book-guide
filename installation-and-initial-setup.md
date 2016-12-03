@@ -145,5 +145,5 @@ To upgrade a copy of OpenMRS Enterprise, do the following:
 
 ![](http://write.flossmanuals.net/openmrs/installation-and-initial-setup/static/case-study.png)
 
-Although Amani Clinic is small, they decided to install the Enterprise version. Claudine is very familiar with Apache Tomcat and MySQL, and decided she would like more control over the system. She installed Ubuntu Linux on the physical server, then installed Java 6, MySQL, and Tomcat. After doing so, she downloaded the **openmrs.warfile** and installed it in the Tomcat application server. Excluding download time for the software, she was able to complete the process in less than one hour.
+Although Amani Clinic is small, they decided to install the Enterprise version. Claudine is very familiar with Apache Tomcat and MySQL, and decided she would like more control over the system. She installed Ubuntu Linux on the physical server, then installed Java 6, MySQL, and Tomcat. After doing so, she downloaded the **openmrs.war **file and installed it in the Tomcat application server. Excluding download time for the software, she was able to complete the process in less than one hour.
 
