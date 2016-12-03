@@ -19,17 +19,17 @@ Although this chapter will cover the basics, as your OpenMRS implementation grow
 
 The module's full functionality is beyond the scope of this book. You can find further documentation on the OpenMRS Wiki:
 
-[http://go.openmrs.org/book-reporting](http://go.openmrs.org/book-reporting)
+[https://wiki.openmrs.org/display/docs/Reporting+Module](https://wiki.openmrs.org/display/docs/Reporting+Moduleg)
 
 This chapter follows after the ones on Data Entry, because you cannot actually build reports without some data to run them on. But while planning the project you should follow the best practice of determining what_outputs_ you want, and working backwards from there to determine the minimal set of data that you need to collect to produce those outputs.
 
 ## Background and terminology
 
-The reporting module is built around the idea ofDefinitionsthat are evaluated to produce output.
+The reporting module is built around the idea of **Definitions** that are evaluated to produce output.
 
 ### Reports and data sets 
 
-In general aReport Definitioncan have multipleData Set Definitions. When run, this will produce a report with multiple data sets, which is rendered to a format chosen by the user.
+In general a **Report Definition** can have multiple **Data Set Definitions**. When run, this will produce a report with multiple data sets, which is rendered to a format chosen by the user.
 
 ### Cohorts
 
@@ -37,15 +37,15 @@ Almost all reports produced with OpenMRS refer to groups of patients. A report m
 
 ### Indicators
 
-In this chapter, we look at a report that is based onIndicators, and specifically indicators that look at the count of patients in a cohort in a period of time.
+In this chapter, we look at a report that is based on **Indicators**, and specifically indicators that look at the count of patients in a cohort in a period of time.
 
 ### Parameters and mapping
 
-Unlike in the OpenMRS Cohort Builder, reports and their underlying queries are intended to be created once, and reused. To support this idea, reports and queries usually take parameters. For example, a report intended to be run monthly would haveStart Date andEnd Date parameters, and the user would be asked for these when they generate the report.
+Unlike in the OpenMRS Cohort Builder, reports and their underlying queries are intended to be created once, and reused. To support this idea, reports and queries usually take parameters. For example, a report intended to be run monthly would have **Start Date** and **End Date** parameters, and the user would be asked for these when they generate the report.
 
 The underlying queries in the report also typically take parameters. If the report is going to display the number of patients enrolled in the Child Nutrition Study at the end of a given month, it would need to have an underlying Cohort Query for "patients enrolled in Child Nutrition Study on a date." p;\[/0" +{}hat date would be an Effective Date parameter.
 
-When the user runs the report, they are asked for aStart Date and anEnd Date, but they are not asked to specify anEffective Date. When designing the report, you will need to define how parameters in the underlying queries obtain their values, based on the values provided by the user when running the report. This process is called mapping.
+When the user runs the report, they are asked for a **Start Date** and an **End Date**, but they are not asked to specify an **Effective Date**. When designing the report, you will need to define how parameters in the underlying queries obtain their values, based on the values provided by the user when running the report. This process is called mapping.
 
 The idea of mapping parameters is complicated. The following resources include more information about why it is necessary, and how to do it:
 
@@ -56,7 +56,9 @@ The idea of mapping parameters is complicated. The following resources include m
 
 ## Amani Clinic's weekly report
 
-![](http://write.flossmanuals.net/openmrs/reporting/static/case-study.png)Before adopting OpenMRS, Amani Clinic used to spend significant time at the end of every month tabulating paper registers and patient charts to produce a monthly report for the Ministry of Health. When planning their OpenMRS implementation, they decided that to improve their program, they needed more immediate feedback. The clinic and Ministry of Health met and decided on five indicators on which they wanted a report every week. They modified their paper data collection forms to make sure that they were capturing the right data to produce those indicators, as well as the periodic Ministry of Health reports.
+![](http://write.flossmanuals.net/openmrs/reporting/static/case-study.png)
+
+Before adopting OpenMRS, Amani Clinic used to spend significant time at the end of every month tabulating paper registers and patient charts to produce a monthly report for the Ministry of Health. When planning their OpenMRS implementation, they decided that to improve their program, they needed more immediate feedback. The clinic and Ministry of Health met and decided on five indicators on which they wanted a report every week. They modified their paper data collection forms to make sure that they were capturing the right data to produce those indicators, as well as the periodic Ministry of Health reports.
 
 We'll focus on two of the indicators they calculated:
 
