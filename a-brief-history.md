@@ -10,13 +10,13 @@ In February 2004, the amount of data had become too large for AMPATH's existing 
 
 At the same time, a Boston-based non-profit named Partners In Health \(PIH\) was pioneering the use of web-based EMRs in developing countries. They had built the PIH-EMR, which they were using to support the treatment of multi-drug resistant tuberculosis in Peru and HIV in Haiti. But Hamish Fraser, PIH's director of the EMR project, was worried: PIH was about to expand into Rwanda, Lesotho, and Malawi, and he feared it would be difficult to maintain their home-built system in 5 countries.
 
-In September 2004, Paul and Burke met Hamish at the World Congress on Medical and Health Informatics \(MedInfo\) conference in San Francisco. It became apparent that the three shared similar goals and needs, so they agreed to work collaboratively to develop a system that would be suitable for the various needs of humanitarian work in African nations and beyond.
+In September 2004, Paul and Burke met Hamish at the World Congress on Medical and Health Informatics \(MedInfo\) conference in San Francisco. It became apparent that the three shared similar goals and needs, so they agreed to work collaboratively to develop a system that would be suitable for the various needs of humanitarian work in African nations and beyond.
 
-Paul and Burke hired developer Ben Wolfe to begin work on programming an early prototype of OpenMRS, based on their previous work at AMPATH and Regenstrief. Several months later, PIH's lead developer Darius Jazayeri joined the project, merging PIH-EMR's functionality into the new system. The previous systems at AMPATH focused on data entry, while at PIH, the focus was more on clinical workflow. The new system combined features of both the AMPATH and PIH systems.
+Paul and Burke hired developer Ben Wolfe to begin work on programming an early prototype of OpenMRS, based on their previous work at AMPATH and Regenstrief. Several months later, PIH's lead developer Darius Jazayeri joined the project, merging PIH-EMR's functionality into the new system. The previous systems at AMPATH focused on data entry, while at PIH, the focus was more on clinical workflow. The new system combined features of both the AMPATH and PIH systems.
 
-Because of the strong cooperation between PIH and Regenstrief and the long distances involved, it became clear that an open source software model of development was the best way to sustain and grow the platform, and the OpenMRS project was born.
+Because of the strong cooperation between PIH and Regenstrief and the long distances involved, it became clear that an open source software model of development was the best way to sustain and grow the platform, and the OpenMRS project was born.
 
-While the collaboration between Regenstrief and PIH continued and the new system was being designed, the groups were looking for additional support in Africa. They turned to their colleague Chris Seebregts, from the South African Medical Research Council \(MRC\). Chris was already heavily involved in the field of medical informatics throughout sub-Saharan Africa, and brought with him a wealth of knowledge about the needs of informatics implementations. Seebregts had been adapting OpenMRS for use in South Africa and started to build up a community of implementers of the software around the world. His work led to massive growth of the OpenMRS community \(now nearly 2,000 strong as of late 2011\). In February 2006, AMPATH launched OpenMRS in Kenya, and PIH brought it to Rwinkwavu, Rwanda, in August of the same year. The South African MRC first switched on the system at Richmond Hospital in KwaZulu-Natal at the end of 2006.
+While the collaboration between Regenstrief and PIH continued and the new system was being designed, the groups were looking for additional support in Africa. They turned to their colleague Chris Seebregts, from the South African Medical Research Council \(MRC\). Chris was already heavily involved in the field of medical informatics throughout sub-Saharan Africa, and brought with him a wealth of knowledge about the needs of informatics implementations. Seebregts had been adapting OpenMRS for use in South Africa and started to build up a community of implementers of the software around the world. His work led to massive growth of the OpenMRS community \(now nearly 2,000 strong as of late 2011\). In February 2006, AMPATH launched OpenMRS in Kenya, and PIH brought it to Rwinkwavu, Rwanda, in August of the same year. The South African MRC first switched on the system at Richmond Hospital in KwaZulu-Natal at the end of 2006.
 
 As both the OpenMRS application and open source community grew, they gathered the attention of many other large projects and agencies. Some of these have extended both financial and consulting support over the past several years, including:
 
@@ -54,11 +54,9 @@ From its humble beginnings as a solution to a problem in a small African town, O
 
 ### What's New in Version 1.9
 
-This version of OpenMRS includes a new concept,Visit. A visit is comprised of at least oneEncounter. Encounter has been redefined in this version as a transaction between a patient and at least one health care provider to provide service or assess a patient's health status.
+This version of OpenMRS includes a new concept, **Visit**. A visit is comprised of at least one **Encounter**. Encounter has been redefined in this version as a transaction between a patient and at least one health care provider to provide service or assess a patient's health status.
 
-**OpenMRS Attributes** now allows for implementation-specific customizations of certain types of OpenMRS data. In earlier releases, only Person could be customized. Now, you can also customize Provider, Visit, and Location data.  
+**OpenMRS Attributes** now allows for implementation-specific customizations of certain types of OpenMRS data. In earlier releases, only Person could be customized. Now, you can also customize Provider, Visit, and Location data.
 
-**Concept Mapping** has been improved in this release, now allowing you to define how your system's concepts relate to external concepts and standards. 
-
-
+**Concept Mapping** has been improved in this release, now allowing you to define how your system's concepts relate to external concepts and standards.
 
