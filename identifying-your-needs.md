@@ -22,7 +22,6 @@ For now, forget about technology and instead think about your organizational goa
 
 * What other 3rd-party or government organizations do you report to? What information is included in each of these reports?
 
-
 Answering these questions will probably help you think of more related questions. Make sure you consider them thoroughly.
 
 ## Take advantage of institutional knowledge
@@ -59,11 +58,11 @@ Implementers should evaluate data collection forms built by other OpenMRS users 
 
 Implementers across the OpenMRS community have invested a lot of resources in ensuring that their forms reflect clinical best practices, international standards, and current research. These forms have already been optimized for electronic data entry. Many OpenMRS partners develop forms using medical informatics experts that may not be available to all projects. Finally, creating forms is time consuming; those resources could be redirected to other efforts.
 
-The OpenMRS Form Bank is a new community-driven project that is beginning to collect existing forms from other users. Visit http://go.openmrs.org/book-formbank for details, or contact other implementers for help. Read the "Getting Help from the OpenMRS Community" chapter for more information.
+The OpenMRS Form Bank is a new community-driven project that is beginning to collect existing forms from other users. Visit [Form Bank](https://wiki.openmrs.org/display/RES/Form+Bank) for details, or contact other implementers for help. Read the "Getting Help from the OpenMRS Community" chapter for more information.
 
 ### Explore the module repository
 
-Implementers should consult the OpenMRS Module Repository at http://modules.openmrs.org/ before considering customization through software development.
+Implementers should consult the OpenMRS Module Repository at [http://modules.openmrs.org/](http://modules.openmrs.org/) before considering customization through software development.
 
 There is a good chance that someone has created a module to address needs you may have. Read the "Customizing OpenMRS with Plug-in Modules" chapter for a list of recommended modules.
 
@@ -74,6 +73,4 @@ Once the clinic determined they would use OpenMRS, they began thinking specifica
 Claudine found many resources within the OpenMRS community, including pre-existing concept dictionaries and forms that had been used in other clinics. She was able to take these artifacts and adapt them to Amani's paper forms already in use. Starting out with the work of others saved quite a bit of time.
 
 ![](http://write.flossmanuals.net/openmrs/identifying-your-needs/static/case-study.png)
-
-
 

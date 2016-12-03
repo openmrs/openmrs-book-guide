@@ -2,7 +2,9 @@
 
 ![](http://write.flossmanuals.net/openmrs/transitioning-to-openmrs/static/transitioning.png)
 
-This chapter outlines steps that typically make up a OpenMRS project, and should be read by people about to embark on a OpenMRS implementation. Some of this information may be obvious to experienced project managers. A comprehensive guide to project management is beyond the scope of this book, but we have included some high-level process considerations to get you started thinking about what needs to happen.
+_A paper-based patient register book at an African OpenMRS clinic._
+
+This chapter outlines steps that typically make up a OpenMRS project, and should be read by people about to embark on a OpenMRS implementation. Some of this information may be obvious to experienced project managers. A comprehensive guide to project management is beyond the scope of this book, but we have included some high-level process considerations to get you started thinking about what needs to happen.
 
 We recommend you try to build a structured implementation process. It's important to plan carefully--the decisions you make during this process require substantial investments of resources, and you will be living with your choices for the foreseeable future.
 
@@ -27,22 +29,22 @@ When you start out on a new OpenMRS project, you should spend time thinking abou
 
 Your project implementation team should include clinic staff:
 
-1. Management are aware of funding obligations and third party reporting requirements.
+1. **Management** are aware of funding obligations and third party reporting requirements.
 
-2. Health care providers are focused on improving patient care.
+2. **Health care providers** are focused on improving patient care.
 
-3. Administrative staff are specialists of workflow issues and clinic processes.
+3. **Administrative staff** are specialists of workflow issues and clinic processes.
 
 
 The team could also include the following people that may or may not be from the clinic:
 
-1. Asystem administrator is in charge of installing and maintaining OpenMRS inside of the clinic's ICT infrastructure.
+1. A **system administrator** is in charge of installing and maintaining OpenMRS inside of the clinic's ICT infrastructure.
 
-2. Medical informatics expert\(s\) create clinical documentation and ensure that data is managed properly in the system. Develop reports.
+2. **Medical informatics expert\(s\)** create clinical documentation and ensure that data is managed properly in the system. Develop reports.
 
-3. \(Optional\) Aproject manager or coordinator. For larger implementations, this person works to hold people accountable to finishing their work in a timely manner, and ensures the project is on track.
+3. \(Optional\) A **project manager or coordinator**. For larger implementations, this person works to hold people accountable to finishing their work in a timely manner, and ensures the project is on track.
 
-4. \(Optional\) Software developersmay be needed for locations that decide to customize the system.
+4. \(Optional\) **Software developers** may be needed for locations that decide to customize the system.
 
 
 It is very important to include clinical staff \(for example nurses, data entry clerks, and others\) in your implementation team from the earliest phases of the project so that the resulting deployment is useful for them and easy for them to use.
@@ -57,15 +59,17 @@ These goals will help you in directing and managing your project. For example, i
 
 ## Incremental adoption
 
-It often makes sense to divide the implementation process into smaller, more manageable sections, which can be implemented in discrete stages or iterations. Implementing in stages allows people to get used to changes gradually without feeling overwhelmed, and allows your implementation team to be responsive to feedback from users during the process.
+It often makes sense to divide the implementation process into smaller, more manageable sections, which can be implemented in discrete stages or iterations. Implementing in stages allows people to get used to changes gradually without feeling overwhelmed, and allows your implementation team to be responsive to feedback from users during the process.
 
 Another reason people choose to develop iteratively is that it is very hard for users to correctly or fully explain their requirements at the beginning of the project. Giving people hands-on experience of an early version of the system helps them understand how it works and what might be possible. They can then provide you with valuable feedback, and they might identify new requirements.
 
-![](http://write.flossmanuals.net/openmrs/transitioning-to-openmrs/static/case-study.png)The Amani Clinic chose to introduce change iteratively. First they started using the system for patient registration. This affected only the administrative staff without impacting the clinical staff. Later they started doing retrospective data entry, which included paper forms for clinicians that had minor changes, as well as training a new data entry clerk.
+![](http://write.flossmanuals.net/openmrs/transitioning-to-openmrs/static/case-study.png)
+
+The Amani Clinic chose to introduce change iteratively. First they started using the system for patient registration. This affected only the administrative staff without impacting the clinical staff. Later they started doing retrospective data entry, which included paper forms for clinicians that had minor changes, as well as training a new data entry clerk.
 
 ### Pilot projects
 
-Larger multi-site implementations may wish to develop a pilot approach to help reduce risk. In this scenario, you would only deploy OpenMRS at one site and learn about the process in a more controlled way. You can then incorporate what you've learned into a coordinated implementation process for other sites.
+Larger multi-site implementations may wish to develop a pilot approach to help reduce risk. In this scenario, you would only deploy OpenMRS at one site and learn about the process in a more controlled way. You can then incorporate what you've learned into a coordinated implementation process for other sites.
 
 ## Ongoing support and development
 
