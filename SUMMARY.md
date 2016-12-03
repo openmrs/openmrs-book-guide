@@ -26,7 +26,7 @@
     * [XForms](xforms.md)
 * [Using Data](using-data.md)
     * [Cohort Builder](cohort-builder.md)
-    * Reporting
+    * [Reporting](reporting.md)
     * Patient Alerts and Flags
 * Administering OpenMRS
     * User Management and Access Control
