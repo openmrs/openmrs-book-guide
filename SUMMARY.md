@@ -13,4 +13,6 @@
     * [Installation and Initial Setup](installation-and-initial-setup.md)
     * [OpenMRS Information Model](openmrs-information-model.md)
     * [Getting Around the User Interface](getting-around-the-user-interface.md)
+* [Configuration](configuration.md)
+    * [Customizing OpenMRS with Plug-in Modules](customizing-openmrs-with-plug-in-modules.md)
 
