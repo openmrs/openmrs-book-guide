@@ -20,8 +20,8 @@
     * [Configuring Visits](configuring-visits.md)
 * [Collecting Data](collecting-data.md)
     * [The Patient Dashboard In Depth](the-patient-dashboard-in-depth.md)
-    * Registering Patients
-    * Data Entry
+    * [Registering Patients](registering-patients.md)
+    * [Data Entry](data-entry.md)
     * HTML Forms
     * XForms
 * [Using Data](using-data.md)
