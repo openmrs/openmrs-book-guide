@@ -22,7 +22,7 @@
     * [The Patient Dashboard In Depth](the-patient-dashboard-in-depth.md)
     * [Registering Patients](registering-patients.md)
     * [Data Entry](data-entry.md)
-    * HTML Forms
+    * [HTML Forms](html-forms.md)
     * XForms
 * [Using Data](using-data.md)
     * Cohort Builder
