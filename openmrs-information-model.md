@@ -190,5 +190,29 @@ A patient named Asaba arrives at Amani Clinic, where the registration clerk Jame
 
 From the perspective of the OpenMRS model, we have the following metadata:
 
+* The nurse, Kissa (a Provider)
+* The registration clerk, James (a User)
+* Contact Phone Number (a Person Attribute Type)
+* Weight, in kilograms (a Concept, with class Finding and datatype Numeric)
+* Urine Pregnancy Test (a Concept, with class Test)
+* Amani Clinic (a Location)
+* Outpatient Visit (an Encounter Type)
+* Outpatient Triage Form (a Form)
 
+When Asaba is first seen at the registration desk, James creates the following data:
+
+* A Patient (Asaba)
+* A Person Attribute (type = Contact Phone Number, value = 312-456-7890).
+
+After Asaba sees the nurse, who gives a paper form to James, he creates more data:
+
+* An Encounter with:
+  * patient = Asaba
+  * type = Outpatient Visit
+  * form = Outpatient Triage Form
+  * location = Amani Clinic
+  * provider = Nurse Kissa
+  * creator = Registration Clerk James
+* An Observation (in that encounter), of Weight in kilograms = 61.5.
+* An Order (in that encounter), for Urine Pregnancy Test
 
