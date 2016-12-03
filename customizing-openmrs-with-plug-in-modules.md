@@ -60,102 +60,156 @@ OpenMRS is delivered with some bundled modules which are included in a standard 
 
 ### HTML Form Entry
 
-Allows anyone with basic HTML programming skills and knowledge of the OpenMRS system to create forms which can be entered without any proprietary tools directly from a web browser. It is a preferred form entry module. HTML Forms allow a lot of control over the form's layout. [https://wiki.openmrs.org/display/docs/HTML+Form+Entry+Module](https://wiki.openmrs.org/display/docs/HTML+Form+Entry+Module)
+Allows anyone with basic HTML programming skills and knowledge of the OpenMRS system to create forms which can be entered without any proprietary tools directly from a web browser. It is a preferred form entry module. HTML Forms allow a lot of control over the form's layout. 
+[https://wiki.openmrs.org/display/docs/HTML+Form+Entry+Module](https://wiki.openmrs.org/display/docs/HTML+Form+Entry+Module)
 
 ### XForms
 
-Allows data entry to be done directly from any JavaScript enabled browser. The module converts an OpenMRS form to an XForm. XForms are well suited to forms that will be filled out on mobile devices.  [https://wiki.openmrs.org/display/docs/XForms+Module](https://wiki.openmrs.org/display/docs/XForms+Module)
+Allows data entry to be done directly from any JavaScript enabled browser. The module converts an OpenMRS form to an XForm. XForms are well suited to forms that will be filled out on mobile devices.
+
+[https://wiki.openmrs.org/display/docs/XForms+Module](https://wiki.openmrs.org/display/docs/XForms+Module)
 
 ### FormEntry
 
-Allows a form's content to be designed in InfoPath, and then allows  end users to fill out the form and submit it to OpenMRS. OpenMRS is moving away from the InfoPath format because InfoPath is proprietary and difficult to troubleshoot.  [https://wiki.openmrs.org/display/docs/FormEntry+Module](https://wiki.openmrs.org/display/docs/FormEntry+Module)
+Allows a form's content to be designed in InfoPath, and then allows  end users to fill out the form and submit it to OpenMRS. OpenMRS is moving away from the InfoPath format because InfoPath is proprietary and difficult to troubleshoot.
+
+[https://wiki.openmrs.org/display/docs/FormEntry+Module](https://wiki.openmrs.org/display/docs/FormEntry+Module)
 
 ### HTML Widgets
 
-Provides a set of reusable HTML form field widgets that encapsulate the common input requirements for OpenMRS. It is meant to be something that developers can utilize in their code.[https://wiki.openmrs.org/display/docs/HTML+Widgets+Module](https://wiki.openmrs.org/display/docs/HTML+Widgets+Module)
+Provides a set of reusable HTML form field widgets that encapsulate the common input requirements for OpenMRS. It is meant to be something that developers can utilize in their code.
+[https://wiki.openmrs.org/display/docs/HTML+Widgets+Module](https://wiki.openmrs.org/display/docs/HTML+Widgets+Module)
 
 ### Reporting
 
-Provides a feature-rich and user-friendly web interface for managing reports within OpenMRS.[https://wiki.openmrs.org/display/docs/Reporting+Module](https://wiki.openmrs.org/display/docs/Reporting+Module)
+Provides a feature-rich and user-friendly web interface for managing reports within OpenMRS.
+[https://wiki.openmrs.org/display/docs/Reporting+Module](https://wiki.openmrs.org/display/docs/Reporting+Module)
 
 ### Reporting Compatibility
 
-Contains pages and features that were previously included into OpenMRS core code itself and are needed to run the Reporting module. It was written for the 1.5 and later releases of OpenMRS.[https://wiki.openmrs.org/display/docs/ReportingCompatibility+Module](https://wiki.openmrs.org/display/docs/ReportingCompatibility+Module)
+Contains pages and features that were previously included into OpenMRS core code itself and are needed to run the Reporting module. It was written for the 1.5 and later releases of OpenMRS.
+[https://wiki.openmrs.org/display/docs/ReportingCompatibility+Module](https://wiki.openmrs.org/display/docs/ReportingCompatibility+Module)
 
 ### Serialization XStream
 
-Provides an implementation of serialization/deserialization strategy using the XStream library.[https://wiki.openmrs.org/display/docs/Serialization+XStream+Module](https://wiki.openmrs.org/display/docs/Serialization+XStream+Module)
+Provides an implementation of serialization/deserialization strategy using the XStream library.
+[https://wiki.openmrs.org/display/docs/Serialization+XStream+Module](https://wiki.openmrs.org/display/docs/Serialization+XStream+Module)
 
 ## Other popular modules
 
 ### Clinical Summary
 
-Allows you to create clinical summaries.[http://go.openmrs.org/book-clinsum](http://go.openmrs.org/book-clinsum)
+Allows you to create clinical summaries.
+[https://wiki.openmrs.org/display/docs/Clinical+Summary+Module](https://wiki.openmrs.org/display/docs/Clinical+Summary+Module)
 
 ### Groovy
 
-Was created as a proof of concept \(for embedding Groovy into OpenMRS\) and to serve as a base module for other modules that want to use Groovy scripting as well.[http://go.openmrs.org/book-groovy](http://go.openmrs.org/book-groovy)
+Was created as a proof of concept \(for embedding Groovy into OpenMRS\) and to serve as a base module for other modules that want to use Groovy scripting as well.
+[https://wiki.openmrs.org/display/docs/Groovy+Module](https://wiki.openmrs.org/display/docs/Groovy+Module)
 
 ### HTML Form Flowsheet
 
-Allows you to generically model a paper flowsheet. Provides basic functionality for embedding small HTML Forms inside of larger HTML Forms, where each small HTML Form represents one row in a patient chart. Additionally, the module allows you to specify any number of tabs in a tab-based layout, each containing a distinct HTML Form.[http://go.openmrs.org/book-hff](http://go.openmrs.org/book-hff)
+Allows you to generically model a paper flowsheet. Provides basic functionality for embedding small HTML Forms inside of larger HTML Forms, where each small HTML Form represents one row in a patient chart. Additionally, the module allows you to specify any number of tabs in a tab-based layout, each containing a distinct HTML Form.
+[https://wiki.openmrs.org/display/docs/HtmlFormFlowsheet+Module](https://wiki.openmrs.org/display/docs/HtmlFormFlowsheet+Module)
 
 ### HTML Form Entry Designer
 
-WYSIWYG Form Designer for the HTML Form Entry module.[http://go.openmrs.org/book-hfed](http://go.openmrs.org/book-hfed)
+WYSIWYG Form Designer for the HTML Form Entry module.
+[https://wiki.openmrs.org/display/docs/HTML+Form+Entry+Designer+Module](https://wiki.openmrs.org/display/docs/HTML+Form+Entry+Designer+Module)
 
 ### ID Generation
 
-Provides a facility for managing identifier generation and allocation within an OpenMRS implementation. Introduces different identifier generation strategies including automatic and pooled.[http://go.openmrs.org/book-idg](http://go.openmrs.org/book-idg)
+Provides a facility for managing identifier generation and allocation within an OpenMRS implementation. Introduces different identifier generation strategies including automatic and pooled.
+[https://wiki.openmrs.org/display/docs/Idgen+Module](https://wiki.openmrs.org/display/docs/Idgen+Module)
 
 ### Metadata Sharing
 
-Allows all kinds of metadata \(concepts, HTML forms, locations, roles, programs, etc.\) to be exchanged between different OpenMRS installations.[http://go.openmrs.org/book-mds](http://go.openmrs.org/book-mds)
+Allows all kinds of metadata \(concepts, HTML forms, locations, roles, programs, etc.\) to be exchanged between different OpenMRS installations.
+[https://wiki.openmrs.org/display/docs/Metadata+Sharing+Module](https://wiki.openmrs.org/display/docs/Metadata+Sharing+Module)
 
 ### Request Account
 
-Allows users to request their own accounts, specifying their own preferred username and preferred password. An administrator can then approve or deny pending account requests.[http://go.openmrs.org/book-reqacct](http://go.openmrs.org/book-reqacct)
+Allows users to request their own accounts, specifying their own preferred username and preferred password. An administrator can then approve or deny pending account requests.
+[https://wiki.openmrs.org/display/docs/Request+Account+Module](https://wiki.openmrs.org/display/docs/Request+Account+Module)
 
 ### REST Webservices
 
-Exposes the OpenMRS API as REST web service.[http://go.openmrs.org/book-rest](http://go.openmrs.org/book-rest)
+Exposes the OpenMRS API as REST web service.
+[https://wiki.openmrs.org/display/docs/REST+Web+Services+API+For+Clients](https://wiki.openmrs.org/display/docs/REST+Web+Services+API+For+Clients)
 
 ### Role-based Home Page
 
-Allows for administrators to define a custom "home page" for each defined role within the system. These home pages may be simply pages that already exist, and which particular users would be best served to have as their default. For example, system administrators may want the Administration page as their default home. Alternatively, administrators can "author" new pages within the running application for their users.[http://go.openmrs.org/book-rbh](http://go.openmrs.org/book-rbh)
+Allows for administrators to define a custom "home page" for each defined role within the system. These home pages may be simply pages that already exist, and which particular users would be best served to have as their default. For example, system administrators may want the Administration page as their default home. Alternatively, administrators can "author" new pages within the running application for their users.
+[https://wiki.openmrs.org/display/docs/Role+Based+Homepage+Module](https://wiki.openmrs.org/display/docs/Role+Based+Homepage+Module)
 
 ### Synchronization
 
-Fits in scenarios when you have multiple sites using OpenMRS with separate databases and you want them to copy data to each other that will keep them synchronized.[http://go.openmrs.org/book-sync](http://go.openmrs.org/book-sync)
+Fits in scenarios when you have multiple sites using OpenMRS with separate databases and you want them to copy data to each other that will keep them synchronized.
+[https://wiki.openmrs.org/display/docs/Sync+Module](https://wiki.openmrs.org/display/docs/Sync+Module)
 
 ## Writing your own module
 
 This section covers basics of writing your own module. We encourage to contribute modules you write to the Module Repository. You can also use our code repository for your module. For more information, please visit this page
 
-[http://go.openmrs.org/book-svnrepo](http://go.openmrs.org/book-svnrepo)
+[https://wiki.openmrs.org/display/docs/Creating+Modules](https://wiki.openmrs.org/display/docs/Creating+Modules)
 
 In order to develop and test a module, you will need to have OpenMRS installed in a version on which you want to run your module.
 
-It is best to use a dedicated Maven archetype to create a new module. Before you start you will need to install Maven. See the Maven web site at[http://maven.apache.org/](http://maven.apache.org/) for more instructions.
+It is best to use a dedicated Maven archetype to create a new module. Before you start you will need to install Maven. See the Maven web site at [http://maven.apache.org/](http://maven.apache.org/) for more instructions.
 
-The next step is to update the settings.xml file to point Maven to theMaven Module Archetype. You can find the file in one of the following locations:
+The next step is to update the **settings.xml** file to point Maven to the **Maven Module Archetype**. You can find the file in one of the following locations:
 
-* Linux:~/.m2
+* Linux: **~/.m2**
 
-* Windows XP:C:\Documents and Settings\user\_name.m2
+* Windows XP: **C:\Documents and Settings\user\_name.m2**
 
-* Windows Vista/7:C:\Users\user\_name.m2
+* Windows Vista/7: **C:\Users\user\_name.m2**
 
 
 If the settings file does not exist you need to create one. Add the following content:
 
-```
+```html
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
-                      http://maven.apache.org/xsd/settings-1.0.0.xsd"><pluginGroups><pluginGroup>org.openmrs.maven.plugins</pluginGroup></pluginGroups><profiles><profile><id>OpenMRS</id><activation><activeByDefault>true</activeByDefault></activation><properties><archetypeCatalog>http://mavenrepo.openmrs.org/nexus/service/local/repositories/releases/content/archetype-catalog.xml</archetypeCatalog></properties><repositories><repository><id>openmrs-repo</id><name>OpenMRS Nexus Repository</name><url>http://mavenrepo.openmrs.org/nexus/content/repositories/public</url></repository></repositories><pluginRepositories><pluginRepository><id>openmrs-repo</id><name>OpenMRS Nexus Repository</name><url>http://mavenrepo.openmrs.org/nexus/content/repositories/public</url><snapshots><enabled>false</enabled></snapshots></pluginRepository></pluginRepositories></profile></profiles></settings>
+                      http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+  <pluginGroups>
+    <pluginGroup>org.openmrs.maven.plugins</pluginGroup>
+  </pluginGroups>
+  <profiles>
+    <profile>
+      <id>OpenMRS</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <archetypeCatalog>http://mavenrepo.openmrs.org/nexus/service/local/repositories/releases/content/archetype-catalog.xml</archetypeCatalog>
+      </properties>
+      <repositories>
+        <repository>
+          <id>openmrs-repo</id>
+          <name>OpenMRS Nexus Repository</name>
+          <url>http://mavenrepo.openmrs.org/nexus/content/repositories/public</url>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>openmrs-repo</id>
+          <name>OpenMRS Nexus Repository</name>
+          <url>http://mavenrepo.openmrs.org/nexus/content/repositories/public</url>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+
+</settings>
 ```
+
 
 Maven is a command line tool, so open a console and enter the folder in which to create a project for your new module. The command you need to run is:
 
@@ -169,15 +223,15 @@ Follow the steps of the wizard by answering the questions. At the end, a new Mav
 mvn install
 ```
 
-You will find the produced.omodfile for your module in the directory omod/target.
+You will find the produced **.omod** file for your module in the directory **omod/target**.
 
 Developing a module requires from you to be familiar with the Spring framework. Read the Spring web site at [http://www.springsource.com/](http://www.springsource.com/)for more details. There are also a few things specific to the OpenMRS platform which you will need to remember:
 
-* The Spring web context file can be found atomod\src\main\resources\webModuleApplicationContext.xml.
+* The Spring web context file can be found at **omod\src\main\resources\webModuleApplicationContext.xml**.
 
-* Modules are able to add and modify tables in the OpenMRS database. The filesomod\src\main\resources\sqldiff.xml andomod\src\main\resources\liquibase.xml hold the SQL commands which can be executed as a module is installed.
+* Modules are able to add and modify tables in the OpenMRS database. The files **omod\src\main\resources\sqldiff.xml** and **omod\src\main\resources\liquibase.xml** hold the SQL commands which can be executed as a module is installed.
 
-* Modules can extend OpenMRS core JSP pages via extension points. A module registers an extension inomod\src\main\resources\config.xmlfor each extension point in the system to which it wants to add content.
+* Modules can extend OpenMRS core JSP pages via extension points. A module registers an extension in **omod\src\main\resources\config.xml** for each extension point in the system to which it wants to add content.
 
 
 You should find extension points in the JSP pages you want to extend. Look for:
@@ -186,5 +240,5 @@ You should find extension points in the JSP pages you want to extend. Look for:
 <openmrs:extensionPoint pointId="..."
 ```
 
-It is best to learn by example, so you should look at some other modules in the OpenMRS code repository for code snippets to reuse in your own work. Consider examining the Webservices.rest module.
+It is best to learn by example, so you should look at some other modules in the OpenMRS code repository for code snippets to reuse in your own work. Consider examining the **Webservices.rest** module.
 
