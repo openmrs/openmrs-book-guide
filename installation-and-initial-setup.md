@@ -2,6 +2,8 @@
 
 ![](http://write.flossmanuals.net/openmrs/installation-and-initial-setup/static/installing.png)
 
+_An OpenMRS server in Uganda._
+
 You can download OpenMRS from the OpenMRS web site.
 
 [http://openmrs.org/download/](http://openmrs.org/download/)
