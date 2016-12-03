@@ -11,5 +11,5 @@
     * [Transitioning to OpenMRS](transitioning-to-openmrs.md)
 * [Getting Started](getting-started.md)
     * [Installation and Initial Setup](installation-and-initial-setup.md)
-    * OpenMRS Information Model
+    * [OpenMRS Information Model](openmrs-information-model.md)
 
