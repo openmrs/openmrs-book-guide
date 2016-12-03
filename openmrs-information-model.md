@@ -139,7 +139,7 @@ Prescribing a medication is a **Drug Order**. A drug order can be placed for a g
 
 ## Allergy lists
 
-OpenMRS lets you manually maintain anAllergy Listfor a patient, including the allergen, reaction, severity, etc.
+OpenMRS lets you manually maintain an **Allergy List** for a patient, including the allergen, reaction, severity, etc.
 
 This list is managed separately from Observations: observing an allergic reaction to a drug does not automatically add an Allergy to the list.
 
@@ -147,17 +147,17 @@ Unlike an Observation \(which happens at one moment in time\), an Allergy is lon
 
 ## Problem lists
 
-OpenMRS lets you manually maintain aProblem Listfor a patient. This list is managed separately from Observations: observing that the patient has "Diagnosis Present = Diabetes" does not automatically add a problem to the list. Unlike an observation \(which happens at one moment in time\), a problem is longitudinal data, with start and end dates.
+OpenMRS lets you manually maintain a **Problem List** for a patient. This list is managed separately from Observations: observing that the patient has "Diagnosis Present = Diabetes" does not automatically add a problem to the list. Unlike an observation \(which happens at one moment in time\), a problem is longitudinal data, with start and end dates.
 
 ## Program enrollments, workflows, and states
 
-AProgramrepresents an administrative program or study that a patient may be enrolled in \(for example, Child Nutrition Study orDOTS Tuberculosis Treatment Program\).
+A **Program** represents an administrative program or study that a patient may be enrolled in \(for example, **Child Nutrition Study** or **DOTS Tuberculosis Treatment Program**\).
 
-AProgram Enrollmentrepresents the fact that a patient is enrolled in one of these programs over a time period at a Location. This is longitudinal data with a start date and end date.
+A **Program Enrollment** represents the fact that a patient is enrolled in one of these programs over a time period at a Location. This is longitudinal data with a start date and end date.
 
-A Program can also define administrativeWorkflows, and possibleStatesthe patient may have within those workflows. AnInitial State is one that a patient is allowed to start in when they are first enrolled in a program. ATerminal State is one that closes the program enrollment if the patient is placed in it.
+A Program can also define administrative **Workflows**, and possible **States** the patient may have within those workflows. An **Initial State** is one that a patient is allowed to start in when they are first enrolled in a program. A **Terminal State** is one that closes the program enrollment if the patient is placed in it.
 
-For example a research study on infant nutrition might have a workflow calledStudy Enrollment Status with the states:
+For example a research study on infant nutrition might have a workflow called **Study Enrollment Status** with the states:
 
 * Patient Identified \(initial\)
 
@@ -168,23 +168,23 @@ For example a research study on infant nutrition might have a workflow calledStu
 * Lost to Followup \(terminal\)
 
 
-These states are meant to represent administrative statuses, not clinical ones. For example putting a patient in aLoss to Followup state represents an official declaration and will not happen automatically even if no encounters are entered for the patient for several months.
+These states are meant to represent administrative statuses, not clinical ones. For example putting a patient in a **Loss to Followup** state represents an official declaration and will not happen automatically even if no encounters are entered for the patient for several months.
 
 ## Forms
 
-AFormrepresents an electronic form that may be used for entering or viewing data. The basic OpenMRS system does not define a specific technology for entering forms. You will need to use one of the community-developed form entry modules. See the chapter "Data Entry" for more details.
+A **Form** represents an electronic form that may be used for entering or viewing data. The basic OpenMRS system does not define a specific technology for entering forms. You will need to use one of the community-developed form entry modules. See the chapter "Data Entry" for more details.
 
-The Form Entry \(Infopath\) and XForms modules rely on aForm Schema, where you define which Concepts are used on the Form. The HTML Form Entry module does not require you to manage the schema.
+The Form Entry \(Infopath\) and XForms modules rely on a **Form Schema**, where you define which Concepts are used on the Form. The HTML Form Entry module does not require you to manage the schema.
 
 ## Users, roles, and privileges
 
-AUserin OpenMRS is an account that a person may use to log into the system.
+A **User** in OpenMRS is an account that a person may use to log into the system.
 
 The real-life person is represented by a Person record in OpenMRS, and a person may have more than one user account. If you want a patient to be able to view her own record in OpenMRS, then you need to create a user account and link it to the patient.
 
-ARolerepresents a group of privileges in the system. Roles may inherit privileges from other roles, and users may have one or more roles.
+A **Role** represents a group of privileges in the system. Roles may inherit privileges from other roles, and users may have one or more roles.
 
-APrivilegeis an authorization to perform a particular action in the system. The list of available privileges are defined by the core system and by add-on modules \(for example, Delete Patients and Manage Encounter Types\), but you need to configure which roles have which privileges while you are configuring your system.
+A **Privilege** is an authorization to perform a particular action in the system. The list of available privileges are defined by the core system and by add-on modules \(for example, **Delete Patients** and **Manage Encounter Types**\), but you need to configure which roles have which privileges while you are configuring your system.
 
 ## The information model in use at Amani Clinic
 
@@ -197,8 +197,8 @@ From the perspective of the OpenMRS model, we have the following metadata:
 * The nurse, Kissa \(a Provider\)
 * The registration clerk, James \(a User\)
 * Contact Phone Number \(a Person Attribute Type\)
-* Weight, in kilograms \(a Concept, with class Finding and datatype Numeric\)
-* Urine Pregnancy Test \(a Concept, with class Test\)
+* Weight, in kilograms \(a Concept, with class **Finding** and datatype **Numeric**\)
+* Urine Pregnancy Test \(a Concept, with class **Test**\)
 * Amani Clinic \(a Location\)
 * Outpatient Visit \(an Encounter Type\)
 * Outpatient Triage Form \(a Form\)
@@ -219,9 +219,9 @@ After Asaba sees the nurse, who gives a paper form to James, he creates more dat
   * provider = Nurse Kissa
   * creator = Registration Clerk James
 
-* An Observation \(in that encounter\), of Weight in kilograms = 61.5.
+* An Observation \(in that encounter\), of **Weight in kilograms** = 61.5.
 
-* An Order \(in that encounter\), for Urine Pregnancy Test
+* An Order \(in that encounter\), for **Urine Pregnancy Test**
 
 
 
