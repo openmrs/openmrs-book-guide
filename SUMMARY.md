@@ -15,4 +15,29 @@
     * [Getting Around the User Interface](getting-around-the-user-interface.md)
 * [Configuration](configuration.md)
     * [Customizing OpenMRS with Plug-in Modules](customizing-openmrs-with-plug-in-modules.md)
+    * [Managing Concepts and Metadata](managing-concepts-and-metadata.md)
+    * [Sharing Concepts and Metadata](sharing-concepts-and-metadata.md)
+    * [Configuring Visits](configuring-visits.md)
+* [Collecting Data](collecting-data.md)
+    * [The Patient Dashboard In Depth](the-patient-dashboard-in-depth.md)
+    * Registering Patients
+    * Data Entry
+    * HTML Forms
+    * XForms
+* [Using Data](using-data.md)
+    * Cohort Builder
+    * Reporting
+    * Patient Alerts and Flags
+* Administering OpenMRS
+    * User Management and Access Control
+    * Maintenance
+    * Troubleshooting
+    * [Getting Help from the OpenMRS Community](getting-help-from-the-openmrs-community.md)
+* Epilogue
+    * Leaving Amani Clinic
+    * About this Book
+* [Appendices](appendices.md)
+    * Appendix A: Glossary
+    * Appendix B: Example HTML Form Source
+    * Appendix C: Document History
 
