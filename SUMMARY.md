@@ -23,9 +23,9 @@
     * [Registering Patients](registering-patients.md)
     * [Data Entry](data-entry.md)
     * [HTML Forms](html-forms.md)
-    * XForms
+    * [XForms](xforms.md)
 * [Using Data](using-data.md)
-    * Cohort Builder
+    * [Cohort Builder](cohort-builder.md)
     * Reporting
     * Patient Alerts and Flags
 * Administering OpenMRS
