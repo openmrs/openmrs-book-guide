@@ -3,5 +3,8 @@
 * [Introduction](README.md)
     * [OpenMRS Around the World](openmrs-around-the-world.md)
     * [A Brief History](a-brief-history.md)
-* [First Chapter](chapter1.md)
+    * [Example: Amani Clinic](example-amani-clinic.md)
+* [Planning](chapter1.md)
+    * [Identifying Your Needs](identifying-your-needs.md)
+    * [Transitioning to OpenMRS](transitioning-to-openmrs.md)
 
