@@ -27,7 +27,7 @@
 * [Using Data](using-data.md)
     * [Cohort Builder](cohort-builder.md)
     * [Reporting](reporting.md)
-    * Patient Alerts and Flags
+    * [Patient Alerts and Flags](patient-alerts-and-flags.md)
 * Administering OpenMRS
     * User Management and Access Control
     * Maintenance

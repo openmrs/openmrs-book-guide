@@ -104,7 +104,7 @@ The rest of the queries needed to include parameters. For example, the query to 
 
 ![](http://write.flossmanuals.net/openmrs/reporting/static/report%20encounters.png)
 
-Some of the queries built in this example included parameters that were not directly equivalent to theStart Date andEnd Date of the report. The "not pregnant" query was aDate Observation Query that included a single parameter, which they later mapped to theEnd Date of the report.
+Some of the queries built in this example included parameters that were not directly equivalent to the **Start Date** and **End Date** of the report. The "not pregnant" query was a **Date Observation Query** that included a single parameter, which they later mapped to the **End Date** of the report.
 
 ![](http://write.flossmanuals.net/openmrs/reporting/static/report%20pregnant.png)
 
@@ -112,7 +112,7 @@ Some of the queries built in this example included parameters that were not dire
 
 After Amani Clinic staff created the underlying queries that their report required, they built several Composition Cohort Queries to tie them together. The most complicated query calculated the denominator of the second indicator, "non-pregnant women, age &gt; 16, seen during the week."
 
-This is their composition query, which includes the two parameters Start Date and End Date. It includes four underlying queries, with values in those queries mapped to these two parameters. Finally, the queries are combined with AND to run them all together. 
+This is their composition query, which includes the two parameters **Start Date** and **End Date**. It includes four underlying queries, with values in those queries mapped to these two parameters. Finally, the queries are combined with AND to run them all together. 
 
 ![](http://write.flossmanuals.net/openmrs/reporting/static/report%20composition.png)
 
@@ -122,21 +122,21 @@ Here, we see the seven cohort queries they built:
 
 ### Indicators
 
-Having built cohort queries to do the underlying calculations, they used these to build the two indicators. TheIndicatorspage is accessed from theManage Report Definitions section of theAdministrationpage.
+Having built cohort queries to do the underlying calculations, they used these to build the two indicators. The **Indicators** page is accessed from the **Manage Report Definitions** section of the **Administration** page.
 
-Since indicators are generally calculated over a time period, at a particular location, the indicators they created contain the defaultStart Date,End Date, andLocation parameters. \(Since the Amani Clinic was only managing a single site in OpenMRS, they ignored the Location parameter.\)
+Since indicators are generally calculated over a time period, at a particular location, the indicators they created contain the default **Start Date**, **End Date**, and **Location** parameters. \(Since the Amani Clinic was only managing a single site in OpenMRS, they ignored the **Location** parameter.\)
 
 #### Count indicators
 
-The simplest type of indicator is aCount indicator, which counts the number of patients who match a cohort query.
+The simplest type of indicator is a **Count** indicator, which counts the number of patients who match a cohort query.
 
-They used aCountindicator to build their first indicator, shown below. The underlying cohort query is a composition query including "Females" and "Any Encounter Between Dates." 
+They used a **Count** indicator to build their first indicator, shown below. The underlying cohort query is a composition query including "Females" and "Any Encounter Between Dates." 
 
 ![](http://write.flossmanuals.net/openmrs/reporting/static/report%20seen%20indicator.png)
 
 #### Fraction indicators
 
-The most useful type of indicator for monitoring program progress is theFraction indicator, which takes two cohort definitions, representing a numerator and a denominator, and displays this as a fraction. \(It ensures that the numerator patients are a subset of the denominator.\)
+The most useful type of indicator for monitoring program progress is the **Fraction** indicator, which takes two cohort definitions, representing a numerator and a denominator, and displays this as a fraction. \(It ensures that the numerator patients are a subset of the denominator.\)
 
 Amani Clinic built their second indicator as a fraction indicator. The underlying cohort query for the numerator was a simple Coded Observation Query, while the denominator was the Composition Query described above.
 
@@ -144,13 +144,13 @@ Amani Clinic built their second indicator as a fraction indicator. The underlyi
 
 ### Period indicator report
 
-Having created their indicators, they built a report that combined them. They used aPeriod Indicator Report, which is a simple way to show the indicators you have already defined.
+Having created their indicators, they built a report that combined them. They used a **Period Indicator Report**, which is a simple way to show the indicators you have already defined.
 
 ![](http://write.flossmanuals.net/openmrs/reporting/static/report%20indicator%20report.png)
 
 ## Running the report
 
-To run this report, the Amani Clinic data manager clicks theReporting link on the top of the screen and selects theProgram Monitoring Report. They must enter the start and end date of the week for which to generate the report.
+To run this report, the Amani Clinic data manager clicks the **Reporting** link on the top of the screen and selects the **Program Monitoring Report**. They must enter the start and end date of the week for which to generate the report.
 
 ![](http://write.flossmanuals.net/openmrs/reporting/static/report%20run.png)
 
