@@ -70,6 +70,7 @@ Tomcat has several settings that may be adjusted to optimize its use of memory:
     ```
 
 
+
 * Adjust Tomcat to prevent potential memory leaks. Tomcat has a default setting that often causes memory leaks. To turn it off, open the configuration file.
 
   > &lt;TOMCAT\_HOME&gt;/conf/web.xml
@@ -99,10 +100,40 @@ max_allowed_packet=64M
 Increase themax\_allowed\_packet size. When MySQL attempts to work with a packet of data larger than specified, it causes apacket too largeerror and closes the connection, causing OpenMRS to stop working. Increasing this value allows MySQL to handle larger sets of data. Modify the following in MySQL'smy.inifile, or add it if it is not present.
 
 ```
-innodb_buffer_pool_size=3G 
+innodb_buffer_pool_size=3G
 ```
 
 You may also consider running a MySQL performance-tuning script and making adjustments to your MySQL configuration file based on its suggestions. One such script is available here:
 
 [https://wiki.openmrs.org/display/docs/Performance+Tuning](https://wiki.openmrs.org/display/docs/Performance+Tuning)
+
+## Replication options
+
+Replication of your OpenMRS installation across multiple servers or multiple sites is an advanced topic that is outside the scope of this book. However, you should be aware that several options exist if you require access to your OpenMRS data from alternate locations.
+
+### MySQL replication
+
+The MySQL database offers methods for replicating your database across multiple servers, meaning it is possible to have multiple synchronized copies of your OpenMRS data. Please consult the MySQL documentation for details. If you point an identically-configured OpenMRS server at this replicated database, you will have a mirrored instance of OpenMRS. It is important to ensure that if you make changes to the primary system, those same changes take place on all servers.
+
+### Sync module
+
+Another option is available for OpenMRS installations with multiple sites. The community-developed **Sync** module is available from the OpenMRS module repository, and allows data to be synchronized across a network \(or external data storage\) using tools within OpenMRS itself. Please search the OpenMRS Wiki for more information about theSyncmodule.
+
+## Upgrading OpenMRS
+
+The OpenMRS implementer and developer communities provide application and customization support via mailing lists, IRC, and other means. See "Getting Help from the OpenMRS Community" for more information.
+
+When the development team release a new upgrade for OpenMRS, they will provide either a new version of the OpenMRS Standalone installer or the OpenMRS Enterprise installer file to run on your server. If using the Standalone version, follow the upgrade instructions included with the application. If using the Enterprise version, you should be able to undeploy the OpenMRS webapp in Apache Tomcat, and deploy the new version.
+
+Be sure to test any upgrades on a server other than the primary server you use for normal clinical support. Always be sure to back up your system before upgrading.
+
+## Updating modules
+
+Supported community-developed OpenMRS modules are regularly updated, and those new versions are published in the OpenMRS module repository. You should check for upgraded modules regularly. Go to[http://modules.openmrs.org/](http://modules.openmrs.org/)or view the "Manage Modules" page from the OpenMRSAdministrationpage. From there, you can upgrade a module with updates automatically by clickingInstall Update, or you may manually upload the new version by following the instructions on the page.
+
+## Amani's maintenance plan
+
+![](http://write.flossmanuals.net/openmrs/maintenance/static/case-study.png)
+
+As part of his responsibilities as ICT infrastructure manager for the clinic, Daniel created a written maintenance plan. In this document, he has included daily, weekly, and monthly tasks. The only daily task is an automated one -- Daniel created a script on his Ubuntu server to stop OpenMRS, backup MySQL and other OpenMRS files, and restart the application. This script runs overnight while the clinic is closed. Weekly, Claudine manually checks the disk space and runsapt-get upgradeto update system components. Every month, Claudine checks the OpenMRS web site for OpenMRS upgrades and upgrades to the modules the clinic uses.
 
