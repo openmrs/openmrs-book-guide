@@ -62,10 +62,8 @@ Now, by defining the main roles for users of your system and assigning users to 
     </tr>
     <tr>
       <td>Data Assistant</td>
-      <td>
-        <p>View Patients</p>
-        <p>Edit Patients</p>
-      </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
       <td>Data Manager</td>
