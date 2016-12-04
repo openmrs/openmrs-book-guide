@@ -42,14 +42,14 @@ You may need to adjust some settings in OpenMRS. To do this, use the **Maintenan
 
 * Make sure that the **dashboard.regimen.displayDrugSetIds** setting has concept ID numbers and not names. In other words, use "1085,1159" instead of "ANTIRETROVIRAL DRUGS,TUBERCULOSIS TREATMENT DRUGS".
 
-* Set the **searchWidget.batchSize**, **searchWidget.runInSerialMode** and **searchWidget.searchDelayInterval** settings to tune your searches for better performance and suit your implementation's environment. You may wish to consider the speed of your network connection, typing skills and average number of simultaneous users on a typical work day. You might also consider reducing the value of the settingsperson.searchMaxResultsandsearchWidget.batchSizeto reduce the load on the search widgets and server for better performance.
+* Set the **searchWidget.batchSize**, **searchWidget.runInSerialMode** and **searchWidget.searchDelayInterval** settings to tune your searches for better performance and suit your implementation's environment. You may wish to consider the speed of your network connection, typing skills and average number of simultaneous users on a typical work day. You might also consider reducing the value of the settings person.searchMaxResults and **searchWidget.batchSize** to reduce the load on the search widgets and server for better performance.
 
 
 ### Apache Tomcat
 
 Tomcat has several settings that may be adjusted to optimize its use of memory:
 
-* Experience has shown it is best to install Tomcat from the download section at http://tomcat.apache.org/ rather than any other source. If using Ubuntu Linux, we do not recommend using the apt-get installer.
+* Experience has shown it is best to install Tomcat from the download section at [http://tomcat.apache.org/](http://tomcat.apache.org/) rather than any other source. If using Ubuntu Linux, we do not recommend using the apt-get installer.
 
 * Increase the amount of memory allocated for Tomcat. Depending on how you start or run Tomcat, use one of the following methods:
 
