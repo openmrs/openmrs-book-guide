@@ -30,8 +30,8 @@
     * [Patient Alerts and Flags](patient-alerts-and-flags.md)
 * Administering OpenMRS
     * [User Management and Access Control](user-management-and-access-control.md)
-    * Maintenance
-    * Troubleshooting
+    * [Maintenance](maintenance.md)
+    * [Troubleshooting](troubleshooting.md)
     * [Getting Help from the OpenMRS Community](getting-help-from-the-openmrs-community.md)
 * Epilogue
     * Leaving Amani Clinic

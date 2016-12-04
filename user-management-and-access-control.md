@@ -85,7 +85,7 @@ Now, by defining the main roles for users of your system and assigning users to 
 
 You can see that the **Data Manager** role can be more clearly defined as a **Data Assistant** with the extra ability to add patients to the system. In addition, if you should change or enhance the privileges of the **Data Assistant** role at any time in the future, the **Data Manager** will automatically adapt to those changes — for example, if you decided a month later to allow any **Data Assistant** to **Edit Encounters**\(by adding the **Edit Encounters** privilege to the **Data Assistant** role\), the **Data Manager** role would automatically gain the ability to edit encounters as well.
 
-In a common deployment scenario, you will have several roles that use the same privileges with only a few differences. It is simpler to manage these privileges by defining a new role from which the others can all inherit. For example, you may have roles like **Clinician**, **Data Assistant**, and **Caregiver**  that all have the same rules about viewing patient data.  You might benefit from creating a new Patient Data Viewer role, assigning it to each of those other roles, and then managing the privileges in one place \(under that new role\).  When there is a policy change about viewing patient data, or a new module is added that adds new functions for viewing data, you would update the Patient Data Viewer role. All the inheriting roles would automatically use the new settings.
+In a common deployment scenario, you will have several roles that use the same privileges with only a few differences. It is simpler to manage these privileges by defining a new role from which the others can all inherit. For example, you may have roles like **Clinician**, **Data Assistant**, and **Caregiver**  that all have the same rules about viewing patient data.  You might benefit from creating a new **Patient Data Viewer** role, assigning it to each of those other roles, and then managing the privileges in one place \(under that new role\).  When there is a policy change about viewing patient data, or a new module is added that adds new functions for viewing data, you would update the Patient Data Viewer role. All the inheriting roles would automatically use the new settings.
 
 
 
@@ -95,15 +95,15 @@ In a common deployment scenario, you will have several roles that use the same p
 
 ### Built-in roles
 
-There are some special roles that are predefined within OpenMRS and cannot be deleted:Anonymous, Authenticated,andSystem Developer. Any privileges granted to theAnonymousrole will be available to people without logging into the system. Generally,Anonymousprivileges should be kept very restricted, since patient information might otherwise be compromised. Privileges granted to theAuthenticatedrole are granted to anyone that logs into your system, no matter what other role\(s\) they might be assigned. Granting privileges to theAuthenticatedrole is an easy way to grant privileges to all users of the system. TheSystem Developerrole is automatically granted full access to the system and should only be granted to system administrators.
+There are some special roles that are predefined within OpenMRS and cannot be deleted: **Anonymous**, **Authenticated**, and **System Developer**. Any privileges granted to the **Anonymous** role will be available to people without logging into the system. Generally, **Anonymous** privileges should be kept very restricted, since patient information might otherwise be compromised. Privileges granted to the **Authenticated** role are granted to anyone that logs into your system, no matter what other role\(s\) they might be assigned. Granting privileges to the **Authenticated** role is an easy way to grant privileges to all users of the system. The **System Developer** role is automatically granted full access to the system and should only be granted to system administrators.
 
-Super users\(system administrators\) are automatically granted all privileges in the system; therefore, you must be very careful to protect your system administrator password.
+**Super users** \(system administrators\) are automatically granted all privileges in the system; therefore, you must be very careful to protect your system administrator password.
 
 Some privileges are built into the system and cannot be deleted. Other privileges may be added by modules. It is unlikely that you will be adding new privileges yourself, since privileges are only useful when they are understood and used by the system. On the other hand, you will definitely be creating new roles to fit your needs and will be managing privileges within those roles.
 
 ## Creating roles
 
-You create roles throughAdministration &gt; Manage Roles.
+You create roles through **Administration &gt; Manage Roles**.
 
 ![](http://write.flossmanuals.net/openmrs/user-management-and-access-control/static/manage_roles.png)
 
@@ -114,7 +114,7 @@ You create roles throughAdministration &gt; Manage Roles.
 3. Click a role to edit it.
 
 
-If you then follow theAdd Rolelink, you will see a form for adding a new role.
+If you then follow the **Add Role** link, you will see a form for adding a new role.
 
 ![](http://write.flossmanuals.net/openmrs/user-management-and-access-control/static/add_role.png)
 
@@ -127,7 +127,7 @@ If you then follow theAdd Rolelink, you will see a form for adding a new role.
 
 ## Creating users
 
-To create these users, we'll go throughAdministration &gt; Manage Users. This page also lets you find and edit existing users.
+To create these users, we'll go through **Administration &gt; Manage Users**. This page also lets you find and edit existing users.
 
 ![](http://write.flossmanuals.net/openmrs/user-management-and-access-control/static/manage_users.png)
 
@@ -144,7 +144,7 @@ Users in OpenMRS need to be associated with Persons. You either need to create a
 
 ![](http://write.flossmanuals.net/openmrs/user-management-and-access-control/static/add_user.png)
 
-In both cases you will be taken to the sameAdd/Edit Userscreen. \(If you selected an existing person, the fields in theDemographic Infosection will be filled out for you.\)
+In both cases you will be taken to the same **Add/Edit User** screen. \(If you selected an existing person, the fields in the **Demographic Info** section will be filled out for you.\)
 
 ![](http://write.flossmanuals.net/openmrs/user-management-and-access-control/static/add_edit_user.png)
 
@@ -152,9 +152,9 @@ In both cases you will be taken to the sameAdd/Edit Userscreen. \(If you selecte
 
 ## Managing Providers
 
-For every Encounter you must enter one or moreProviders, the person who provided the care or services. Forms usually include a dropdown box to select a provider.
+For every Encounter you must enter one or more **Providers**, the person who provided the care or services. Forms usually include a dropdown box to select a provider.
 
-The system administrator must explicitly identify Providers. This is done throughAdministration &gt; Providers &gt; Manage Providers.
+The system administrator must explicitly identify Providers. This is done through **Administration &gt; Providers &gt; Manage Providers**.
 
 There are two kinds of providers. In OpenMRS 1.8 and earlier, a provider had to be associated with a user or, less often, a patient. The administrator had to create a user, and then search for them with the Person dropdown box. This is most useful when a provider has a user login. 
 
@@ -162,7 +162,7 @@ At many OpenMRS sites, only a few users log into the system. Often, treatment no
 
 For system security, patient privacy, and ease of maintenance, it's best to enter providers only as a Provider Name when possible. You should create a user if the provider needs to log in or be given special permissions through a role. You can assign a user to a provider at a later time if it becomes necessary.
 
-To create a Provider, go toAdmin &gt; Manage Providersand clickAdd Provider.
+To create a Provider, go to **Admin &gt; Manage Providers** and click **Add Provider**.
 
 ![](http://write.flossmanuals.net/openmrs/user-management-and-access-control/static/managing_users_add_provider.png)
 
@@ -170,5 +170,5 @@ The identifier is a unique word or number that you provide.  It's recommended t
 
 Next, decide if this provider will be associated with a Person, or only be entered as a provider name.  If you choose the Person style, you must have already created a User for them. Begin typing their name in the Person field, and select them from the auto-complete list of matching users. For a Provider who is simply a Provider Name, enter their name in the Provider Name field.  
 
-Click Save to save the provider. 
+Click **Save** to save the provider. 
 
