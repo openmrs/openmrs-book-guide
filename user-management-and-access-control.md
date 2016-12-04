@@ -73,16 +73,17 @@ Now, by defining the main roles for users of your system and assigning users to 
     <tr>
       <td>Data Manager</td>
       <td>
-        <p>View Patients</p>
-        <p>Edit Patients</p>
-        <p>Add Patients</p>
+        Data Assistant
+      </td>
+      <td>
+        Add Patient
       </td>
     </tr>
   </tbody>
 </table>
 
 
-You can see that theData Managerrole can be more clearly defined as aData Assistantwith the extra ability to add patients to the system. In addition, if you should change or enhance the privileges of theData Assistantrole at any time in the future, theData Managerwill automatically adapt to those changes — for example, if you decided a month later to allow anyData AssistanttoEdit Encounters\(by adding theEdit Encountersprivilege to theData Assistantrole\), theData Managerrole would automatically gain the ability to edit encounters as well.
+You can see that the **Data Manager** role can be more clearly defined as aData Assistantwith the extra ability to add patients to the system. In addition, if you should change or enhance the privileges of theData Assistantrole at any time in the future, theData Managerwill automatically adapt to those changes — for example, if you decided a month later to allow anyData AssistanttoEdit Encounters\(by adding theEdit Encountersprivilege to theData Assistantrole\), theData Managerrole would automatically gain the ability to edit encounters as well.
 
 In a common deployment scenario, you will have several roles that use the same privileges with only a few differences. It is simpler to manage these privileges by defining a new role from which the others can all inherit. For example, you may have roles like Clinician,Data Assistant, and Caregiver  that all have the same rules about viewing patient data.  You might benefit from creating a new Patient Data Viewer role, assigning it to each of those other roles, and then managing the privileges in one place \(under that new role\).  When there is a policy change about viewing patient data, or a new module is added that adds new functions for viewing data, you would update the Patient Data Viewer role. All the inheriting roles would automatically use the new settings.
 
