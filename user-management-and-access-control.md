@@ -34,13 +34,7 @@ In order to give these privileges to the relevant users, you must define a role 
       </td>
     </tr>
     <tr>
-      <td>InfoPath</td>
-      <td>
-        <ul>
-          <li>Original approach to data entry via forms</li>
-          <li>Others may already be familiar with the technology</li>
-        </ul>
-      </td>
+      <td>Data Manager</td>
       <td>
          <ul>
           <li>Not open source</li>
