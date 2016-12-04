@@ -36,7 +36,9 @@ In order to give these privileges to the relevant users, you must define a role 
     <tr>
       <td>Data Manager</td>
       <td>
-         
+        <p>View Patients</p>
+        <p>Edit Patients</p>
+        <p>Add Patients</p>
       </td>
     </tr>
   </tbody>
