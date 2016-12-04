@@ -75,3 +75,10 @@ CATALINA_OPTS="-Djava.library.path=/opt/tomcat/lib/.libs  -Xmx512m -Xms512m -XX:
   > <TOMCAT_HOME&gt;/conf/web.xml 
 
   In JSP servlet definition add the following element:
+
+   ```html
+<init-param>
+ <param-name>enablePooling</param-name>
+ <param-value>false</param-value>
+</init-param>
+   ```
