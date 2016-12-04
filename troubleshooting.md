@@ -52,9 +52,9 @@ If you cannot start the Tomcat service on Windows, try checking the Tomcat logs.
 
 ### Errors like "Failed creating java C:\Program Files\Java\jre1.6.0\bin\client\jvm.dll"
 
-To fix this problem, search formsvcr71.dllon your hard drive, and copy that file to this location.
+To fix this problem, search for **msvcr71.dll** on your hard drive, and copy that file to this location.
 
-C:\Windows\System32 
+> C:\Windows\System32 
 
 ### Installing OpenMRS or running database updates fails with message “Could not acquire change log lock”
 
