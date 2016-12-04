@@ -258,9 +258,9 @@ This problem happens because MySQL clients on UNIX-based systems always use UNIX
 
 It is possible to run OpenMRS in a separate database instance than the one already existing on your system \(for example, to run OpenMRS Standalone on a system where MySQL is already installed\). To do so, you must first ensure that the new database instance is running on a different port.
 
-Then, ensure that you are connecting to MySQL via TCP/IP instead of using the same UNIX socket as the existing instance. The easiest way to do this is to use127.0.0.1 instead oflocalhost in the connection string. An alternative is to add&server.port=XXXXto the value ofconnection.urlin theopenmrs-runtime.propertiesfile, whereXXXX is the port used by the OpenMRS MySQL instance.
+Then, ensure that you are connecting to MySQL via TCP/IP instead of using the same UNIX socket as the existing instance. The easiest way to do this is to use **127.0.0.1** instead of **localhost** in the connection string. An alternative is to add **&server.port=XXXX** to the value of **connection.url** in the **openmrs-runtime.properties** file, where **XXXX** is the port used by the OpenMRS MySQL instance.
 
-For example, if the MySQL instance used by OpenMRS is running on port4242, theopenmrs-runtime.propertiesfile should include one of the following lines:
+For example, if the MySQL instance used by OpenMRS is running on port **4242**, the **openmrs-runtime.properties** file should include one of the following lines:
 
 ```
 connection.url=jdbc:mysql://127.0.0.1:4242/openmrs?autoReconnect=true&sessionVariables=storage_engine=InnoDB&useUnicode=true&characterEncoding=UTF-8
@@ -278,7 +278,7 @@ Apache Tomcat tries to restore the exact memory state after each restart. OpenMR
 SEVERE: IOException while loading persisted sessions: java.io.WriteAbortedException: writing aborted; java.io.NotSerializableException:
 ```
 
-If you find these messages annoying, you can turn off session persistence. Edit the &lt;TOMCAT\_HOME&gt;/conf/server.xml file and uncomment the line that includes:
+If you find these messages annoying, you can turn off session persistence. Edit the **&lt;TOMCAT\_HOME&gt;/conf/server.xml** file and uncomment the line that includes:
 
 ```
 <Manager pathname="" />
