@@ -129,11 +129,11 @@ Be sure to test any upgrades on a server other than the primary server you use f
 
 ## Updating modules
 
-Supported community-developed OpenMRS modules are regularly updated, and those new versions are published in the OpenMRS module repository. You should check for upgraded modules regularly. Go to [http://modules.openmrs.org/](http://modules.openmrs.org/) or view the "Manage Modules" page from the OpenMRS Administrationpage. From there, you can upgrade a module with updates automatically by clicking **Install Update**, or you may manually upload the new version by following the instructions on the page.
+Supported community-developed OpenMRS modules are regularly updated, and those new versions are published in the OpenMRS module repository. You should check for upgraded modules regularly. Go to [http://modules.openmrs.org/](http://modules.openmrs.org/) or view the "Manage Modules" page from the OpenMRS **Administration** page. From there, you can upgrade a module with updates automatically by clicking **Install Update**, or you may manually upload the new version by following the instructions on the page.
 
 ## Amani's maintenance plan
 
 ![](http://write.flossmanuals.net/openmrs/maintenance/static/case-study.png)
 
-As part of his responsibilities as ICT infrastructure manager for the clinic, Daniel created a written maintenance plan. In this document, he has included daily, weekly, and monthly tasks. The only daily task is an automated one -- Daniel created a script on his Ubuntu server to stop OpenMRS, backup MySQL and other OpenMRS files, and restart the application. This script runs overnight while the clinic is closed. Weekly, Claudine manually checks the disk space and runsapt-get upgradeto update system components. Every month, Claudine checks the OpenMRS web site for OpenMRS upgrades and upgrades to the modules the clinic uses.
+As part of his responsibilities as ICT infrastructure manager for the clinic, Daniel created a written maintenance plan. In this document, he has included daily, weekly, and monthly tasks. The only daily task is an automated one -- Daniel created a script on his Ubuntu server to stop OpenMRS, backup MySQL and other OpenMRS files, and restart the application. This script runs overnight while the clinic is closed. Weekly, Claudine manually checks the disk space and runs `apt-get upgrade` to update system components. Every month, Claudine checks the OpenMRS web site for OpenMRS upgrades and upgrades to the modules the clinic uses.
 
