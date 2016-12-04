@@ -58,7 +58,7 @@ To fix this problem, search for **msvcr71.dll** on your hard drive, and copy tha
 
 ### Installing OpenMRS or running database updates fails with message “Could not acquire change log lock”
 
-To prevent conflicting updates, liquibase begins each update by creating a row in theliquibasechangeloglocktable. This row acts as a lock. If OpenMRS or Apache Tomcat crashes while an update is in progress, the update may fail to complete
+To prevent conflicting updates, liquibase begins each update by creating a row in the **liquibasechangeloglock** table. This row acts as a lock. If OpenMRS or Apache Tomcat crashes while an update is in progress, the update may fail to complete
 
 and this row will not be removed from the table.
 
@@ -68,7 +68,7 @@ You may see the following error message in your web browser or in the Tomcat log
 "Error Could not acquire change log lock"
 ```
 
-Deleting this row from theliquibasechangeloglocktable will solve the problem, and allow installation or updates to proceed normally. To delete rows from theliquibasechangeloglocktable using a command line SQL client, run either of the following SQL commands:
+Deleting this row from the **liquibasechangeloglock** table will solve the problem, and allow installation or updates to proceed normally. To delete rows from the **liquibasechangeloglock** table using a command line SQL client, run either of the following SQL commands:
 
 ```
 truncate table liquibasechangeloglock;
@@ -78,13 +78,13 @@ truncate table liquibasechangeloglock;
 delete from liquibasechangeloglock;
 ```
 
-If you prefer to use a GUI client for MySQL, you should navigate to theliquibasechangeloglocktable and delete all rows from that table. When you have cleared the table, restart Tomcat if necessary, and restart OpenMRS.
+If you prefer to use a GUI client for MySQL, you should navigate to the **liquibasechangeloglock** table and delete all rows from that table. When you have cleared the table, restart Tomcat if necessary, and restart OpenMRS.
 
 ### Problems connecting to Tomcat on port 8080
 
 Other installed programs may already be using port 8080. This will prevent Tomcat using this port. Some software may also use port 8005, which should not interfere with running Tomcat, but may prevent it from starting up correctly.
 
-If you know what program is using these ports, you may choose to stop or remove that program. Alternatively, you can configure Tomcat to run on a different port by editing Tomcat’sserver.xmlfile to change 8080 to a different value \(eg 8090\).
+If you know what program is using these ports, you may choose to stop or remove that program. Alternatively, you can configure Tomcat to run on a different port by editing Tomcat’s **server.xml** file to change 8080 to a different value \(eg 8090\).
 
 If you need further help, see the "Getting Help from the OpenMRS Community" chapter for more information.
 
@@ -98,9 +98,9 @@ java.security.AccessControlException: access denied (java.io.FilePermission /usr
 
 The easiest way to solve this issue is to disable the Java security manager or similar startup script, which you can find at this location.
 
- /etc/init.d/tomcat6 
+> /etc/init.d/tomcat6
 
-Edit the file and setTOMCAT6\_SECURITYtono.
+Edit the file and set **TOMCAT6\_SECURITY** to **no**.
 
 ```
 # Use the Java security manager? (yes/no)
@@ -109,7 +109,7 @@ TOMCAT6_SECURITY=no
 
 ### Tomcat stops responding after updating or reloading OpenMRS in the Web Application Manager
 
-Tomcat and the JVM allocate memory to a webapp each time you use theUpdate orReloadfunctions in theWeb Application Manager. When the app is destroyed or recreated, some of this memory may not be released. If you update or reload the webapp too many times, Tomcat may run out of allocated memory, and will stop responding. You will also see the following error in the Tomcat logs:
+Tomcat and the JVM allocate memory to a webapp each time you use the **Update** or **Reload** functions in the **Web Application Manager**. When the app is destroyed or recreated, some of this memory may not be released. If you update or reload the webapp too many times, Tomcat may run out of allocated memory, and will stop responding. You will also see the following error in the Tomcat logs:
 
 ```
 java.lang.OutOfMemoryError: PermGen space
@@ -154,19 +154,19 @@ Ensure that the runtime properties file exists, and that the application\_data\_
 
 If the directory exists as specified in the runtime properties file and Tomcat has the appropriate permissions, you may have security violation problems in your Tomcat configuration. If you need further advice, consider seeking help from the community, as described in the chapter "Getting Help from the OpenMRS Community".
 
-Unable to log in to Tomcat Manager due to lost password
+**Unable to log in to Tomcat Manager due to lost password**
 
 The Tomcat admin password is required to log in to the Tomcat Manager web application, and to deploy and undeploy applications, including OpenMRS.
 
-If you have forgotten, lost, or misplaced this password, you can retrieve it from the file tomcat-users.xml. On Windows, this is probably located at this location.
+If you have forgotten, lost, or misplaced this password, you can retrieve it from the file **tomcat-users.xml**. On Windows, this is probably located at this location.
 
-C:\Program Files\Apache Software Foundation\Tomcat 6.0\conf\
+> C:\Program Files\Apache Software Foundation\Tomcat 6.0\conf\
 
 ### The database password or other properties are set incorrectly
 
-If you have installed the OpenMRS Standalone application, you can modify settings by editing theopenmrs-standalone-runtime.propertiesfile in the directory where you extracted the ZIP package.
+If you have installed the OpenMRS Standalone application, you can modify settings by editing the **openmrs-standalone-runtime.properties** file in the directory where you extracted the ZIP package.
 
-To modify settings for the OpenMRS Enterprise version, you should edit the fileopenmrs-runtime.properties. You should find this file in one of the following locations:
+To modify settings for the OpenMRS Enterprise version, you should edit the file **openmrs-runtime.properties**. You should find this file in one of the following locations:
 
 On Windows systems:
 
@@ -184,16 +184,16 @@ On Mac OS X or Linux systems:
 
 ### The OpenMRS administrator account password has been forgotten
 
-In general, when a user is locked out, the password should be reset by the administrator using the "Edit User" page from the OpenMRSAdministrationpage. In rare situations in which the administrator's account has been forgotten, the only way to reset the password is to directly modify the OpenMRS database. This should only be attempted by advanced users, and you should always back up your database before making changes.
+In general, when a user is locked out, the password should be reset by the administrator using the "Edit User" page from the OpenMRS **Administration** page. In rare situations in which the administrator's account has been forgotten, the only way to reset the password is to directly modify the OpenMRS database. This should only be attempted by advanced users, and you should always back up your database before making changes.
 
-You will need to modify theusers table in the OpenMRS database schema. Find the row for the user in question and change thepassword andsalt values to the following:
+You will need to modify the **users** table in the OpenMRS database schema. Find the row for the user in question and change the **password** and **salt** values to the following:
 
-* password: 4a1750c8607d0fa237de36c6305715c223415189
+* **password**: 4a1750c8607d0fa237de36c6305715c223415189
 
-* salt: c788c6ad82a157b712392ca695dfcf2eed193d7f   
+* **salt**: c788c6ad82a157b712392ca695dfcf2eed193d7f   
 
 
-### Some module pages throw java.lang.ClassNotFoundException
+### Some module pages throw **java.lang.ClassNotFoundException**
 
 There are currently some issues with compatibility between OpenMRS and versions of Apache Tomcat later than 6.0.29. OpenMRS modules that rely on certain custom expression language functions will throw ajava.lang.ClassNotFoundException exception.
 
@@ -213,11 +213,11 @@ org.openmrs.module.ModuleException: Module file does not have the correct .omod 
 
 To solve this problem, delete or move any files in the modules directory that are not modules with an.omodextension. 
 
-In particular, theBIRT Runtimecreates various log files in the modules directory when theBIRTmodule is stopped. If you are using theBIRT Report module, there may be non-module files in the OpenMRS modules directory--typically,derby.logorvelocity.log. These files can safely be moved to another location or deleted.
+In particular, the **BIRT Runtime** creates various log files in the modules directory when the **BIRT** module is stopped. If you are using the **BIRT Report** module, there may be non-module files in the OpenMRS modules directory--typically, **derby.log** or **velocity.log**. These files can safely be moved to another location or deleted.
 
-To prevent thederby.logfrom being created in future, delete the directoryorg.apache.derby.core\_10.1.2.1 which is located under the following directory. 
+To prevent thederby.logfrom being created in future, delete the directory **org.apache.derby.core\_10.1.2.1** which is located under the following directory. 
 
-birt-runtime-2\_2\_0/ReportEngine/plugins/
+> birt-runtime-2\_2\_0/ReportEngine/plugins/
 
 ### MySQL packet length errors, or MySQL Error 2006
 
@@ -234,15 +234,15 @@ To increase the maximum packet length allowed by your MySQL server, you should s
 
 
 
-This file should already contain a section with the header\[archive:mysqld\]. You can add the following line below that header:
+This file should already contain a section with the header **\[archive:mysqld\]**. You can add the following line below that header:
 
 ```
 max_allowed_packet=64M
 ```
 
-You can also increase the maximum packet length using the MySQL Administrator application, by opening the Health section and changing themax\_allowed\_packetsetting on the System Variables tab. This setting can be increased up to a maximum of1024Mas necessary.
+You can also increase the maximum packet length using the MySQL Administrator application, by opening the Health section and changing the **max\_allowed\_packet** setting on the System Variables tab. This setting can be increased up to a maximum of **1024M** as necessary.
 
-Depending on your MySQL client, you may also need to adjust the maximum packet length of the client. If you are using the MySQL command line client, you can start it with an increasedmax\_allowed\_packetby adding the following after the MySQL command:
+Depending on your MySQL client, you may also need to adjust the maximum packet length of the client. If you are using the MySQL command line client, you can start it with an increased **max\_allowed\_packet** by adding the following after the MySQL command:
 
 ```
 --max_allowed_packet=64M 
@@ -252,7 +252,7 @@ Depending on your MySQL client, you may also need to adjust the maximum packet l
 
 If MySQL is already installed and running on your system, OpenMRS Standalone's initial setup may be unable to create the OpenMRS user and database. You may also encounter this problem after installation, if you have installed a "traditional" MySQL server and try to run OpenMRS Standalone.
 
-This problem happens because MySQL clients on UNIX-based systems always use UNIX sockets to connect to MySQL whenlocalhost is specified in the connection URL. This is a known issue/limitation/bug in MySQL and is documented in more detail by the MySQL project.
+This problem happens because MySQL clients on UNIX-based systems always use UNIX sockets to connect to MySQL when **localhost** is specified in the connection URL. This is a known issue/limitation/bug in MySQL and is documented in more detail by the MySQL project.
 
 [http://bugs.mysql.com/bug.php?id=31577](http://bugs.mysql.com/bug.php?id=31577)
 
