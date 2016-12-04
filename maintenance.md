@@ -60,9 +60,16 @@ Tomcat has several settings that may be adjusted to optimize its use of memory:
    ```
 
   * If running Tomcat as a Windows service, launch the Tomcat Monitor application. Go to Configure > Java > Java Options and add the following to the listed settings:
+
    ```
 -Xmx512m -Xms512m -XX:PermSize=256m -XX:MaxPermSize=256m -XX:NewSize=128m
    ```
+  * If running Tomcat as a Linux service, edit the **/etc/init.d/tomcat** (or equivalent) script and modify the line for **CATALINA_OPTS** to read as follows:
+
+   ```
+CATALINA_OPTS="-Djava.library.path=/opt/tomcat/lib/.libs  -Xmx512m -Xms512m -XX:PermSize=256m -XX:MaxPermSize=256m  -XX:NewSize=128m"
+```
+
 
 
 
