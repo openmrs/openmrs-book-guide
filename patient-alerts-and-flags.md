@@ -22,19 +22,19 @@ In this example we define two different categories of alerts, the more critical 
 
 To set up a flag, you need to define a calculation that returns the cohort of patients for whom the flag should be shown. There are multiple ways to do this, each requiring a different type of technical knowlege.
 
-All flags, regardless of how they are calculated, let you specify text and aPriority. The text is displayed on a patient dashboard for patients to whom the flag applies, and thePrioritycontrols the formatting of the flag if displayed.
+All flags, regardless of how they are calculated, let you specify text and a **Priority**. The text is displayed on a patient dashboard for patients to whom the flag applies, and the **Priority** controls the formatting of the flag if displayed.
 
-Finally, you can decide whether flags areReal-Time, which means that the flags to be displayed are calculated whenever you view a patient dashboard. If you don't make a flag real-time, you can still execute the flag calculations on demand as a batch.
+Finally, you can decide whether flags are **Real-Time**, which means that the flags to be displayed are calculated whenever you view a patient dashboard. If you don't make a flag real-time, you can still execute the flag calculations on demand as a batch.
 
 ### SQL flags
 
-The calculation behind this type of flag is a SQL statement that will be executed against the database, and must include aselect \(something\).patient\_id ...statement. The results of this query will be intersected with all non-voided patients to produce the Cohort for the flag.
+The calculation behind this type of flag is a SQL statement that will be executed against the database, and must include a **select \(something\).patient\_id ...** statement. The results of this query will be intersected with all non-voided patients to produce the Cohort for the flag.
 
 Many system administrators know how to write SQL queries, and over time they become familiar with the OpenMRS data model, making this type of flag very accessible. At the same time, writing this type of flag can be error-prone. There is nothing to prevent you from omitting a clause, such as to ensure you are only looking at non-voided data.
 
 In this example we are searching for all patients who have carried at least 4 pregnancies.
 
-Since SQL flags must include .patient\_id in theirselectclause, we have to join theobstable against thepatienttable, even though we aren't using that table.
+Since SQL flags must include **.patient\_id** in their **select** clause, we have to join the **obs** table against the **patient** table, even though we aren't using that table.
 
 ![](http://write.flossmanuals.net/openmrs/patient-alerts-and-flags/static/flags%20sql.png)
 
