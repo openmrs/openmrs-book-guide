@@ -312,7 +312,7 @@ if [ -z "$JAVA_OPTS" ]; then
 fi
 ```
 
-If you are running Tomcat as a Linux service, open the/etc/init.d/tomcatscript and append change theCATALINA\_OPTSvariable:
+If you are running Tomcat as a Linux service, open the **/etc/init.d/tomcat** script and append change the **CATALINA\_OPTS** variable:
 
 ```
 CATALINA_OPTS="-Djava.library.path=/opt/tomcat/lib/.libs -Xmx512m -Xms512m -XX:PermSize=256m -XX:MaxPermSize=256m -XX:NewSize=128m"
@@ -338,5 +338,5 @@ YourKit is kindly supporting members of the OpenMRS community with its full-feat
 
 If you believe you have discovered a problem that may be a bug in OpenMRS, we encourage you to report that bug. The OpenMRS development team takes bug reports seriously and continually fixes as many bug reports as possible for future releases. Please see our bug report page on the OpenMRS wiki for further details and instructions:
 
-[http://go.openmrs.org/bug](http://go.openmrs.org/bug)
+[https://issues.openmrs.org/](https://issues.openmrs.org/)
 
