@@ -16,7 +16,7 @@ When troubleshooting Tomcat, your first step should always be to review the Tomc
 
 Historically, MySQL has been recommended as the database of choice to use with OpenMRS. The newer database from the open source project MariaDB should also be compatible with OpenMRS. Work is underway in the OpenMRS community to provide support for other databases such as Oracle, Microsoft SQL Server, and others, but these databases are not yet supported.
 
-You may not be able to resolve your problem with OpenMRS using the troubleshooting material in this chapter. That is OK -- the OpenMRS community is available to help! Check out the "Getting Help from the OpenMRS Community" chapter for more information about how to communicate with others, ask questions, and get answers.
+You may not be able to resolve your problem with OpenMRS using the troubleshooting material in this chapter. That is OK -- the OpenMRS community is available to help! Check out the [Getting Help from the OpenMRS Community](/getting-help-from-the-openmrs-community.md) chapter for more information about how to communicate with others, ask questions, and get answers.
 
 ## Some possible problems and solutions
 
@@ -32,23 +32,23 @@ Ensure MySQL is installed and running before attempting to start and install Ope
 
 ### MySQL Configure Instance hangs on starting the service, or reports Error 1045
 
-On Windows, the computer may stop responding while running the MySQL Configure Instance tool. Most commonly, this occurs before the tool marksStarting the serviceas complete, because there is already a MySQL service running. 
+On Windows, the computer may stop responding while running the MySQL Configure Instance tool. Most commonly, this occurs before the tool marks **Starting the service** as complete, because there is already a MySQL service running. 
 
 To fix this, you should delete the pre-existing MySQL service in Windows, and try the installation again. You can find instructions on how to do delete a MySQL service at this link.
 
-http://www.howtogeek.com/howto/windows-vista/how-to-delete-a-windows-service-in-vista-or-xp/
+[http://www.howtogeek.com/howto/windows-vista/how-to-delete-a-windows-service-in-vista-or-xp/](http://www.howtogeek.com/howto/windows-vista/how-to-delete-a-windows-service-in-vista-or-xp/)
 
 Alternatively, you may see a MySQL Error 1045, if your computer has previously had a MySQL instance installed. This means that the root password is incorrect, and is most commonly caused by residual data from the previous installation.
 
 To fix this, you should delete the MySQL data directory. On Windows 7, you may need to reboot and delete the directory, or to use an unlocking program in order to delete this directory.
 
-You can also change the password that OpenMRS uses to access your MySQL database, by editing theopenmrs-runtime.propertiesfile, as described later in this chapter.
+You can also change the password that OpenMRS uses to access your MySQL database, by editing the **openmrs-runtime.properties** file, as described later in this chapter.
 
 ### Starting Tomcat service on Windows fails
 
 If you cannot start the Tomcat service on Windows, try checking the Tomcat logs. You can find the logs in the following directory.
 
-&lt;TOMCAT HOME&gt;\logs 
+> &lt;TOMCAT HOME&gt;\logs
 
 ### Errors like "Failed creating java C:\Program Files\Java\jre1.6.0\bin\client\jvm.dll"
 
