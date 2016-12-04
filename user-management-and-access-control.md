@@ -32,11 +32,6 @@ In order to give these privileges to the relevant users, you must define a role 
         <p>View Patients</p>
         <p>Edit Patients</p>
       </td>
-      <td>
-        <ul>
-          <li>Does not support some complex logic operations</li>
-        </ul>
-      </td>
     </tr>
     <tr>
       <td>InfoPath</td>
