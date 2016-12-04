@@ -117,7 +117,7 @@ The MySQL database offers methods for replicating your database across multiple 
 
 ### Sync module
 
-Another option is available for OpenMRS installations with multiple sites. The community-developed **Sync** module is available from the OpenMRS module repository, and allows data to be synchronized across a network \(or external data storage\) using tools within OpenMRS itself. Please search the OpenMRS Wiki for more information about theSyncmodule.
+Another option is available for OpenMRS installations with multiple sites. The community-developed **Sync** module is available from the OpenMRS module repository, and allows data to be synchronized across a network \(or external data storage\) using tools within OpenMRS itself. Please search the OpenMRS Wiki for more information about the **Sync** module.
 
 ## Upgrading OpenMRS
 
