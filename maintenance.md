@@ -22,8 +22,6 @@ Most importantly, you need to create a backup strategy for your MySQL database. 
 
 You should also ensure you are backing up the **.OpenMRS** directory. This directory, which stores modules and configuration files, is stored in the home directory of the user that runs the Tomcat server on Windows or Linux.
 
-
-
 ## Performance tuning
 
 Over the past several years, implementers of OpenMRS around the world have compiled information about improving the performance of their systems. There are several components of the system that may need to be tuned to ensure optimal performance. Please use the information in the following sections as a guide and a starting point -- you will need to explore what settings work best for your system.
@@ -32,7 +30,7 @@ Over the past several years, implementers of OpenMRS around the world have compi
 
 Note:From version 1.9 and above, "global properties" will be referred to as "settings" in the guide.
 
-You may need to adjust some settings in OpenMRS. To do this, use the **Maintenance &gt; Advanced Settings** page under the OpenMRS **Administration** section, find the desired setting and clear or change its value as described in the following tips, then click the **Save** button at the bottom of the page.
+You may need to adjust some settings in OpenMRS. To do this, use the **Maintenance &gt; Advanced Settings** page under the OpenMRS **Administration** section, find the desired setting and clear or change its value as described in the following tips, then click the **Save** button at the bottom of the page.
 
 ![](http://write.flossmanuals.net/openmrs/maintenance/static/globalprop-regex.png)
 
@@ -55,32 +53,56 @@ Tomcat has several settings that may be adjusted to optimize its use of memory:
 
   * If running Tomcat from the command line, add the following parameters:
 
-   ```
--Xmx512m -Xms512m -XX:PermSize=256m -XX:MaxPermSize=256m -XX:NewSize=128m
-   ```
+    ```
+    -Xmx512m -Xms512m -XX:PermSize=256m -XX:MaxPermSize=256m -XX:NewSize=128m
+    ```
 
-  * If running Tomcat as a Windows service, launch the Tomcat Monitor application. Go to Configure > Java > Java Options and add the following to the listed settings:
+  * If running Tomcat as a Windows service, launch the Tomcat Monitor application. Go to Configure &gt; Java &gt; Java Options and add the following to the listed settings:
 
-   ```
--Xmx512m -Xms512m -XX:PermSize=256m -XX:MaxPermSize=256m -XX:NewSize=128m
-   ```
-  * If running Tomcat as a Linux service, edit the **/etc/init.d/tomcat** (or equivalent) script and modify the line for **CATALINA_OPTS** to read as follows:
+    ```
+    -Xmx512m -Xms512m -XX:PermSize=256m -XX:MaxPermSize=256m -XX:NewSize=128m
+    ```
 
-   ```
-CATALINA_OPTS="-Djava.library.path=/opt/tomcat/lib/.libs  -Xmx512m -Xms512m -XX:PermSize=256m -XX:MaxPermSize=256m  -XX:NewSize=128m"
-   ```
+  * If running Tomcat as a Linux service, edit the **/etc/init.d/tomcat** \(or equivalent\) script and modify the line for **CATALINA\_OPTS** to read as follows:
 
-* Adjust Tomcat to prevent potential memory leaks. Tomcat has a default setting that often causes memory leaks. To turn it off, open the configuration file. 
+    ```
+    CATALINA_OPTS="-Djava.library.path=/opt/tomcat/lib/.libs  -Xmx512m -Xms512m -XX:PermSize=256m -XX:MaxPermSize=256m  -XX:NewSize=128m"
+    ```
 
-  > <TOMCAT_HOME&gt;/conf/web.xml 
+
+* Adjust Tomcat to prevent potential memory leaks. Tomcat has a default setting that often causes memory leaks. To turn it off, open the configuration file.
+
+  > &lt;TOMCAT\_HOME&gt;/conf/web.xml
 
   In JSP servlet definition add the following element:
 
-   ```html
-<init-param>
- <param-name>enablePooling</param-name>
- <param-value>false</param-value>
-</init-param>
-   ```
+  ```html
+  <init-param>
+  <param-name>enablePooling</param-name>
+  <param-value>false</param-value>
+  </init-param>
+  ```
 
-* Experiment with better garbage collection in Tomcat to prevent PermGen out of memory errors. To use a newer version of Tomcat garbage collection, you need to add the following to **CATALINA_OPTS**, as was shown above in the previous step.
+* Experiment with better garbage collection in Tomcat to prevent PermGen out of memory errors. To use a newer version of Tomcat garbage collection, you need to add the following to **CATALINA\_OPTS**, as was shown above in the previous step.
+
+
+### MySQL
+
+Optimizing MySQL database settings will help OpenMRS to run more efficiently, especially as your installation grows in the size of data you are storing.
+
+Increase theinnodb\_buffer\_pool\_size. It is the size in bytes of the memory buffer InnoDB uses to cache data and indexes of its tables. The larger you set this value, the less disk I/O is needed to access data in tables. On a dedicated database server, you may set this to up to 80% of the machine physical memory size. However, do not set it too large because competition for physical memory might cause paging in the operating system. Modify the following in MySQL'smy.inifile, or add it if it is not present.
+
+```
+max_allowed_packet=64M
+```
+
+Increase themax\_allowed\_packet size. When MySQL attempts to work with a packet of data larger than specified, it causes apacket too largeerror and closes the connection, causing OpenMRS to stop working. Increasing this value allows MySQL to handle larger sets of data. Modify the following in MySQL'smy.inifile, or add it if it is not present.
+
+```
+innodb_buffer_pool_size=3G 
+```
+
+You may also consider running a MySQL performance-tuning script and making adjustments to your MySQL configuration file based on its suggestions. One such script is available here:
+
+[http://go.openmrs.org/book-tuningscript](http://go.openmrs.org/book-tuningscript)
+
