@@ -294,11 +294,11 @@ If you are starting Tomcat on the command line, you should pass the following pa
 -Xmx512m -Xms512m -XX:PermSize=256m -XX:MaxPermSize=256m -XX:NewSize=128m
 ```
 
-If you are running Tomcat as a Windows Service, you can increase the memory allocation by adding this same line to the list of start parameters. Make sure that you add this to the end of the existing parameters exactly. An extra space at the end of the line can prevent Tomcat from starting properly. You can find the list of start parameters in the Tomcat Monitor application, by going toConfigure Tomcat &gt; Java &gt; Java Options, or via theControl Panel &gt; Services &gt; Apache Tomcat &gt; Properties &gt; Start Parameters. 
+If you are running Tomcat as a Windows Service, you can increase the memory allocation by adding this same line to the list of start parameters. Make sure that you add this to the end of the existing parameters exactly. An extra space at the end of the line can prevent Tomcat from starting properly. You can find the list of start parameters in the Tomcat Monitor application, by going to **Configure Tomcat &gt; Java &gt; Java Options**, or via the **Control Panel &gt; Services &gt; Apache Tomcat &gt; Properties &gt; Start Parameters**. 
 
-If you are running a 64-bit version of Tomcat as a Windows Service, you must edit the Windows Registry to add that line to theHKEY\_LOCAL\_MACHINE\SOFTWARE\Apache Software Foundation\Procrun 2.0\Tomcat5\Parameters\JavaJVMsettings in the Registry.
+If you are running a 64-bit version of Tomcat as a Windows Service, you must edit the Windows Registry to add that line to the **HKEY\_LOCAL\_MACHINE\SOFTWARE\Apache Software Foundation\Procrun 2.0\Tomcat5\Parameters\JavaJVM** settings in the Registry.
 
-If you are running Tomcat on Ubuntu, edit its startup script such as/etc/init.d/tomcat6and make the following changes:
+If you are running Tomcat on Ubuntu, edit its startup script such as **/etc/init.d/tomcat6** and make the following changes:
 
 ```
 if [ -z "$JAVA_OPTS" ]; then
@@ -322,7 +322,7 @@ CATALINA_OPTS="-Djava.library.path=/opt/tomcat/lib/.libs -Xmx512m -Xms512m -XX:P
 
 After troubleshooting, you may determine that Tomcat or OpenMRS is having problems with memory leaks.
 
-To mitigate memory leak problems in Tomcat, consider enabling pooling by adding the following element to the JSP servlet definition in the file&lt;TOMCAT\_HOME&gt;/conf/web.xml:
+To mitigate memory leak problems in Tomcat, consider enabling pooling by adding the following element to the JSP servlet definition in the file **&lt;TOMCAT\_HOME&gt;/conf/web.xml**:
 
 ```
 <init-param><param-name>enablePooling</param-name><param-value>false</param-value></init-param>
