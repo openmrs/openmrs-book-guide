@@ -104,5 +104,5 @@ innodb_buffer_pool_size=3G 
 
 You may also consider running a MySQL performance-tuning script and making adjustments to your MySQL configuration file based on its suggestions. One such script is available here:
 
-[http://go.openmrs.org/book-tuningscript](http://go.openmrs.org/book-tuningscript)
+[https://wiki.openmrs.org/display/docs/Performance+Tuning](https://wiki.openmrs.org/display/docs/Performance+Tuning)
 
