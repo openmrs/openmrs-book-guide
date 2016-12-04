@@ -54,7 +54,7 @@ All IRC discussions are logged and available online.
 
 If you have problems with your OpenMRS ID, or with any of the tools listed above, please open a support desk ticket and someone will respond to your issue.
 
-[http://go.openmrs.org/helpdesk](http://go.openmrs.org/helpdesk)
+[http://om.rs/helpdesk](http://om.rs/helpdesk)
 
 If you are not able to log in when creating the ticket, please remember to include your name and contact information.
 
