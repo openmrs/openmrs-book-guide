@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [\[COVER\]](README.md)
 * Introduction
     * [OpenMRS Around the World](openmrs-around-the-world.md)
     * [A Brief History](a-brief-history.md)
