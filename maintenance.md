@@ -72,6 +72,6 @@ CATALINA_OPTS="-Djava.library.path=/opt/tomcat/lib/.libs  -Xmx512m -Xms512m -XX:
 
 * Adjust Tomcat to prevent potential memory leaks. Tomcat has a default setting that often causes memory leaks. To turn it off, open the configuration file. 
 
-  > <TOMCAT_HOME&gt;/conf/web.xml 
+  > &gt;TOMCAT_HOME&gt;/conf/web.xml 
 
   In JSP servlet definition add the following element:
