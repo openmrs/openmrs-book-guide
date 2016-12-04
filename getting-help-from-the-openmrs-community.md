@@ -46,7 +46,7 @@ Internet Relay Chat \(IRC\) is a protocol for real-time Internet chat. The OpenM
 
 For more information on how to connect to IRC visit:
 
-[http://go.openmrs.org/irc](http://go.openmrs.org/irc)
+[http://om.rs/irc](http://om.rs/irc)
 
 All IRC discussions are logged and available online.
 
