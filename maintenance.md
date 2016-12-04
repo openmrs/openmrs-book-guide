@@ -68,7 +68,7 @@ Tomcat has several settings that may be adjusted to optimize its use of memory:
 
    ```
 CATALINA_OPTS="-Djava.library.path=/opt/tomcat/lib/.libs  -Xmx512m -Xms512m -XX:PermSize=256m -XX:MaxPermSize=256m  -XX:NewSize=128m"
-```
+   ```
 
 
 
