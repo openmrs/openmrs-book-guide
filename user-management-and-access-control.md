@@ -36,13 +36,8 @@ In order to give these privileges to the relevant users, you must define a role 
     <tr>
       <td>Data Manager</td>
       <td>
-         <ul>
-          <li>Not open source</li>
-          <li>Runs only on Windows</li>
-          <li>Requires payment of license fees</li>
-          <li>No new development by the OpenMRS team</li>
-        </ul>
-</td>
+         
+      </td>
     </tr>
   </tbody>
 </table>
