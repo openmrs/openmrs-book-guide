@@ -70,3 +70,6 @@ Tomcat has several settings that may be adjusted to optimize its use of memory:
 CATALINA_OPTS="-Djava.library.path=/opt/tomcat/lib/.libs  -Xmx512m -Xms512m -XX:PermSize=256m -XX:MaxPermSize=256m  -XX:NewSize=128m"
    ```
 
+* Adjust Tomcat to prevent potential memory leaks. Tomcat has a default setting that often causes memory leaks. To turn it off, open the configuration file. 
+<TOMCAT_HOME>/conf/web.xml 
+In JSP servlet definition add the following element:
