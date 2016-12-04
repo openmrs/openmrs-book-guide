@@ -12,7 +12,7 @@ If you are not yet using Tomcat 6.0.29, consider upgrading Tomcat before you con
 
 When troubleshooting Tomcat, your first step should always be to review the Tomcat logs. In Windows, these are stored at the following location.
 
-C:\Program Files\Apache Software Foundation\Tomcat 6.0\logs
+> C:\Program Files\Apache Software Foundation\Tomcat 6.0\logs
 
 Historically, MySQL has been recommended as the database of choice to use with OpenMRS. The newer database from the open source project MariaDB should also be compatible with OpenMRS. Work is underway in the OpenMRS community to provide support for other databases such as Oracle, Microsoft SQL Server, and others, but these databases are not yet supported.
 
