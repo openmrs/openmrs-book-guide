@@ -44,13 +44,40 @@ In order to give these privileges to the relevant users, you must define a role 
   </tbody>
 </table>
 
-Now, by defining the main roles for users of your system and assigning users to those roles, you have a much easier system to manage and users will automatically inherit all privileges given to their role\(s\). Of course, some users will have multiple roles. Now, let's take this process one step further. While it may not seem necessary in this simple example, as your system grows, you will likely end up with a large number of different roles. Very often, certain roles can be defined as a combination of other roles. In our example, aData Manageroversees theData Assistantsand therefore should have all of their privileges plus some additional privileges. So, let's redesign our roles slightly to show how this might work.
+Now, by defining the main roles for users of your system and assigning users to those roles, you have a much easier system to manage and users will automatically inherit all privileges given to their role\(s\). Of course, some users will have multiple roles. Now, let's take this process one step further. While it may not seem necessary in this simple example, as your system grows, you will likely end up with a large number of different roles. Very often, certain roles can be defined as a combination of other roles. In our example, a **Data Manager** oversees the **Data Assistants** and therefore should have all of their privileges plus some additional privileges. So, let's redesign our roles slightly to show how this might work.
 
-| Role | Inherit Privileges from Role\(s\) | Additional Privilege\(s\) |
-| :--- | :--- | :--- |
-|  Medical Student |  | View Patient  |
-|  Data Assistant |  | View PatientEdit Patient  |
-|  Data Manager | Data Assistant  | Add Patient  |
+<table>
+  <tbody>
+    <tr>
+      <th>Role</th>
+      <th>Inherit Privileges from Role(s)</th>
+      <th>Additional Privilege(s)</th>
+    </tr>
+    <tr>
+      <td>
+        Medical Student
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Data Assistant</td>
+      <td>
+        <p>View Patients</p>
+        <p>Edit Patients</p>
+      </td>
+    </tr>
+    <tr>
+      <td>Data Manager</td>
+      <td>
+        <p>View Patients</p>
+        <p>Edit Patients</p>
+        <p>Add Patients</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 
 You can see that theData Managerrole can be more clearly defined as aData Assistantwith the extra ability to add patients to the system. In addition, if you should change or enhance the privileges of theData Assistantrole at any time in the future, theData Managerwill automatically adapt to those changes — for example, if you decided a month later to allow anyData AssistanttoEdit Encounters\(by adding theEdit Encountersprivilege to theData Assistantrole\), theData Managerrole would automatically gain the ability to edit encounters as well.
 
