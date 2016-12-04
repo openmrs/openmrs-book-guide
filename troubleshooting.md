@@ -330,9 +330,9 @@ To mitigate memory leak problems in Tomcat, consider enabling pooling by adding 
 
 If you believe you have discovered a memory leak in OpenMRS and are comfortable looking at the OpenMRS application code to identify where the leak is located, you may like to troubleshoot further to find out the cause. OpenMRS developers use YourKit Profiler to discover and debug memory and CPU consumption issues. 
 
-YourKit is kindly supporting members of the OpenMRS community with its full-featured Java Profiler product. If you have development skills you may want to use this tool to understand why the application is leaking memory or consuming too many processor resources. As an active participant in the OpenMRS community, you can request a license by opening a support desk ticket
+YourKit is kindly supporting members of the OpenMRS community with its full-featured Java Profiler product. If you have development skills you may want to use this tool to understand why the application is leaking memory or consuming too many processor resources. As an active participant in the OpenMRS community, you can request a license by opening a support desk ticket:
 
-[http://go.openmrs.org/helpdesk](http://go.openmrs.org/helpdesk)
+[https://help.openmrs.org/](https://help.openmrs.org/)
 
 ## Bugs in OpenMRS
 
