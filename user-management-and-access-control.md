@@ -58,12 +58,17 @@ Now, by defining the main roles for users of your system and assigning users to 
         Medical Student
       </td>
       <td></td>
-      <td></td>
+      <td>
+        View Patient
+      </td>
     </tr>
     <tr>
       <td>Data Assistant</td>
       <td></td>
-      <td></td>
+      <td>
+        <p>View Patient</p>
+        <p>Edit Patient</p>
+      </td>
     </tr>
     <tr>
       <td>Data Manager</td>
