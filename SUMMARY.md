@@ -34,10 +34,10 @@
     * [Troubleshooting](troubleshooting.md)
     * [Getting Help from the OpenMRS Community](getting-help-from-the-openmrs-community.md)
 * Epilogue
-    * Leaving Amani Clinic
-    * About this Book
+    * [Leaving Amani Clinic](leaving-amani-clinic.md)
+    * [About this Book](about-this-book.md)
 * [Appendices](appendices.md)
-    * Appendix A: Glossary
-    * Appendix B: Example HTML Form Source
-    * Appendix C: Document History
+    * [Appendix A: Glossary](appendix-a-glossary.md)
+    * [Appendix B: Example HTML Form Source](appendix-b-example-html-form-source.md)
+    * [Appendix C: Document History](appendix-c-document-history.md)
 
