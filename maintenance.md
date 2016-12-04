@@ -82,3 +82,5 @@ CATALINA_OPTS="-Djava.library.path=/opt/tomcat/lib/.libs  -Xmx512m -Xms512m -XX:
  <param-value>false</param-value>
 </init-param>
    ```
+
+* Experiment with better garbage collection in Tomcat to prevent PermGen out of memory errors. To use a newer version of Tomcat garbage collection, you need to add the following to **CATALINA_OPTS**, as was shown above in the previous step.
