@@ -1,16 +1,15 @@
 # A Brief History
 
-![](http://write.flossmanuals.net/openmrs/a-brief-history/static/AMPATH-2004.png)
-
-_One of OpenMRS's birthplaces--Moi University Teaching and Referral Hospital, Eldoret, Kenya \(2004\)_
+_One of OpenMRS' birthplaces &ndash; Moi University Teaching and Referral Hospital in Eldoret, Kenya (2004)_
+![](/assets/AMPATH-2004.png)
 
 Throughout the 1990s, an academic partnership flourished between Indiana University School of Medicine in the United States and Moi University in Eldoret, Kenya, providing Kenyan medical students with access to health care training. This program continued to grow for several years until a severe outbreak of HIV/AIDS in Western Kenya caused the program to rethink its goals, at which point the Academic Model for Prevention and Treatment of HIV/AIDS \(AMPATH\) was created. The number of patients in Kenya continued to grow, and basic IT systems including Microsoft Access were used to monitor patient care.
 
 In February 2004, the amount of data had become too large for AMPATH's existing systems, so their medical director invited Burke Mamlin, from the Regenstrief Institute in Indianapolis, United States, to visit the site and evaluate how improvements in medical informatics technology could improve AMPATH's data management. Regenstrief had long been recognized as a leader in medical informatics research, and Burke brought his colleague Paul Biondich along with him on the visit to Kenya. It quickly became apparent that a new system was needed. Paul and Burke began to design the data model for a new medical records system for AMPATH, which would go on to become OpenMRS.
 
-At the same time, a Boston-based non-profit named Partners In Health \(PIH\) was pioneering the use of web-based EMRs in developing countries. They had built the PIH-EMR, which they were using to support the treatment of multi-drug resistant tuberculosis in Peru and HIV in Haiti. But Hamish Fraser, PIH's director of the EMR project, was worried: PIH was about to expand into Rwanda, Lesotho, and Malawi, and he feared it would be difficult to maintain their home-built system in 5 countries.
+At the same time, a Boston-based non-profit named Partners In Health (PIH) was pioneering the use of web-based EMRs in developing countries. They had built the PIH-EMR, which they were using to support the treatment of multi-drug resistant tuberculosis in Peru and HIV in Haiti. But Hamish Fraser, PIH's director of the EMR project, was worried: PIH was about to expand into Rwanda, Lesotho, and Malawi, and he feared it would be difficult to maintain their home-built system in 5 countries.
 
-In September 2004, Paul and Burke met Hamish at the World Congress on Medical and Health Informatics \(MedInfo\) conference in San Francisco. It became apparent that the three shared similar goals and needs, so they agreed to work collaboratively to develop a system that would be suitable for the various needs of humanitarian work in African nations and beyond.
+In September 2004, Paul and Burke met Hamish at the World Congress on Medical and Health Informatics (MedInfo) conference in San Francisco. It became apparent that the three shared similar goals and needs, so they agreed to work collaboratively to develop a system that would be suitable for the various needs of humanitarian work in African nations and beyond.
 
 Paul and Burke hired developer Ben Wolfe to begin work on programming an early prototype of OpenMRS, based on their previous work at AMPATH and Regenstrief. Several months later, PIH's lead developer Darius Jazayeri joined the project, merging PIH-EMR's functionality into the new system. The previous systems at AMPATH focused on data entry, while at PIH, the focus was more on clinical workflow. The new system combined features of both the AMPATH and PIH systems.
 
@@ -38,9 +37,8 @@ As both the OpenMRS application and open source community grew, they gathered th
 
 In an effort to broaden participation in the project around the world, OpenMRS began participating in the Google Summer of Code \(GSoC\) program in 2007. GSoC provides university students who wish to participate in open source development projects with a stipend and a close mentoring relationship with an experienced project team member. Participation in the program has continued since then--OpenMRS is now one of the larger open source projects in the program, boasting a large class of alumni, a number of whom continue to contribute to the project. Many of these alumni come from the developing world, and some have gone on to successful software development careers.
 
-![](http://write.flossmanuals.net/openmrs/a-brief-history/static/implmenters-early.png)
-
-_Any early gathering of OpenMRS implementers and developers in Cape Town, South Africa._
+_The inaugural OpenMRS Implementers Meeting in Cape Town, South Africa._
+![](/assets/implementers-early.png)
 
 One of the aims of the OpenMRS community is to help build local capacity in the places where it is used. To that end, participants in the community are encouraged to develop programs and processes that encourage entrepreneurship and the creation of partnerships to grow the field of medical informatics, particularly in the developing world. For example, in Kigali, Rwanda, Partners In Health jump-started a local training program known as E-Health Software Development and Implementation \(EHSDI\). This 9-month course conducted in partnership with the Rwanda Development Board and the Kigali Institute of Science and Technology \(KIST\) was designed to teach students to develop medical information systems. It includes extensive training in using the OpenMRS platform.
 
