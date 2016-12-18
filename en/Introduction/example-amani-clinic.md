@@ -2,7 +2,7 @@
 
 We assume if you're reading this book that you're interested in deploying OpenMRS to support clinical care in the real world. To bridge the divide between theory and practice, and to illustrate the sometimes challenging process of deploying a large health-care information system, we have used the example of the fictional Amani Clinic as a case study throughout this book.
 
-![](http://write.flossmanuals.net/openmrs/example-amani-clinic/static/case-study.png)
+![](/assets/case-study.png)
 
 Every time you see this image in the book, you will learn how Amani Clinic used the information discussed to plan and implement OpenMRS.
 
