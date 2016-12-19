@@ -1,6 +1,6 @@
 # Customizing OpenMRS with Plug-in Modules
 
-![](http://write.flossmanuals.net/openmrs/customizing-openmrs-with-plug-in-modules/static/customized-openmrs.png)
+![](/assets/customized-openmrs.png)
 
 OpenMRS has a modular architecture, which allows special functionality to be easily added or removed from the system. Modules have full access to the system and can modify or enhance the behavior of the system. For example, the **Sync** module adds the ability for an OpenMRS server to synchronize its data with other OpenMRS servers; the **HTML Form Entry **module provides a way to create web-based forms for collecting data; and the **Flowsheet** module adds a new way for viewing information. Modules also provide a mechanism for adapting OpenMRS to local needs. For more information about published modules visit the OpenMRS Wiki:
 
@@ -14,15 +14,15 @@ You can view available modules in the OpenMRS Module Repository:
 
 It is a place where you can find published modules. Each module has a page with a description, a link for downloading, and a link to the module's documentation.
 
-Some modules may be under development, but not yet published in the module repository. Many of these can be seen by browsing the "modules" section of the OpenMRS Subversion Code Repository:
+Some modules may be under development, but not yet published in the module repository. Many of these can be seen by browsing [GitHub](https://github.com) for repositories starting with "openmrs-module-" in their name. Many community modules can be found under the OpenMRS organization on GitHub:
 
-[http://svn.openmrs.org/openmrs-modules/](http://svn.openmrs.org/openmrs-modules/)
+[https://github.com/openmrs/](https://github.com/openmrs/)
 
 ## Managing modules
 
 You can see available modules under **Administration** page, **Manage Modules**. The listing contains all the installed modules. You can see their status \(if they are started, stopped or failed to start\) as well as uninstall them.
 
-![](http://write.flossmanuals.net/openmrs/customizing-openmrs-with-plug-in-modules/static/manage_modules_3.png)
+![](/assets/manage_modules_3.png)
 
 To uninstall a module:
 
@@ -32,12 +32,11 @@ To uninstall a module:
 
 3. Uninstall the module
 
-
 A module is distributed as a single file with the **.omod** extension. You can install it from the dedicated **Manage Modules** section on the **Administration** page.
 
 You can either point to a local path to the **.omod** file or find and install a module directly from the **Install from Module Repository** section which connects to the module repository.
 
-![](http://write.flossmanuals.net/openmrs/customizing-openmrs-with-plug-in-modules/static/add_module_3.png)
+![](/assets/add_module_3.png)
 
 To install a module:
 
@@ -47,7 +46,6 @@ To install a module:
 
 3. Install the chosen module
 
-
 If uploads are not allowed from the web, you can copy the **.omod** file into the folder:
 
 **~/.OpenMRS/modules**
@@ -56,7 +54,7 @@ If uploads are not allowed from the web, you can copy the **.omod** file into th
 
 ## Bundled modules
 
-OpenMRS is delivered with some bundled modules which are included in a standard installation. The list may differ from version to version. OpenMRS 1.8 contains:
+OpenMRS is delivered with some bundled modules which are included in a standard installation. The list may differ from version to version. Some examples:
 
 ### HTML Form Entry
 
@@ -68,12 +66,6 @@ Allows anyone with basic HTML programming skills and knowledge of the OpenMRS sy
 Allows data entry to be done directly from any JavaScript enabled browser. The module converts an OpenMRS form to an XForm. XForms are well suited to forms that will be filled out on mobile devices.
 
 [https://wiki.openmrs.org/display/docs/XForms+Module](https://wiki.openmrs.org/display/docs/XForms+Module)
-
-### FormEntry
-
-Allows a form's content to be designed in InfoPath, and then allows  end users to fill out the form and submit it to OpenMRS. OpenMRS is moving away from the InfoPath format because InfoPath is proprietary and difficult to troubleshoot.
-
-[https://wiki.openmrs.org/display/docs/FormEntry+Module](https://wiki.openmrs.org/display/docs/FormEntry+Module)
 
 ### HTML Widgets
 
@@ -89,11 +81,6 @@ Provides a feature-rich and user-friendly web interface for managing reports wit
 
 Contains pages and features that were previously included into OpenMRS core code itself and are needed to run the Reporting module. It was written for the 1.5 and later releases of OpenMRS.
 [https://wiki.openmrs.org/display/docs/ReportingCompatibility+Module](https://wiki.openmrs.org/display/docs/ReportingCompatibility+Module)
-
-### Serialization XStream
-
-Provides an implementation of serialization/deserialization strategy using the XStream library.
-[https://wiki.openmrs.org/display/docs/Serialization+XStream+Module](https://wiki.openmrs.org/display/docs/Serialization+XStream+Module)
 
 ## Other popular modules
 
