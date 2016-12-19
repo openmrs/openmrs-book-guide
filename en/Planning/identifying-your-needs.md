@@ -1,8 +1,7 @@
 # Identifying Your Needs
 
-![](http://write.flossmanuals.net/openmrs/identifying-your-needs/static/needs.png)
-
 _Discussing requirements and needs at TRAC Plus clinic in Kigali._
+![](/assets/needs.png)
 
 This chapter covers some basic strategies for identifying your organizational needs, and how OpenMRS might help. It does not go into detail about what OpenMRS does or how it stores data -- you will find that in other chapters. Instead, we encourage you to first take a step back and think about your organization.
 
@@ -72,5 +71,4 @@ Once the clinic determined they would use OpenMRS, they began thinking specifica
 
 Claudine found many resources within the OpenMRS community, including pre-existing concept dictionaries and forms that had been used in other clinics. She was able to take these artifacts and adapt them to Amani's paper forms already in use. Starting out with the work of others saved quite a bit of time.
 
-![](http://write.flossmanuals.net/openmrs/identifying-your-needs/static/case-study.png)
-
+![](/assets/case-study.png)
