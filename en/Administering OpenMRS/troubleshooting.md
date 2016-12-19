@@ -1,6 +1,6 @@
 # Troubleshooting Your Installation
 
-![](http://write.flossmanuals.net/openmrs/troubleshooting/static/troubleshooting.png)
+![](/assets/troubleshooting.png)
 
 Unfortunately, sometimes things do not go exactly planned. This chapter can help you deal with the most common problems.
 
@@ -34,9 +34,7 @@ Ensure MySQL is installed and running before attempting to start and install Ope
 
 On Windows, the computer may stop responding while running the MySQL Configure Instance tool. Most commonly, this occurs before the tool marks **Starting the service** as complete, because there is already a MySQL service running. 
 
-To fix this, you should delete the pre-existing MySQL service in Windows, and try the installation again. You can find instructions on how to do delete a MySQL service at this link.
-
-[http://www.howtogeek.com/howto/windows-vista/how-to-delete-a-windows-service-in-vista-or-xp/](http://www.howtogeek.com/howto/windows-vista/how-to-delete-a-windows-service-in-vista-or-xp/)
+To fix this, you should delete the pre-existing MySQL service in Windows, and try the installation again. You can find instructions on how to do delete a MySQL service at [this link](http://www.howtogeek.com/howto/windows-vista/how-to-delete-a-windows-service-in-vista-or-xp/).
 
 Alternatively, you may see a MySQL Error 1045, if your computer has previously had a MySQL instance installed. This means that the root password is incorrect, and is most commonly caused by residual data from the previous installation.
 
@@ -141,7 +139,7 @@ service tomcat6 start
 
 Log back into the Tomcat Manager web application and deploy OpenMRS normally.
 
-### OpenMRS \(openmrs.war\) deploys successfully but fails to start
+### OpenMRS (openmrs.war) deploys successfully but fails to start
 
 If there are issues with the OpenMRS settings for application\_data\_directory, openmrs.war may successfully deploy, but then fail to start. The following messages are seen in Tomcat's logs:
 
@@ -225,14 +223,9 @@ These errors occur when the client or server tries to handle data larger than th
 
 To increase the maximum packet length allowed by your MySQL server, you should stop the server, edit the configuration file, then restart the server. The configuration file is typically located at one of these locations.
 
-
-
 * Windows: C:\Program Files\MySQL\MySQL Server x.x\my.ini
 
 * Linux or Mac OS X: /etc/my.cnf
-
-
-
 
 This file should already contain a section with the header **\[archive:mysqld\]**. You can add the following line below that header:
 
