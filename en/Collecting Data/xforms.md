@@ -32,8 +32,7 @@ XForms is an XML format for specifying a data processing model for XML data and 
 
 * Give you as much flexibility as the ﻿HTML Form Entry module when it comes to the form layout and looks.
 
-* Some features present in the HTML Form Entry module are not yet implemented \(E.g.: relationships\)
-
+* Some features present in the HTML Form Entry module are not yet implemented (e.g.: relationships).
 
 ## Creating an XForm
 
