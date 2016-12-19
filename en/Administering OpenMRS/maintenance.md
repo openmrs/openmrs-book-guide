@@ -1,14 +1,13 @@
 # Maintenance
 
-![](http://write.flossmanuals.net/openmrs/maintenance/static/maintenance.png)
-
 _OpenMRS server room in Webuye, Kenya._
+![](/assets/maintenance.png)
 
 Once you have installed and configured OpenMRS and it is being used to support day-to-day clinical operations, there is still work to be done. To ensure the system runs smoothly and error-free, use the following tips as a starting point to create a maintenance plan for your OpenMRS installation. We recommend documenting this plan and reviewing it regularly.
 
 ## Server management
 
-Although outside the scope of this book, it is important to keep both your OpenMRS server\(s\) and client systems updated with the latest security patches. In Windows, you should use the Windows Update tool to review and install critical system updates. If you use Linux, use either **apt-get upgrade** or **yum update**, depending on what distribution of Linux you use.
+Although outside the scope of this book, it is important to keep both your OpenMRS server(s) and client systems updated with the latest security patches. In Windows, you should use the Windows Update tool to review and install critical system updates. If you use Linux, use either **apt-get upgrade** or **yum update**, depending on what distribution of Linux you use.
 
 Before upgrading MySQL, Java, or Apache Tomcat \(and of course, OpenMRS\) you should check with the OpenMRS community to see how those upgrades might effect how OpenMRS runs on your server. See the "Getting Help" section for more information.
 
@@ -32,7 +31,7 @@ Note:From version 1.9 and above, "global properties" will be referred to as "set
 
 You may need to adjust some settings in OpenMRS. To do this, use the **Maintenance &gt; Advanced Settings** page under the OpenMRS **Administration** section, find the desired setting and clear or change its value as described in the following tips, then click the **Save** button at the bottom of the page.
 
-![](http://write.flossmanuals.net/openmrs/maintenance/static/globalprop-regex.png)
+![](/assets/globalprop-regex.png)
 
 * Clear out the **patient.identifierRegex** setting to disable regular expression identifier searches.
 
@@ -41,7 +40,6 @@ You may need to adjust some settings in OpenMRS. To do this, use the **Maintenan
 * Make sure that the **dashboard.regimen.displayDrugSetIds** setting has concept ID numbers and not names. In other words, use "1085,1159" instead of "ANTIRETROVIRAL DRUGS,TUBERCULOSIS TREATMENT DRUGS".
 
 * Set the **searchWidget.batchSize**, **searchWidget.runInSerialMode** and **searchWidget.searchDelayInterval** settings to tune your searches for better performance and suit your implementation's environment. You may wish to consider the speed of your network connection, typing skills and average number of simultaneous users on a typical work day. You might also consider reducing the value of the settings person.searchMaxResults and **searchWidget.batchSize** to reduce the load on the search widgets and server for better performance.
-
 
 ### Apache Tomcat
 
@@ -69,11 +67,9 @@ Tomcat has several settings that may be adjusted to optimize its use of memory:
     CATALINA_OPTS="-Djava.library.path=/opt/tomcat/lib/.libs  -Xmx512m -Xms512m -XX:PermSize=256m -XX:MaxPermSize=256m  -XX:NewSize=128m"
     ```
 
-
-
 * Adjust Tomcat to prevent potential memory leaks. Tomcat has a default setting that often causes memory leaks. To turn it off, open the configuration file.
 
-  > &lt;TOMCAT\_HOME&gt;/conf/web.xml
+  > &lt;TOMCAT_HOME&gt;/conf/web.xml
 
   In JSP servlet definition add the following element:
 
@@ -84,7 +80,7 @@ Tomcat has several settings that may be adjusted to optimize its use of memory:
   </init-param>
   ```
 
-* Experiment with better garbage collection in Tomcat to prevent PermGen out of memory errors. To use a newer version of Tomcat garbage collection, you need to add the following to **CATALINA\_OPTS**, as was shown above in the previous step.
+* Experiment with better garbage collection in Tomcat to prevent PermGen out of memory errors. To use a newer version of Tomcat garbage collection, you need to add the following to **CATALINA_OPTS**, as was shown above in the previous step.
 
 
 ### MySQL
@@ -117,7 +113,7 @@ The MySQL database offers methods for replicating your database across multiple 
 
 ### Sync module
 
-Another option is available for OpenMRS installations with multiple sites. The community-developed **Sync** module is available from the OpenMRS module repository, and allows data to be synchronized across a network \(or external data storage\) using tools within OpenMRS itself. Please search the OpenMRS Wiki for more information about the **Sync** module.
+Another option is available for OpenMRS installations with multiple sites. The community-developed **Sync** module is available from the OpenMRS module repository, and allows data to be synchronized across a network (or external data storage) using tools within OpenMRS itself. Please search the OpenMRS Wiki for more information about the **Sync** module.
 
 ## Upgrading OpenMRS
 
@@ -133,7 +129,6 @@ Supported community-developed OpenMRS modules are regularly updated, and those n
 
 ## Amani's maintenance plan
 
-![](http://write.flossmanuals.net/openmrs/maintenance/static/case-study.png)
+![](/assets/case-study.png)
 
 As part of his responsibilities as ICT infrastructure manager for the clinic, Daniel created a written maintenance plan. In this document, he has included daily, weekly, and monthly tasks. The only daily task is an automated one -- Daniel created a script on his Ubuntu server to stop OpenMRS, backup MySQL and other OpenMRS files, and restart the application. This script runs overnight while the clinic is closed. Weekly, Claudine manually checks the disk space and runs `apt-get upgrade` to update system components. Every month, Claudine checks the OpenMRS web site for OpenMRS upgrades and upgrades to the modules the clinic uses.
-
