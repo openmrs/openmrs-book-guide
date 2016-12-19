@@ -16,7 +16,7 @@ If you wish to record extra information about visits, you can create Visit Attri
 
 There are several settings for the Visit feature.
 
-![](http://write.flossmanuals.net/openmrs/configuring-visits/static/visits_configure_1.png)
+![](/assets/visits_configure_1.png)
 
 Visit is enabled by default, but is an optional feature. While Visit is enabled, the patient dashboard will show a tab called Visits and group all encounters by visit. If disabled, the patient dashboard will show the Encounters tab and list encounters chronologically with no grouping.
 
