@@ -91,7 +91,7 @@ In a common deployment scenario, you will have several roles that use the same p
 
 There are some special roles that are predefined within OpenMRS and cannot be deleted: **Anonymous**, **Authenticated**, and **System Developer**. Any privileges granted to the **Anonymous** role will be available to people without logging into the system. Generally, **Anonymous** privileges should be kept very restricted, since patient information might otherwise be compromised. Privileges granted to the **Authenticated** role are granted to anyone that logs into your system, no matter what other role\(s\) they might be assigned. Granting privileges to the **Authenticated** role is an easy way to grant privileges to all users of the system. The **System Developer** role is automatically granted full access to the system and should only be granted to system administrators.
 
-**Super users** \(system administrators\) are automatically granted all privileges in the system; therefore, you must be very careful to protect your system administrator password.
+**Super users** (system administrators) are automatically granted all privileges in the system; therefore, you must be very careful to protect your system administrator password.
 
 Some privileges are built into the system and cannot be deleted. Other privileges may be added by modules. It is unlikely that you will be adding new privileges yourself, since privileges are only useful when they are understood and used by the system. On the other hand, you will definitely be creating new roles to fit your needs and will be managing privileges within those roles.
 
