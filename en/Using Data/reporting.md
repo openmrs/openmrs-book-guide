@@ -97,7 +97,7 @@ The simplest query built by Amani Clinic included only female patients:
 
 ![](/assets/report-females.png)
 
-The rest of the queries needed to include parameters. For example, the query to find patients with any encounter between two given dates, the "on or after" and "on or before" fields were set as a **Parameter** \[1\] and user-friendly names "Start Date" and "End Date" were provided.
+The rest of the queries needed to include parameters. For example, the query to find patients with any encounter between two given dates, the "on or after" and "on or before" fields were set as a **Parameter** [1] and user-friendly names "Start Date" and "End Date" were provided.
 
 ![](/assets/report-encounters.png)
 
