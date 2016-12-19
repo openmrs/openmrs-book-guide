@@ -10,12 +10,11 @@ You can either enter concepts on your own manually or use a tool like the Metada
 
 To start with you will need to setup **Concept Classes**. The standard installation includes around 15 predefined concept classes. To view them enter the **Administration** page &gt; **Manage Concept Classes**.
 
-![](http://write.flossmanuals.net/openmrs/managing-concepts-and-metadata/static/concept_classes.png)
+![](/assets/concept_classes.png)
 
 1. Add a new Concept Class
 
 2. Click to edit an existing Concept Class
-
 
 You will see a list with names and descriptions. You can edit them by clicking on a name and also delete by selecting check-boxes next to their names. Note that you cannot delete concept classes that are used in concepts already. There is also a link **Add Concept Class** to enter new ones.
 
@@ -23,13 +22,13 @@ You will see a list with names and descriptions. You can edit them by clicking o
 
 **Concept Datatypes** are purposed to indicate different formats of data stored in concepts. They are predefined and read-only. You can view them under **Administration &gt; Manage Concept Datatypes**.
 
-![](http://write.flossmanuals.net/openmrs/managing-concepts-and-metadata/static/concept_datatype.png)
+![](/assets/concept_datatype.png)
 
 ## Concept
 
 To view concepts available in your system click **Dictionary** in the top menu. You will be able to search for particular concepts by name or ID. There is also a check-box that allows to search for retired concepts which are not supposed to be used anymore or are replaced with new ones. You can also enter a new concept from here clicking **Add new Concept**.
 
-![](http://write.flossmanuals.net/openmrs/managing-concepts-and-metadata/static/concept_dictionary.png)
+![](/assets/concept_dictionary.png)
 
 1. Open concept dictionary
 
@@ -39,14 +38,13 @@ To view concepts available in your system click **Dictionary** in the top menu. 
 
 4. Search results
 
-
-![](http://write.flossmanuals.net/openmrs/managing-concepts-and-metadata/static/case-study.png)
+![](/assets/case-study.png)
 
 Let's create a concept to represent **ANTENATAL VISIT REASON**. We will use it later in the book in a data entry form. The form for creating a concept allows you to enter **Fully Specified Name** as well as synonyms. You can add synonyms with **Add Synonym** button \[2\]. At least one of the names needs to be marked as **Preferred** with the radio button next to it.
 
 While creating a new concept you need to decide on datatype. In this case it will be a coded concept that is you will provide a list of answers. Answers need to be defined as concepts. You need to create them beforehand or else add them later.
 
-![](http://write.flossmanuals.net/openmrs/managing-concepts-and-metadata/static/add_concept_1.png)
+![](/assets/add_concept_1.png)
 
 1. Switch between languages
 
@@ -54,7 +52,7 @@ While creating a new concept you need to decide on datatype. In this case it wil
 
 3. Select datatype
 
-4. Edit a list of answers \(this section changes depending on the chosen datatype\)
+4. Edit a list of answers (this section changes depending on the chosen datatype)
 
 5. Add mappings
 
@@ -89,7 +87,7 @@ Identifiers uniquely identify patients within the system. Different types of ide
 
 In order to see predefined identifier types, or to add a new one, go to **Administration - Manage Identifier Types**. Let's examine **OpenMRS Identification Number**.
 
-![](http://write.flossmanuals.net/openmrs/managing-concepts-and-metadata/static/patient_identifier_type.png)
+![](/assets/patient_identifier_type.png)
 
 The **Regex Format** and **Description of format** fields are empty, but you could add here a regular expression to validate each entered identifier. For example:
 
