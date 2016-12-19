@@ -32,10 +32,10 @@
     * [Maintenance](Administering OpenMRS/maintenance.md)
     * [Troubleshooting](Administering OpenMRS/troubleshooting.md)
     * [Getting Help from the OpenMRS Community](Administering OpenMRS/getting-help-from-the-openmrs-community.md)
-* Epilogue
+* [Epilogue](epilogue.md)
     * [Leaving Amani Clinic](Epilogue/leaving-amani-clinic.md)
     * [About this Book](Epiloque/about-this-book.md)
-* Appendices
+* [Appendices](appendices.md)
     * [Appendix A: Glossary](appendix-a-glossary.md)
     * [Appendix B: Example HTML Form Source](appendix-b-example-html-form-source.md)
     * [Appendix C: Document History](appendix-c-document-history.md)
