@@ -21,17 +21,17 @@ Every HTML form must have the following minimal elements:
 
 It is easiest to leave these essential elements in a form header section that you re-use at the top of each form. The mandatory observation element is included below.
 
-![](http://write.flossmanuals.net/openmrs/html-forms/static/form-header-s.jpg)
+![](/assets/form-header-s.jpg)
 
 ## Case study: Amani Clinic
 
-![](http://write.flossmanuals.net/openmrs/html-forms/static/case-study.png)
+![](/assets/case-study.png)
 
 The clinicians at the Amani Clinic needed a way to capture patient history as part of their maternal and child health \(MCH\) program. They had been in contact with the Millenium Villages Project \(MVP\) via the OpenMRS implementers mailing list. MVP staff shared their Antenatal Visit form. The implementation team decided to use the History section from the MVP form as a basis for their MCH history form.
 
 The MVP Antenatal History section looked like this:
 
-![](http://write.flossmanuals.net/openmrs/html-forms/static/mvp-antenatal-history.jpg)
+![](/assets/mvp-antenatal-history.jpg)
 
 ### Step 1: Identify and create concepts
 
@@ -39,21 +39,21 @@ Before you create a form, you must ensure that all reference concepts are presen
 
 The MVP form included fourteen different Question Concepts, as well as Answer Concepts for \[1\], \[3\], \[6\], \[9\], \[11\], \[13\], and \[14\].
 
-![](http://write.flossmanuals.net/openmrs/html-forms/static/form-concepts.jpg)
+![](/assets/form-concepts.jpg)
 
 ### Step 2: Create the form
 
 To create a form, click on the **Manage HTML Forms** link on the **Administration** page.
 
-![](http://write.flossmanuals.net/openmrs/html-forms/static/form-admin.jpg)
+![](/assets/form-admin.jpg)
 
 ClickNew Form.
 
-![](http://write.flossmanuals.net/openmrs/html-forms/static/form-new.jpg)
+![](/assets/form-new.jpg)
 
 Enter the basic form information and click **Save**.
 
-![](http://write.flossmanuals.net/openmrs/html-forms/static/form-enter.jpg)
+![](/assets/form-enter.jpg)
 
 ### Step 3: Create visual form structure with HTML
 
@@ -63,7 +63,7 @@ The degree to which your form resembles the paper form depends on your HTML layo
 
 This is the basic structure of the example HTML form, with a placeholder label inserted for each observation:
 
-![](http://write.flossmanuals.net/openmrs/html-forms/static/form-skeleton.jpg)
+![](/assets/form-skeleton.jpg)
 
 ### Step 4: Insert observation elements
 
@@ -75,7 +75,7 @@ Next, insert a form tag for each observation in your forms. These **obs** tags a
 
 ### Example 1: Date observation
 
-![](http://write.flossmanuals.net/openmrs/html-forms/static/form-date-s.jpg)
+![](/assets/form-date-s.jpg)
 
 To insert a Date Observation, include the Question Concept ID of any date-based Concept. The formatting label behind the Date Box cannot be removed.
 
@@ -94,7 +94,7 @@ To insert a Date Observation, include the Question Concept ID of any date-based 
 
 ### Example 2: Boolean observation
 
-![](http://write.flossmanuals.net/openmrs/html-forms/static/form-boolean-s.jpg)
+![](/assets/form-boolean-s.jpg)
 
 To insert a Boolean observation, include the question concept ID of any boolean concept. There are several different styles available for Boolean types.
 
@@ -116,7 +116,7 @@ To insert a Boolean observation, include the question concept ID of any boolean 
 
 ### Example 3: Coded observation with radio buttons
 
-![](http://write.flossmanuals.net/openmrs/html-forms/static/form-radio-s.jpg)
+![](/assets/form-radio-s.jpg)
 
 This **obs** element is inserted with the radio button style. You must specify each answer concept ID even though they are already recorded in the system as answers for the question concept. If you want to use a name other than the concept name for an answer concept, you must include the answer concept label.
 
@@ -140,7 +140,7 @@ To render the radio buttons vertically, insert **&lt;br \/&gt;** at the end of e
 
 ### Example 4: Coded observation with multi-select checkboxes
 
-![](http://write.flossmanuals.net/openmrs/html-forms/static/form-multi-s.jpg)
+![](/assets/form-multi-s.jpg)
 
 This **obs** element is inserted with the checkbox button style. You must specify each Answer Concept ID even though they are already recorded in the system as answers for the question concept. If you want to use a name other than the concept name for an answer concept, you must include the answer concept label.
 
@@ -180,7 +180,7 @@ Each checkbox selected actually represents an individual observation; the questi
 
 ### Complete form
 
-![](http://write.flossmanuals.net/openmrs/html-forms/static/form-full.jpg)
+![](/assets/form-full.jpg)
 
 See Appendix B for Full HTML source.
 
@@ -188,21 +188,21 @@ See Appendix B for Full HTML source.
 
 Click on **Find/Create Patient** from anywhere within OpenMRS.
 
-![](http://write.flossmanuals.net/openmrs/html-forms/static/form-find-patient.jpg)
+![](/assets/form-find-patient.jpg)
 
 Begin typing the patient's ID number or name, then select the patient for whom you are entering data.
 
-![](http://write.flossmanuals.net/openmrs/html-forms/static/form-select-patient.jpg)
+![](/assets/form-select-patient.jpg)
 
 Click the **Form Entry** tab.
 
-![](http://write.flossmanuals.net/openmrs/html-forms/static/form-click-tab.jpg)
+![](/assets/form-click-tab.jpg)
 
 Select the appropriate form as shown below, then fill in the patient data and click the **Enter Form** button on the page that appears.
 
-![](http://write.flossmanuals.net/openmrs/html-forms/static/form-select-form.jpg)
+![](/assets/form-select-form.jpg)
 
 You can now see the completed form under the **Form Entry** tab of the patient's chart.
 
-![](http://write.flossmanuals.net/openmrs/html-forms/static/form-view-form.jpg)
+![](/assets/form-view-form.jpg)
 
