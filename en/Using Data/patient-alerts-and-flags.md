@@ -8,7 +8,7 @@ Using this module requires significant technical knowledge. This chapter assumes
 
 First, you need to install **Patient Flags** module from the OpenMRS module repository, and then go to its section on the **Administration** page. First, define categories of alerts \[1\]. Then, you can define logic and messages for these alerts \[2\].
 
-![](http://write.flossmanuals.net/openmrs/patient-alerts-and-flags/static/flags%20admin.png)
+![](/assets/flags-admin.png)
 
 ## Categorizing flags by priorities
 
@@ -16,7 +16,7 @@ From the Manage Priorities link, you can define different categories of alerts, 
 
 In this example we define two different categories of alerts, the more critical of which will be highlighted in orange, and the other in gray. Note that you need to include **thestyle="..."** in your style property.
 
-![](http://write.flossmanuals.net/openmrs/patient-alerts-and-flags/static/flags%20priority_1.png)
+![](/assets/flags-priority_1.png)
 
 ## Defining flags
 
@@ -28,15 +28,15 @@ Finally, you can decide whether flags are **Real-Time**, which means that the fl
 
 ### SQL flags
 
-The calculation behind this type of flag is a SQL statement that will be executed against the database, and must include a **select \(something\).patient\_id ...** statement. The results of this query will be intersected with all non-voided patients to produce the Cohort for the flag.
+The calculation behind this type of flag is a SQL statement that will be executed against the database, and must include a **select (something).patient_id ...** statement. The results of this query will be intersected with all non-voided patients to produce the Cohort for the flag.
 
 Many system administrators know how to write SQL queries, and over time they become familiar with the OpenMRS data model, making this type of flag very accessible. At the same time, writing this type of flag can be error-prone. There is nothing to prevent you from omitting a clause, such as to ensure you are only looking at non-voided data.
 
 In this example we are searching for all patients who have carried at least 4 pregnancies.
 
-Since SQL flags must include **.patient\_id** in their **select** clause, we have to join the **obs** table against the **patient** table, even though we aren't using that table.
+Since SQL flags must include **.patient_id** in their **select** clause, we have to join the **obs** table against the **patient** table, even though we aren't using that table.
 
-![](http://write.flossmanuals.net/openmrs/patient-alerts-and-flags/static/flags%20sql.png)
+![](/assets/flags-sql.png)
 
 ### Groovy flags
 
@@ -44,5 +44,5 @@ The most powerful type of flag allows you to write Groovy or Java code, which ca
 
 A Groovy flag returns a cohort of all patients that match the calculation. In this example we find all patients who are expected to give birth in the next 3 months, but who have_not_had an encounter in the last 3 months.
 
-![](http://write.flossmanuals.net/openmrs/patient-alerts-and-flags/static/flags%20groovy.png)
+![](/assets/flags-groovy.png)
 
