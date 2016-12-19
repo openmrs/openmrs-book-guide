@@ -30,24 +30,23 @@ The initial screen of the cohort builder contains several sections:
 
 7. Use the link at the top of the cohort builder to load saved cohorts and cohort definitions.
 
-
-![](http://write.flossmanuals.net/openmrs/cohort-builder/static/cohort%20builder%20overview.png)
+![](/assets/cohort-builder-overview.png)
 
 ## Searching by observation
 
-To search for patients who have observations matching certain criteria, choose the **Concept/Observation** tab. Start typing the name of a concept that you want to search for \[1\], and choose that concept from the search results \[2\].
+To search for patients who have observations matching certain criteria, choose the **Concept/Observation** tab. Start typing the name of a concept that you want to search for [1], and choose that concept from the search results [2].
 
-If you choose a concept whose datatype is anything other than N/A, you can search for observations whose question is the concept you selected \[3\]. Depending on the datatype, you can limit this to a numeric or date range, or to specific coded answers. You can also choose which observations you are looking for \(first, last, min, max, any, none\) or combine \(average\), and you can specify date ranges.
+If you choose a concept whose datatype is anything other than N/A, you can search for observations whose question is the concept you selected [3]. Depending on the datatype, you can limit this to a numeric or date range, or to specific coded answers. You can also choose which observations you are looking for (first, last, min, max, any, none) or combine (average), and you can specify date ranges.
 
 This example will build a cohort of patients whose last systolic blood pressure measurement was above 130 mmHg:
 
-![](http://write.flossmanuals.net/openmrs/cohort-builder/static/cohort%20builder%20obs%20question.png)
+![](/assets/cohort-builder-obs-question.png)
 
 You can also search for any observations that have your chosen concept as an **answer**. \(You'd typically use this for doing a highly selective search, which you'll later filter down to something more specific.\)
 
 In this example we search for patients who have any observation whose answer is Hypertension, which might include both confirmed diagnoses of hypertension as well as consults to rule out Hypertension:
 
-![](http://write.flossmanuals.net/openmrs/cohort-builder/static/cohort%20builder%20obs%20answer.png)
+![](/assets/cohort-builder-obs-answer.png)
 
 ## Searching by demographics
 
@@ -55,7 +54,7 @@ Select the **Patient Attributes** tab to search based on simple demographic cha
 
 In this example, we search for living male patients between 45 and 65 years old: 
 
-![](http://write.flossmanuals.net/openmrs/cohort-builder/static/cohort%20builder%20demographics.png)
+![](/assets/cohort-builder-demographics.png)
 
 ## Searching by encounters
 
@@ -63,7 +62,7 @@ Select the **Encounters** tab to search for patients based on encounters they h
 
 In this example we search for patients who have had at least 3 encounters whose types were either ADULTINITIAL or ADULTRETURN:
 
-![](http://write.flossmanuals.net/openmrs/cohort-builder/static/cohort%20builder%20encounters.png)
+![](/assets/cohort-builder-encounters.png)
 
 ## Searching by program enrollments
 
@@ -71,7 +70,7 @@ Select the **Program Enrollment** tab to search for patients enrolled in a part
 
 In this example, we search for patients who have ever been in the Hypertension Program:
 
-![](http://write.flossmanuals.net/openmrs/cohort-builder/static/cohort%20builder%20program.png)
+![](/assets/cohort-builder-program.png)
 
 ## Combining searches
 
@@ -79,5 +78,5 @@ After you have done several searches, the **Composition** tab allows you to com
 
 Here, we search for patients who match a combination of the previous example queries:
 
-![](http://write.flossmanuals.net/openmrs/cohort-builder/static/cohort%20builder%20composition_1.png)
+![](/assets/cohort-builder-composition_1.png)
 
