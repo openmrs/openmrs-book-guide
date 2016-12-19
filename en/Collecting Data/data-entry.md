@@ -1,6 +1,6 @@
 # Data Entry
 
-![](http://write.flossmanuals.net/openmrs/data-entry/static/data-entry.png)
+![](/assets/data-entry.png)
 
 An electronic medical records system has many advantages compared to a traditional paper-based system. Data is collected using electronic forms, and a standard template means that each user sees the same structure, simplifying the representation of the underlying information structure and complexity. Electronic forms also allow for basic data validation.
 
