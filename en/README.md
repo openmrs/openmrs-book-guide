@@ -3,7 +3,7 @@
 _OpenMRS clinical and research locations as of 2016_
 ![](/assets/openmrs_atlas_2016.png) 
 
-[OpenMRS](https://openmrs.org) is an electronic medical record system \(EMR\) platform, designed for use in the developing world and first established in 2004. Today, the system has evolved into a medical informatics platform used on nearly every continent, supporting health care delivery and research in an extremely wide variety of contexts.
+[OpenMRS](https://openmrs.org) is an electronic medical record system (EMR) platform, designed for use in the developing world and first established in 2004. Today, the system has evolved into a medical informatics platform used on nearly every continent, supporting health care delivery and research in an extremely wide variety of contexts.
 
 Our world continues to be ravaged by pandemics of epic proportions, as untold millions of people are infected with diseases such as HIV/AIDS, multi-drug resistant tuberculosis, malaria, and many others. Many of these infections occur in developing countries, where lack of education and resources contribute to scores of preventable deaths. Prevention and treatment interventions on this scale require efficient information management, which is particularly critical as clinical care must increasingly be entrusted to less skilled providers. Whether for lack of time, lack of money, or no access to software developers, most health care programs in developing countries manage their information with simple spreadsheets or small, poorly designed databases--if they have any electronic infrastructure at all. Most health care records in the developing world are still maintained on paper.
 
