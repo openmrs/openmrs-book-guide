@@ -2,7 +2,7 @@
 
 **Roles** and **Privileges** are controlled through the **Administration** page, under the **Manage Users** section.
 
-OpenMRS uses privileges and roles to control access to data within the system. Privileges define what can or cannot be done in the system \(e.g., **Edit Patients** or **Add Users**\), while roles are used to group privileges into more manageable groupings. To make the system easier to manage, roles can contain other roles as well as privileges. Roles inherit all the privileges of their parent roles.
+OpenMRS uses privileges and roles to control access to data within the system. Privileges define what can or cannot be done in the system (e.g., **Edit Patients** or **Add Users**), while roles are used to group privileges into more manageable groupings. To make the system easier to manage, roles can contain other roles as well as privileges. Roles inherit all the privileges of their parent roles.
 
 We will use this example: you are working with several privileges related to patient data—e.g., **View Patients**, **Edit Patients**, and **Add Patients**. TheView Patientsprivilege lets users look at patients in the system, the **Edit Patients** privilege lets users edit information about existing patients, and the **Add Patients** privilege allows users to create a completely new patient record within the system.
 
@@ -83,15 +83,9 @@ Now, by defining the main roles for users of your system and assigning users to 
 </table>
 
 
-You can see that the **Data Manager** role can be more clearly defined as a **Data Assistant** with the extra ability to add patients to the system. In addition, if you should change or enhance the privileges of the **Data Assistant** role at any time in the future, the **Data Manager** will automatically adapt to those changes — for example, if you decided a month later to allow any **Data Assistant** to **Edit Encounters**\(by adding the **Edit Encounters** privilege to the **Data Assistant** role\), the **Data Manager** role would automatically gain the ability to edit encounters as well.
+You can see that the **Data Manager** role can be more clearly defined as a **Data Assistant** with the extra ability to add patients to the system. In addition, if you should change or enhance the privileges of the **Data Assistant** role at any time in the future, the **Data Manager** will automatically adapt to those changes — for example, if you decided a month later to allow any **Data Assistant** to **Edit Encounters** (by adding the **Edit Encounters** privilege to the **Data Assistant** role), the **Data Manager** role would automatically gain the ability to edit encounters as well.
 
-In a common deployment scenario, you will have several roles that use the same privileges with only a few differences. It is simpler to manage these privileges by defining a new role from which the others can all inherit. For example, you may have roles like **Clinician**, **Data Assistant**, and **Caregiver**  that all have the same rules about viewing patient data.  You might benefit from creating a new **Patient Data Viewer** role, assigning it to each of those other roles, and then managing the privileges in one place \(under that new role\).  When there is a policy change about viewing patient data, or a new module is added that adds new functions for viewing data, you would update the Patient Data Viewer role. All the inheriting roles would automatically use the new settings.
-
-
-
-
-
-
+In a common deployment scenario, you will have several roles that use the same privileges with only a few differences. It is simpler to manage these privileges by defining a new role from which the others can all inherit. For example, you may have roles like **Clinician**, **Data Assistant**, and **Caregiver**  that all have the same rules about viewing patient data.  You might benefit from creating a new **Patient Data Viewer** role, assigning it to each of those other roles, and then managing the privileges in one place (under that new role).  When there is a policy change about viewing patient data, or a new module is added that adds new functions for viewing data, you would update the Patient Data Viewer role. All the inheriting roles would automatically use the new settings.
 
 ### Built-in roles
 
@@ -105,7 +99,7 @@ Some privileges are built into the system and cannot be deleted. Other privilege
 
 You create roles through **Administration &gt; Manage Roles**.
 
-![](http://write.flossmanuals.net/openmrs/user-management-and-access-control/static/manage_roles.png)
+![](/assets/manage_roles.png)
 
 1. Allows to add a new role
 
@@ -113,10 +107,9 @@ You create roles through **Administration &gt; Manage Roles**.
 
 3. Click a role to edit it.
 
-
 If you then follow the **Add Role** link, you will see a form for adding a new role.
 
-![](http://write.flossmanuals.net/openmrs/user-management-and-access-control/static/add_role.png)
+![](/assets/add_role.png)
 
 1. Enter Role Name
 
@@ -124,12 +117,11 @@ If you then follow the **Add Role** link, you will see a form for adding a new r
 
 3. Choose Privileges which you want this Role to have
 
-
 ## Creating users
 
 To create these users, we'll go through **Administration &gt; Manage Users**. This page also lets you find and edit existing users.
 
-![](http://write.flossmanuals.net/openmrs/user-management-and-access-control/static/manage_users.png)
+![](/assets/manage_users.png)
 
 1. Create a new User
 
@@ -142,13 +134,11 @@ To create these users, we'll go through **Administration &gt; Manage Users**. Th
 
 Users in OpenMRS need to be associated with Persons. You either need to create a new Person, or attach the user account to an existing one.
 
-![](http://write.flossmanuals.net/openmrs/user-management-and-access-control/static/add_user.png)
+![](/assets/add_user.png)
 
-In both cases you will be taken to the same **Add/Edit User** screen. \(If you selected an existing person, the fields in the **Demographic Info** section will be filled out for you.\)
+In both cases you will be taken to the same **Add/Edit User** screen. (If you selected an existing person, the fields in the **Demographic Info** section will be filled out for you.)
 
-![](http://write.flossmanuals.net/openmrs/user-management-and-access-control/static/add_edit_user.png)
-
-
+![](/assets/add_edit_user.png)
 
 ## Managing Providers
 
@@ -164,11 +154,10 @@ For system security, patient privacy, and ease of maintenance, it's best to ente
 
 To create a Provider, go to **Admin &gt; Manage Providers** and click **Add Provider**.
 
-![](http://write.flossmanuals.net/openmrs/user-management-and-access-control/static/managing_users_add_provider.png)
+![](/assets/managing_users_add_provider.png)
 
 The identifier is a unique word or number that you provide.  It's recommended that you create identifiers in a way that's simple and easy, such as using the provider's last name and first name.
 
 Next, decide if this provider will be associated with a Person, or only be entered as a provider name.  If you choose the Person style, you must have already created a User for them. Begin typing their name in the Person field, and select them from the auto-complete list of matching users. For a Provider who is simply a Provider Name, enter their name in the Provider Name field.  
 
 Click **Save** to save the provider. 
-
