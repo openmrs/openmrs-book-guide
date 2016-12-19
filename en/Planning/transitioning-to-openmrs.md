@@ -1,8 +1,7 @@
 # Transitioning to OpenMRS
 
-![](http://write.flossmanuals.net/openmrs/transitioning-to-openmrs/static/transitioning.png)
-
 _A paper-based patient register book at an African OpenMRS clinic._
+![](/assets/transitioning.png)
 
 This chapter outlines steps that typically make up a OpenMRS project, and should be read by people about to embark on a OpenMRS implementation. Some of this information may be obvious to experienced project managers. A comprehensive guide to project management is beyond the scope of this book, but we have included some high-level process considerations to get you started thinking about what needs to happen.
 
@@ -63,7 +62,7 @@ It often makes sense to divide the implementation process into smaller, more man
 
 Another reason people choose to develop iteratively is that it is very hard for users to correctly or fully explain their requirements at the beginning of the project. Giving people hands-on experience of an early version of the system helps them understand how it works and what might be possible. They can then provide you with valuable feedback, and they might identify new requirements.
 
-![](http://write.flossmanuals.net/openmrs/transitioning-to-openmrs/static/case-study.png)
+![](/assets/case-study.png)
 
 The Amani Clinic chose to introduce change iteratively. First they started using the system for patient registration. This affected only the administrative staff without impacting the clinical staff. Later they started doing retrospective data entry, which included paper forms for clinicians that had minor changes, as well as training a new data entry clerk.
 
@@ -86,7 +85,6 @@ Even if your organizational needs don't change, you need to plan for ongoing sup
 * Upgrading the modules you use to fix bugs and improve features
 
 * Maintenance of your server and network infrastructure
-
 
 For more information, see the "Maintenance" chapter.
 
