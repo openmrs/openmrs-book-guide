@@ -24,7 +24,7 @@ During setup, there is an option to install demo data. You may choose to install
 Alternatively, from the command line, you can navigate to the decompressed folder and run the following command:
 
 ```
-java -jar standalone-1.1.jar
+java -jar openmrs-standalone.jar
 ```
 
 On Linux, you can also double-click on the file named **run-on-linux.sh**. If you are prompted for how to run it, just select **run**. Alternatively, you can use a command line shell to navigate to the decompressed folder and run the following command:
@@ -52,10 +52,9 @@ To upgrade a copy of OpenMRS Standalone, do the following:
 
 By default, the initial username and password are as follows:
 
-* Username: admin
+* Username: **admin**
 
-* Password: Admin123
-
+* Password: **Admin123**
 
 You must immediately change the admin password after installation for security purposes. To change your password, click **My Profile** in the upper right of OpenMRS, and choose the **Change Login Info tab**. Update your password, then click **Save Options**. You can also change your username, and provide your real name, on this screen.
 
@@ -83,7 +82,7 @@ You must have Apache Tomcat and MySQL installed on your system before installing
 
 Download the Enterprise WAR package from
 
-[http://openmrs.org/download/](http://openmrs.org/download/)
+[http://download.openmrs.org](http://download.openmrs.org)
 
 Navigate to the Tomcat Web Application Manager and enter your Tomcat administrator credentials.
 
@@ -144,7 +143,7 @@ To upgrade a copy of OpenMRS Enterprise, do the following:
 
 ## Amani chooses the Enterprise version
 
-![](http://write.flossmanuals.net/openmrs/installation-and-initial-setup/static/case-study.png)
+![](/assets/case-study.png)
 
 Although Amani Clinic is small, they decided to install the Enterprise version. Claudine is very familiar with Apache Tomcat and MySQL, and decided she would like more control over the system. She installed Ubuntu Linux on the physical server, then installed Java 6, MySQL, and Tomcat. After doing so, she downloaded the **openmrs.war **file and installed it in the Tomcat application server. Excluding download time for the software, she was able to complete the process in less than one hour.
 
