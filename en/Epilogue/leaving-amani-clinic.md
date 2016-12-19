@@ -1,8 +1,8 @@
 # Leaving Amani Clinic
 
-![](http://write.flossmanuals.net/openmrs/leaving-amani-clinic/static/leaving-clinic.png)
+![](/assets/leaving-clinic.png)
 
-![](http://write.flossmanuals.net/openmrs/leaving-amani-clinic/static/case-study.png)
+![](/assets/case-study.png)
 
 We now end our visit to Amani Clinic. We saw how the clinic management started with the idea of using a medical information system to support the workflow of their clinic. They implemented OpenMRS to manage their data, evaluate and report on their project's effectiveness, and ultimately improve care for their patients.
 
