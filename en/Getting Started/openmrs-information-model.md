@@ -1,8 +1,7 @@
 # OpenMRS Information Model
 
-![](http://write.flossmanuals.net/openmrs/openmrs-information-model/static/infomodel.png)
-
 _Reference books line a shelf in a rural African clinic._
+![](/assets/infomodel.png)
 
 This chapter explains terms and concepts which are useful to understand as you install and use OpenMRS.
 
@@ -64,7 +63,7 @@ A **Check Digit** is an extra digit that is added to the end of an identifier, a
 
 ## Relationships
 
-![](http://write.flossmanuals.net/openmrs/openmrs-information-model/static/case-study.png)
+![](/assets/case-study.png)
 
 A **Relationship** is a bidirectional link between two Persons in OpenMRS.
 
@@ -188,7 +187,7 @@ A **Privilege** is an authorization to perform a particular action in the system
 
 ## The information model in use at Amani Clinic
 
-![](http://write.flossmanuals.net/openmrs/openmrs-information-model/static/case-study.png)
+![](/assets/case-study.png)
 
 A patient named Asaba arrives at Amani Clinic, where the registration clerk James creates her electronic record and stores her contact phone number as 312-555-7890. On paper the Nurse, Kissa, records Asaba's weight as 61.5kg and orders a pregnancy test. James enters these onto an electronic screen.
 
