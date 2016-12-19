@@ -16,7 +16,6 @@ Although this chapter will cover the basics, as your OpenMRS implementation grow
 
 * An API that Java developers can extend to add custom reports, indicators, and displays.
 
-
 The module's full functionality is beyond the scope of this book. You can find further documentation on the OpenMRS Wiki:
 
 [https://wiki.openmrs.org/display/docs/Reporting+Module](https://wiki.openmrs.org/display/docs/Reporting+Moduleg)
@@ -49,10 +48,9 @@ When the user runs the report, they are asked for a **Start Date** and an **End
 
 The idea of mapping parameters is complicated. The following resources include more information about why it is necessary, and how to do it:
 
-* [http://go.openmrs.org/book-mapping](http://go.openmrs.org/book-mapping)
+* [http://om.rs/bookmapping](http://om.rs/bookmapping)
 
-* [http://go.openmrs.org/book-mapvid](http://go.openmrs.org/book-mapvid)
-
+* [http://om.rs/bookmapvid](http://om.rs/bookmapvid)
 
 ## Amani Clinic's weekly report
 
@@ -73,40 +71,39 @@ Calculating the first of those indicators was very straightforward: they defined
 
 The second indicator was more complicated: they had to break down both the numerator and the denominator into multiple cohort queries. For the denominator they needed:
 
-* Not pregnant \("no obs for Estimated Date of Confinement with a value in the future"\)
+* Not pregnant ("no obs for Estimated Date of Confinement with a value in the future")
 
 * Female
 
 * Age &gt; 16 at the end of the week
 
-* Had an encounter during the week \(same as the query for the first indicator\)
-
+* Had an encounter during the week (same as the query for the first indicator)
 
 The numerator required just one more cohort query, for patients who self-reported use of contraceptive methods other than "Natural Planning / Rhythm" during the week.
 
 ## Building the report in the user interface
 
-Having determined how to calculate their indicators, they proceeded to build them in the Reporting module's user interface. First, they built the low-level queries \[1\]. They then composed the two indicator definitions \[2\] from those cohort queries. Finally, they created a report definition \[3\] that included the two indicators.
+Having determined how to calculate their indicators, they proceeded to build them in the Reporting module's user interface. First, they built the low-level queries [1]. They then composed the two indicator definitions [2] from those cohort queries. Finally, they created a report definition [3] that included the two indicators.
 
-![](http://write.flossmanuals.net/openmrs/reporting/static/report%20admin.png)
+![](/assets/report-admin.png)
 
 ## Building cohort queries
 
 The **Cohort Query** management page shows you the different types of queries available. Clicking on any of the\[+\]links lets you create a new query of that type.
 
-![](http://write.flossmanuals.net/openmrs/reporting/static/report%20cohort%20queries.png)
+![](/assets/report-cohort-queries.png)
 
 The simplest query built by Amani Clinic included only female patients:
 
-![](http://write.flossmanuals.net/openmrs/reporting/static/report%20females.png)
+![](/assets/report-females.png)
 
 The rest of the queries needed to include parameters. For example, the query to find patients with any encounter between two given dates, the "on or after" and "on or before" fields were set as a **Parameter** \[1\] and user-friendly names "Start Date" and "End Date" were provided.
 
-![](http://write.flossmanuals.net/openmrs/reporting/static/report%20encounters.png)
+![](/assets/report-encounters.png)
 
 Some of the queries built in this example included parameters that were not directly equivalent to the **Start Date** and **End Date** of the report. The "not pregnant" query was a **Date Observation Query** that included a single parameter, which they later mapped to the **End Date** of the report.
 
-![](http://write.flossmanuals.net/openmrs/reporting/static/report%20pregnant.png)
+![](/assets/report-pregnant.png)
 
 ### Combining cohort queries
 
@@ -114,11 +111,11 @@ After Amani Clinic staff created the underlying queries that their report requir
 
 This is their composition query, which includes the two parameters **Start Date** and **End Date**. It includes four underlying queries, with values in those queries mapped to these two parameters. Finally, the queries are combined with AND to run them all together. 
 
-![](http://write.flossmanuals.net/openmrs/reporting/static/report%20composition.png)
+![](/assets/report-composition.png)
 
 Here, we see the seven cohort queries they built:
 
-![](http://write.flossmanuals.net/openmrs/reporting/static/report%20all%20cohort%20queries.png)
+![](/assets/report-all-cohort-queries.png)
 
 ### Indicators
 
@@ -132,7 +129,7 @@ The simplest type of indicator is a **Count** indicator, which counts the numbe
 
 They used a **Count** indicator to build their first indicator, shown below. The underlying cohort query is a composition query including "Females" and "Any Encounter Between Dates." 
 
-![](http://write.flossmanuals.net/openmrs/reporting/static/report%20seen%20indicator.png)
+![](/assets/report-seen-indicator.png)
 
 #### Fraction indicators
 
@@ -140,21 +137,21 @@ The most useful type of indicator for monitoring program progress is the **Fract
 
 Amani Clinic built their second indicator as a fraction indicator. The underlying cohort query for the numerator was a simple Coded Observation Query, while the denominator was the Composition Query described above.
 
-![](http://write.flossmanuals.net/openmrs/reporting/static/report%20indicator%20contraception.png)
+![](/assets/report-indicator-contraception.png)
 
 ### Period indicator report
 
 Having created their indicators, they built a report that combined them. They used a **Period Indicator Report**, which is a simple way to show the indicators you have already defined.
 
-![](http://write.flossmanuals.net/openmrs/reporting/static/report%20indicator%20report.png)
+![](/assets/report-indicator-report.png)
 
 ## Running the report
 
 To run this report, the Amani Clinic data manager clicks the **Reporting** link on the top of the screen and selects the **Program Monitoring Report**. They must enter the start and end date of the week for which to generate the report.
 
-![](http://write.flossmanuals.net/openmrs/reporting/static/report%20run.png)
+![](/assets/report-run.png)
 
 The output of the report includes clickable links to the lists of patients matching each indicator.
 
-![](http://write.flossmanuals.net/openmrs/reporting/static/report%20run%20results.png)
+![](/assets/report-run-results.png)
 
