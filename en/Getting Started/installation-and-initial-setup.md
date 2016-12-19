@@ -1,14 +1,13 @@
 # Installation and Initial Setup
 
-![](http://write.flossmanuals.net/openmrs/installation-and-initial-setup/static/installing.png)
-
 _An OpenMRS server in Uganda._
+![](/assets/installing.png)
 
-You can download OpenMRS from the OpenMRS web site.
+You can download OpenMRS from the OpenMRS web site:
 
-[http://openmrs.org/download/](http://openmrs.org/download/)
+[http://download.openmrs.org](http://download.openmrs.org)
 
-There are two ways to install OpenMRS: Standalone, and Enterprise. You must have Java 6 or higher installed on your system to run OpenMRS.
+There are two ways to install OpenMRS: Standalone, and Enterprise. You must have Java 6 or higher installed on your system to run OpenMRS. For OpenMRS Platform 2.0+ (includes the community's Reference Application 2.5+), Java 8 or higher is required.
 
 OpenMRS Standalone provides a simplified installation option with an embedded database and web server. It is a great way to evaluate and explore OpenMRS, letting you get a local version up and running within minutes, and includes download options with sample data. OpenMRS Standalone should run fine for smaller installations \(fewer than 10,000 patient records\), but if you are setting up a larger installation, we recommend using the Enterprise installation. If you are not sure which makes sense, you can start with a Standalone installation and migrate your data to the Enterprise version later.
 
