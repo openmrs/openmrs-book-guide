@@ -1,8 +1,6 @@
-<
-center><img src="/assets/OpenMRS-cross.png"></center>
+<center><img src="/assets/OpenMRS-cross.png"></center>
 <center><h1> Welcome To OpenMRS </h1></center>
 <center><h2> Write Code, Save Lives </h2></center>
-********************************************
 
 The OpenMRS Guide is hosted at [https://github.com/openmrs/openmrs-book-guide](https://github.com/openmrs/openmrs-book-guide). Anyone is welcome to help us improve the guide by contributing pull requests to this repository.
 
