@@ -2,7 +2,7 @@
 <center><h1> Welcome To OpenMRS </h1></center>
 <center><h2> Write Code, Save Lives </h2></center>
 
-This is the OpenMRS Guide. It is an introduction to [OpenMRS](https://openmrs.org).
+This is the OpenMRS Guide. It is an introduction to [OpenMRS](https://openmrs.org) for people who are interested in learning about OpenMRS or implementing OpenMRS.
 
 ### View the Book
 
