@@ -8,7 +8,7 @@ before_script:
 script:
   - gitbook install && gitbook build
 before_deploy:
-  - cat LANGS.md | perl -n -e'/\(([^\)]+?)\/?\)/ && print "$1\n"' | xargs -I lang gitbook pdf lang _book/lang/openmrs-guide-lang.pdf
+  - cat LANGS.md | perl -n -e'/\(([^\)]+?)\/?\)/ && print "$1\n"' | xargs -I lang gitbook pdf lang _book/lang/openmrs-guide.pdf
 deploy:
   provider: pages
   skip_cleanup: true
