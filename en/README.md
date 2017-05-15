@@ -3,7 +3,7 @@
 _OpenMRS clinical and research locations as of 2016_  
 ![](/assets/openmrs_atlas_2016.png)
 
-> This is _your_ book. See an error? Want to suggest updates or help improve the guide? Learn [how to contribute](https://github.com/openmrs/openmrs-book-guide/blob/master/CONTRIBUTING.md).
+> **This is _your_ book. Simply scroll to the top of any page and click the EDIT link to contribute changes. Want to contribute more than small edits? Learn more about [how to contribute](https://github.com/openmrs/openmrs-book-guide/blob/master/CONTRIBUTING.md).**
 
 [OpenMRS](https://openmrs.org) is an electronic medical record system \(EMR\) platform, designed for use in the developing world and first established in 2004. Today, the system has evolved into a medical informatics platform used on nearly every continent, supporting health care delivery and research in an extremely wide variety of contexts.
 
