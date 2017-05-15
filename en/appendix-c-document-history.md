@@ -2,7 +2,7 @@
 
 ### Version 2.0 (Current)
 
-Released: June, 2012
+Released: June, 2012, Converted to GitBook format: November, 2016
 
 Describes OpenMRS Version: 1.9.x
 
