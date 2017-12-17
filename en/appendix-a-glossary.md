@@ -70,7 +70,7 @@
 
 **module**: A software package that extends OpenMRS functionality in specific ways; often developed by others in the OpenMRS community.
 
-**module repository**: An online resource to find and maintain community-developed OpenMRS add-on modules. [http://modules.openmrs.org/](http://modules.openmrs.org/)
+**module repository**: An online resource to find and maintain community-developed OpenMRS add-on modules. [https://addons.openmrs.org/](https://addons.openmrs.org/)
 
 **observation**: One piece of information that is recorded about a person at a moment in time.
 
