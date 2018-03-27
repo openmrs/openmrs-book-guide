@@ -125,7 +125,7 @@ Be sure to test any upgrades on a server other than the primary server you use f
 
 ## Updating modules
 
-Supported community-developed OpenMRS modules are regularly updated, and those new versions are published in the OpenMRS module repository. You should check for upgraded modules regularly. Go to [http://modules.openmrs.org/](http://modules.openmrs.org/) or view the "Manage Modules" page from the OpenMRS **Administration** page. From there, you can upgrade a module with updates automatically by clicking **Install Update**, or you may manually upload the new version by following the instructions on the page.
+Supported community-developed OpenMRS modules are regularly updated, and those new versions are published in the OpenMRS Add-ons index. You should check for upgraded modules regularly. Go to [https://addons.openmrs.org/](https://addons.openmrs.org/) or view the "Manage Modules" page from the OpenMRS **Administration** page. From there, you can upgrade a module with updates automatically by clicking **Install Update**, or you may manually upload the new version by following the instructions on the page.
 
 ## Amani's maintenance plan
 

@@ -61,7 +61,7 @@ The OpenMRS Form Bank is a new community-driven project that is beginning to col
 
 ### Explore the module repository
 
-Implementers should consult the OpenMRS Module Repository at [http://modules.openmrs.org/](http://modules.openmrs.org/) before considering customization through software development.
+Implementers should consult the OpenMRS Module Repository at [https://addons.openmrs.org/](https://addons.openmrs.org/) before considering customization through software development.
 
 There is a good chance that someone has created a module to address needs you may have. Read the "Customizing OpenMRS with Plug-in Modules" chapter for a list of recommended modules.
 

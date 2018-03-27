@@ -8,9 +8,9 @@ OpenMRS has a modular architecture, which allows special functionality to be eas
 
 ## Module repository
 
-You can view available modules in the OpenMRS Module Repository:
+You can view available modules in the OpenMRS Add-ons index:
 
-[http://modules.openmrs.org/](http://modules.openmrs.org/)
+[https://addons.openmrs.org/](https://addons.openmrs.org/)
 
 It is a place where you can find published modules. Each module has a page with a description, a link for downloading, and a link to the module's documentation.
 
