@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.748585574323">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 3.5.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Troubleshooting Your Installation</title>
+    <meta name="title" content="Troubleshooting Your Installation">
+    <meta name="description" content="Unfortunately, sometimes things do not go exactly planned. This chapter can help you deal with the most common problems.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="/administering-openmrs/troubleshooting/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/administering-openmrs/troubleshooting/">
+    <meta property="og:title" content="Troubleshooting Your Installation">
+    <meta property="og:description" content="Unfortunately, sometimes things do not go exactly planned. This chapter can help you deal with the most common problems.">
+    <meta property="og:image" content="/assets/troubleshooting.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="/administering-openmrs/troubleshooting/">
+    <meta property="twitter:title" content="Troubleshooting Your Installation">
+    <meta property="twitter:description" content="Unfortunately, sometimes things do not go exactly planned. This chapter can help you deal with the most common problems.">
+    <meta property="twitter:image" content="/assets/troubleshooting.png">
+
+    <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
+
+    <link href="../../resources/css/retype.css?v=3.5.0.748585574323" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.748585574323" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.748585574323" data-turbo-eval="false" defer></script>
+</head>
+<body>
+    <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
+        <div class="absolute bottom-0 left-0 bg-gray-100 dark:bg-dark-800" style="top: 5rem; right: 50%"></div>
+    
+        <header id="docs-site-header" class="sticky top-0 z-30 flex w-full h-16 bg-white border-b border-gray-200 md:h-20 dark:bg-dark-850 dark:border-dark-650">
+            <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+                <!-- Mobile menu button skeleton -->
+                <button v-cloak class="skeleton docs-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+                <div v-cloak id="docs-sidebar-toggle"></div>
+        
+                <!-- Logo -->
+                <div class="flex items-center justify-between h-full py-2 md:w-75">
+                    <div class="flex items-center px-2 md:px-6">
+                        <a id="docs-site-logo" href="../../" class="flex items-center leading-snug text-xl">
+                            <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">OpenMRS Guide</span>
+                        </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">2.0</span>
+                    </div>
+        
+                    <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
+                </div>
+        
+                <div class="flex justify-between md:grow">
+                    <!-- Top Nav -->
+                    <nav class="hidden md:flex">
+                        <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://openmrs.org/">OpenMRS.org</a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://wiki.openmrs.org/">Wiki</a>
+                            </li>
+        
+                        </ul>
+                    </nav>
+        
+                    <!-- Header Right Skeleton -->
+                    <div v-cloak class="flex justify-end grow skeleton">
+        
+                        <!-- Search input mock -->
+                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                            </div>
+                            <input class="w-full h-10 placeholder-gray-400 transition-colors duration-200 ease-in bg-gray-200 border border-transparent rounded md:text-sm hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-dark-600 dark:border-dark-600 dark:placeholder-dark-400" style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search">
+                        </div>
+        
+                        <!-- Mobile search button -->
+                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                        </div>
+        
+                        <!-- Dark mode switch placeholder -->
+                        <div class="w-10 h-10 lg:ml-2"></div>
+        
+                        <!-- History button -->
+                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                        </div>
+                    </div>
+        
+                    <div v-cloak class="flex justify-end grow">
+                        <div id="docs-mobile-search-button"></div>
+                        <doc-search-desktop></doc-search-desktop>
+        
+                        <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                        <doc-history></doc-history>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <div class="container relative flex bg-white">
+            <!-- Sidebar Skeleton -->
+            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-gray-100 border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
+            
+                <!-- Render this div, if config.showSidebarFilter is `true` -->
+                <div class="flex items-center h-16 px-6">
+                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-white border border-gray-200 rounded shadow-none text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter">
+                </div>
+            
+                <div class="pl-6 mt-1 mb-4">
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                </div>
+            
+                <div class="shrink-0 mt-auto bg-transparent dark:border-dark-650">
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Sidebar component -->
+            <doc-sidebar v-cloak>
+                <template #sidebar-footer>
+                    <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-dark-650">
+            
+                        <div class="py-3 px-6 md:hidden border-b dark:border-dark-650">
+                            <nav>
+                                <ul class="flex flex-wrap justify-center items-center">
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://openmrs.org/">OpenMRS.org</a>
+                                    </li>
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://wiki.openmrs.org/">Wiki</a>
+                                    </li>
+            
+                                </ul>
+                            </nav>
+                        </div>
+            
+                        <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                            <span class="text-xs whitespace-nowrap">Powered by</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                        </a>
+                    </div>
+                </template>
+            </doc-sidebar>
+    
+            <div class="grow min-w-0 dark:bg-dark-850">
+                <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+                <div class="flex">
+                    <div class="min-w-0 p-4 grow md:px-16">
+                        <main class="relative pb-12 lg:pt-2">
+                            <div class="docs-markdown" id="docs-content">
+                                <!-- Rendered if sidebar right is enabled -->
+                                <div id="docs-sidebar-right-toggle"></div>
+                                <!-- Page content  -->
+<doc-anchor-target id="troubleshooting-your-installation" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#troubleshooting-your-installation">#</doc-anchor-trigger>
+        <span>Troubleshooting Your Installation</span>
+    </h1>
+</doc-anchor-target>
+<p><figure class="content-center">
+    <img src="../../assets/troubleshooting.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>Unfortunately, sometimes things do not go exactly planned. This chapter can help you deal with the most common problems.</p>
+<p>We recommend using Apache Tomcat 6.0.29 to run OpenMRS. Any J2EE-compliant Java servlet container should be able to run it, but most people who use OpenMRS are running it with Tomcat, which may make it easier to get support if you encounter problems.</p>
+<p>If you are not yet using Tomcat 6.0.29, consider upgrading Tomcat before you continue. We recommend getting Tomcat from this link.</p>
+<p><a href="http://tomcat.apache.org/">http://tomcat.apache.org/</a></p>
+<p>When troubleshooting Tomcat, your first step should always be to review the Tomcat logs. In Windows, these are stored at the following location.</p>
+<blockquote>
+<p>C:\Program Files\Apache Software Foundation\Tomcat 6.0\logs</p>
+</blockquote>
+<p>Historically, MySQL has been recommended as the database of choice to use with OpenMRS. The newer database from the open source project MariaDB should also be compatible with OpenMRS. Work is underway in the OpenMRS community to provide support for other databases such as Oracle, Microsoft SQL Server, and others, but these databases are not yet supported.</p>
+<p>You may not be able to resolve your problem with OpenMRS using the troubleshooting material in this chapter. That is OK -- the OpenMRS community is available to help! Check out the <a href="../getting-help-from-the-openmrs-community/">Getting Help from the OpenMRS Community</a> chapter for more information about how to communicate with others, ask questions, and get answers.</p>
+<doc-anchor-target id="some-possible-problems-and-solutions">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#some-possible-problems-and-solutions">#</doc-anchor-trigger>
+        <span>Some possible problems and solutions</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="openmrs-fails-to-install-with-message-error-creating-bean-with-name-messagesourceservicetarget">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#openmrs-fails-to-install-with-message-error-creating-bean-with-name-messagesourceservicetarget">#</doc-anchor-trigger>
+        <span>OpenMRS fails to install with message &quot;Error creating bean with name &#x27;messageSourceServiceTarget&#x27;&quot;</span>
+    </h3>
+</doc-anchor-target>
+<p>MySQL must be running before starting and installing OpenMRS. If it is not, you may see the following error message in your web browser and log files when you attempt to install OpenMRS:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">org.springframework.beans.factory.BeanCreationException:Error creating bean with name 'messageSourceServiceTarget' defined in class path resource applicationContext-service.xml</code></pre>
+</doc-codeblock></div>
+<p>Ensure MySQL is installed and running before attempting to start and install OpenMRS.</p>
+<doc-anchor-target id="mysql-configure-instance-hangs-on-starting-the-service-or-reports-error-1045">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mysql-configure-instance-hangs-on-starting-the-service-or-reports-error-1045">#</doc-anchor-trigger>
+        <span>MySQL Configure Instance hangs on starting the service, or reports Error 1045</span>
+    </h3>
+</doc-anchor-target>
+<p>On Windows, the computer may stop responding while running the MySQL Configure Instance tool. Most commonly, this occurs before the tool marks <strong>Starting the service</strong> as complete, because there is already a MySQL service running.</p>
+<p>To fix this, you should delete the pre-existing MySQL service in Windows, and try the installation again. You can find instructions on how to do delete a MySQL service at <a href="http://www.howtogeek.com/howto/windows-vista/how-to-delete-a-windows-service-in-vista-or-xp/">this link</a>.</p>
+<p>Alternatively, you may see a MySQL Error 1045, if your computer has previously had a MySQL instance installed. This means that the root password is incorrect, and is most commonly caused by residual data from the previous installation.</p>
+<p>To fix this, you should delete the MySQL data directory. On Windows 7, you may need to reboot and delete the directory, or to use an unlocking program in order to delete this directory.</p>
+<p>You can also change the password that OpenMRS uses to access your MySQL database, by editing the <strong>openmrs-runtime.properties</strong> file, as described later in this chapter.</p>
+<doc-anchor-target id="starting-tomcat-service-on-windows-fails">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#starting-tomcat-service-on-windows-fails">#</doc-anchor-trigger>
+        <span>Starting Tomcat service on Windows fails</span>
+    </h3>
+</doc-anchor-target>
+<p>If you cannot start the Tomcat service on Windows, try checking the Tomcat logs. You can find the logs in the following directory.</p>
+<blockquote>
+<p>&lt;TOMCAT HOME&gt;\logs</p>
+</blockquote>
+<doc-anchor-target id="errors-like-failed-creating-java-cprogram-filesjavajre160binclientjvmdll">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#errors-like-failed-creating-java-cprogram-filesjavajre160binclientjvmdll">#</doc-anchor-trigger>
+        <span>Errors like &quot;Failed creating java C:\Program Files\Java\jre1.6.0\bin\client\jvm.dll&quot;</span>
+    </h3>
+</doc-anchor-target>
+<p>To fix this problem, search for <strong>msvcr71.dll</strong> on your hard drive, and copy that file to this location.</p>
+<blockquote>
+<p>C:\Windows\System32</p>
+</blockquote>
+<doc-anchor-target id="installing-openmrs-or-running-database-updates-fails-with-message-could-not-acquire-change-log-lock">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#installing-openmrs-or-running-database-updates-fails-with-message-could-not-acquire-change-log-lock">#</doc-anchor-trigger>
+        <span>Installing OpenMRS or running database updates fails with message “Could not acquire change log lock”</span>
+    </h3>
+</doc-anchor-target>
+<p>To prevent conflicting updates, liquibase begins each update by creating a row in the <strong>liquibasechangeloglock</strong> table. This row acts as a lock. If OpenMRS or Apache Tomcat crashes while an update is in progress, the update may fail to complete</p>
+<p>and this row will not be removed from the table.</p>
+<p>You may see the following error message in your web browser or in the Tomcat logs, the next time you start up or attempt to install or update OpenMRS:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">&quot;Error Could not acquire change log lock&quot;</code></pre>
+</doc-codeblock></div>
+<p>Deleting this row from the <strong>liquibasechangeloglock</strong> table will solve the problem, and allow installation or updates to proceed normally. To delete rows from the <strong>liquibasechangeloglock</strong> table using a command line SQL client, run either of the following SQL commands:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">truncate table liquibasechangeloglock;</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">delete from liquibasechangeloglock;</code></pre>
+</doc-codeblock></div>
+<p>If you prefer to use a GUI client for MySQL, you should navigate to the <strong>liquibasechangeloglock</strong> table and delete all rows from that table. When you have cleared the table, restart Tomcat if necessary, and restart OpenMRS.</p>
+<doc-anchor-target id="problems-connecting-to-tomcat-on-port-8080">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#problems-connecting-to-tomcat-on-port-8080">#</doc-anchor-trigger>
+        <span>Problems connecting to Tomcat on port 8080</span>
+    </h3>
+</doc-anchor-target>
+<p>Other installed programs may already be using port 8080. This will prevent Tomcat using this port. Some software may also use port 8005, which should not interfere with running Tomcat, but may prevent it from starting up correctly.</p>
+<p>If you know what program is using these ports, you may choose to stop or remove that program. Alternatively, you can configure Tomcat to run on a different port by editing Tomcat’s <strong>server.xml</strong> file to change 8080 to a different value (eg 8090).</p>
+<p>If you need further help, see the &quot;Getting Help from the OpenMRS Community&quot; chapter for more information.</p>
+<doc-anchor-target id="permission-problems-when-running-tomcat-as-a-service-on-ubuntu">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#permission-problems-when-running-tomcat-as-a-service-on-ubuntu">#</doc-anchor-trigger>
+        <span>Permission problems when running Tomcat as a service on Ubuntu</span>
+    </h3>
+</doc-anchor-target>
+<p>If you are trying to run Tomcat as a server on Ubuntu, you may run into permission issues. The following error is typical of these problems:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">java.security.AccessControlException: access denied (java.io.FilePermission /usr/share/tomcat6/webapps/openmrs/WEB-INF/dwr-modules.xml delete)</code></pre>
+</doc-codeblock></div>
+<p>The easiest way to solve this issue is to disable the Java security manager or similar startup script, which you can find at this location.</p>
+<blockquote>
+<p>/etc/init.d/tomcat6</p>
+</blockquote>
+<p>Edit the file and set <strong>TOMCAT6_SECURITY</strong> to <strong>no</strong>.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none"># Use the Java security manager? (yes/no)
+TOMCAT6_SECURITY=no</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="tomcat-stops-responding-after-updating-or-reloading-openmrs-in-the-web-application-manager">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#tomcat-stops-responding-after-updating-or-reloading-openmrs-in-the-web-application-manager">#</doc-anchor-trigger>
+        <span>Tomcat stops responding after updating or reloading OpenMRS in the Web Application Manager</span>
+    </h3>
+</doc-anchor-target>
+<p>Tomcat and the JVM allocate memory to a webapp each time you use the <strong>Update</strong> or <strong>Reload</strong> functions in the <strong>Web Application Manager</strong>. When the app is destroyed or recreated, some of this memory may not be released. If you update or reload the webapp too many times, Tomcat may run out of allocated memory, and will stop responding. You will also see the following error in the Tomcat logs:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">java.lang.OutOfMemoryError: PermGen space</code></pre>
+</doc-codeblock></div>
+<p>It is not possible to completely avoid this problem. However you can mitigate it by allowing Tomcat to use more memory, or by restarting Tomcat if you have to repeatedly update or reload a webapp.</p>
+<doc-anchor-target id="deploying-openmrs-using-the-tomcat-manager-web-application-fails">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#deploying-openmrs-using-the-tomcat-manager-web-application-fails">#</doc-anchor-trigger>
+        <span>Deploying OpenMRS using the Tomcat Manager web application fails</span>
+    </h3>
+</doc-anchor-target>
+<p>For various reasons, trying to deploy OpenMRS using the Tomcat Manager web application may fail. If this occurs, you should undeploy OpenMRS using the Tomcat Manager, then stop Tomcat.</p>
+<p>You can do this on the command line under Linux or OS X. First, find the process ID (PID) by running the following command:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">ps ax | grep tomcat</code></pre>
+</doc-codeblock></div>
+<p>This may return several lines, each starting with a number. Look for a long line that contains something like /usr/local/tomcat or /opt/tomcat. The PID is the first number on that line. Stop Tomcat with the following command:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">kill -9 PID</code></pre>
+</doc-codeblock></div>
+<p>Finally, you can restart Tomcat as follows:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">service tomcat6 start</code></pre>
+</doc-codeblock></div>
+<p>Log back into the Tomcat Manager web application and deploy OpenMRS normally.</p>
+<doc-anchor-target id="openmrs-openmrswar-deploys-successfully-but-fails-to-start">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#openmrs-openmrswar-deploys-successfully-but-fails-to-start">#</doc-anchor-trigger>
+        <span>OpenMRS (openmrs.war) deploys successfully but fails to start</span>
+    </h3>
+</doc-anchor-target>
+<p>If there are issues with the OpenMRS settings for application_data_directory, openmrs.war may successfully deploy, but then fail to start. The following messages are seen in Tomcat&#x27;s logs:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">SEVERE: Error listenerStart
+SEVERE: Context [/openmrs] startup failed due to previous errors</code></pre>
+</doc-codeblock></div>
+<p>Ensure that the runtime properties file exists, and that the application_data_directory is specified in this file. Then ensure that the directory exists, and that Tomcat has read and write permissions to the directory.</p>
+<p>If the directory exists as specified in the runtime properties file and Tomcat has the appropriate permissions, you may have security violation problems in your Tomcat configuration. If you need further advice, consider seeking help from the community, as described in the chapter &quot;Getting Help from the OpenMRS Community&quot;.</p>
+<p><strong>Unable to log in to Tomcat Manager due to lost password</strong></p>
+<p>The Tomcat admin password is required to log in to the Tomcat Manager web application, and to deploy and undeploy applications, including OpenMRS.</p>
+<p>If you have forgotten, lost, or misplaced this password, you can retrieve it from the file <strong>tomcat-users.xml</strong>. On Windows, this is probably located at this location.</p>
+<blockquote>
+<p>C:\Program Files\Apache Software Foundation\Tomcat 6.0\conf\</p>
+</blockquote>
+<doc-anchor-target id="the-database-password-or-other-properties-are-set-incorrectly">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#the-database-password-or-other-properties-are-set-incorrectly">#</doc-anchor-trigger>
+        <span>The database password or other properties are set incorrectly</span>
+    </h3>
+</doc-anchor-target>
+<p>If you have installed the OpenMRS Standalone application, you can modify settings by editing the <strong>openmrs-standalone-runtime.properties</strong> file in the directory where you extracted the ZIP package.</p>
+<p>To modify settings for the OpenMRS Enterprise version, you should edit the file <strong>openmrs-runtime.properties</strong>. You should find this file in one of the following locations:</p>
+<p>On Windows systems:</p>
+<ul>
+<li><p>C:\Documents and Settings\YOURUSERNAME\Application Data\OpenMRS</p>
+</li>
+<li><p>C:\Windows\system32\config\systemprofile\Application Data\OpenMRS</p>
+</li>
+</ul>
+<p>On Mac OS X or Linux systems:</p>
+<ul>
+<li><p>~/YOURUSERNAME/.OpenMRS</p>
+</li>
+<li><p>/usr/share/tomcatX/.OpenMRS</p>
+</li>
+</ul>
+<doc-anchor-target id="the-openmrs-administrator-account-password-has-been-forgotten">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#the-openmrs-administrator-account-password-has-been-forgotten">#</doc-anchor-trigger>
+        <span>The OpenMRS administrator account password has been forgotten</span>
+    </h3>
+</doc-anchor-target>
+<p>In general, when a user is locked out, the password should be reset by the administrator using the &quot;Edit User&quot; page from the OpenMRS <strong>Administration</strong> page. In rare situations in which the administrator&#x27;s account has been forgotten, the only way to reset the password is to directly modify the OpenMRS database. This should only be attempted by advanced users, and you should always back up your database before making changes.</p>
+<p>You will need to modify the <strong>users</strong> table in the OpenMRS database schema. Find the row for the user in question and change the <strong>password</strong> and <strong>salt</strong> values to the following:</p>
+<ul>
+<li><p><strong>password</strong>: 4a1750c8607d0fa237de36c6305715c223415189</p>
+</li>
+<li><p><strong>salt</strong>: c788c6ad82a157b712392ca695dfcf2eed193d7f</p>
+</li>
+</ul>
+<doc-anchor-target id="some-module-pages-throw-javalangclassnotfoundexception">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#some-module-pages-throw-javalangclassnotfoundexception">#</doc-anchor-trigger>
+        <span>Some module pages throw <strong>java.lang.ClassNotFoundException</strong></span>
+    </h3>
+</doc-anchor-target>
+<p>There are currently some issues with compatibility between OpenMRS and versions of Apache Tomcat later than 6.0.29. OpenMRS modules that rely on certain custom expression language functions will throw ajava.lang.ClassNotFoundException exception.</p>
+<p>If you encounter this issue using a version of Tomcat greater than v6.0.29, you may need to disable any modules that rely on custom expression language functions, or install Tomcat 6.0.29 for use with OpenMRS.</p>
+<doc-anchor-target id="starting-openmrs-fails-with-message-module-file-does-not-have-the-correct-omod-file-extension">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#starting-openmrs-fails-with-message-module-file-does-not-have-the-correct-omod-file-extension">#</doc-anchor-trigger>
+        <span>Starting OpenMRS fails with message “Module file does not have the correct .omod file extension”</span>
+    </h3>
+</doc-anchor-target>
+<p>OpenMRS will not start if there are non-modules in the modules directory. You may find a message in the logs similar to these:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">org.openmrs.module.ModuleException: Module file does not have the correct .omod file extension Module: derby.log</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">org.openmrs.module.ModuleException: Module file does not have the correct .omod file extension Module: velocity.log</code></pre>
+</doc-codeblock></div>
+<p>To solve this problem, delete or move any files in the modules directory that are not modules with an.omodextension.</p>
+<p>In particular, the <strong>BIRT Runtime</strong> creates various log files in the modules directory when the <strong>BIRT</strong> module is stopped. If you are using the <strong>BIRT Report</strong> module, there may be non-module files in the OpenMRS modules directory--typically, <strong>derby.log</strong> or <strong>velocity.log</strong>. These files can safely be moved to another location or deleted.</p>
+<p>To prevent thederby.logfrom being created in future, delete the directory <strong>org.apache.derby.core_10.1.2.1</strong> which is located under the following directory.</p>
+<blockquote>
+<p>birt-runtime-2_2_0/ReportEngine/plugins/</p>
+</blockquote>
+<doc-anchor-target id="mysql-packet-length-errors-or-mysql-error-2006">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mysql-packet-length-errors-or-mysql-error-2006">#</doc-anchor-trigger>
+        <span>MySQL packet length errors, or MySQL Error 2006</span>
+    </h3>
+</doc-anchor-target>
+<p>These errors occur when the client or server tries to handle data larger than the maximum packet length. The default maximum packet length is 1MB. Some items (such as form data) can easily exceed this maximum, causing errors when importing data into or exporting data from the OpenMRS database.</p>
+<p>To increase the maximum packet length allowed by your MySQL server, you should stop the server, edit the configuration file, then restart the server. The configuration file is typically located at one of these locations.</p>
+<ul>
+<li><p>Windows: C:\Program Files\MySQL\MySQL Server x.x\my.ini</p>
+</li>
+<li><p>Linux or Mac OS X: /etc/my.cnf</p>
+</li>
+</ul>
+<p>This file should already contain a section with the header <strong>[archive:mysqld]</strong>. You can add the following line below that header:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">max_allowed_packet=64M</code></pre>
+</doc-codeblock></div>
+<p>You can also increase the maximum packet length using the MySQL Administrator application, by opening the Health section and changing the <strong>max_allowed_packet</strong> setting on the System Variables tab. This setting can be increased up to a maximum of <strong>1024M</strong> as necessary.</p>
+<p>Depending on your MySQL client, you may also need to adjust the maximum packet length of the client. If you are using the MySQL command line client, you can start it with an increased <strong>max_allowed_packet</strong> by adding the following after the MySQL command:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">--max_allowed_packet=64M </code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="problems-connecting-to-mysql-on-a-system-with-multiple-mysql-installations">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#problems-connecting-to-mysql-on-a-system-with-multiple-mysql-installations">#</doc-anchor-trigger>
+        <span>Problems connecting to MySQL on a system with multiple MySQL installations</span>
+    </h3>
+</doc-anchor-target>
+<p>If MySQL is already installed and running on your system, OpenMRS Standalone&#x27;s initial setup may be unable to create the OpenMRS user and database. You may also encounter this problem after installation, if you have installed a &quot;traditional&quot; MySQL server and try to run OpenMRS Standalone.</p>
+<p>This problem happens because MySQL clients on UNIX-based systems always use UNIX sockets to connect to MySQL when <strong>localhost</strong> is specified in the connection URL. This is a known issue/limitation/bug in MySQL and is documented in more detail by the MySQL project.</p>
+<p><a href="http://bugs.mysql.com/bug.php?id=31577">http://bugs.mysql.com/bug.php?id=31577</a></p>
+<p>It is possible to run OpenMRS in a separate database instance than the one already existing on your system (for example, to run OpenMRS Standalone on a system where MySQL is already installed). To do so, you must first ensure that the new database instance is running on a different port.</p>
+<p>Then, ensure that you are connecting to MySQL via TCP/IP instead of using the same UNIX socket as the existing instance. The easiest way to do this is to use <strong>127.0.0.1</strong> instead of <strong>localhost</strong> in the connection string. An alternative is to add <strong>&amp;server.port=XXXX</strong> to the value of <strong>connection.url</strong> in the <strong>openmrs-runtime.properties</strong> file, where <strong>XXXX</strong> is the port used by the OpenMRS MySQL instance.</p>
+<p>For example, if the MySQL instance used by OpenMRS is running on port <strong>4242</strong>, the <strong>openmrs-runtime.properties</strong> file should include one of the following lines:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">connection.url=jdbc:mysql://127.0.0.1:4242/openmrs?autoReconnect=true&amp;sessionVariables=storage_engine=InnoDB&amp;useUnicode=true&amp;characterEncoding=UTF-8</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">connection.url=jdbc:mysql://localhost:4242/openmrs?autoReconnect=true&amp;sessionVariables=storage_engine=InnoDB&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;server.port=4242</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="tomcat-error-log-contains-ioexception-while-loading-persisted-sessions">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#tomcat-error-log-contains-ioexception-while-loading-persisted-sessions">#</doc-anchor-trigger>
+        <span>Tomcat error log contains IOException while loading persisted sessions</span>
+    </h3>
+</doc-anchor-target>
+<p>Apache Tomcat tries to restore the exact memory state after each restart. OpenMRS does not depend on this feature, so you can ignore any warnings printed to the Tomcat logs that look similar to the following:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">SEVERE: IOException while loading persisted sessions: java.io.WriteAbortedException: writing aborted; java.io.NotSerializableException:</code></pre>
+</doc-codeblock></div>
+<p>If you find these messages annoying, you can turn off session persistence. Edit the <strong>&lt;TOMCAT_HOME&gt;/conf/server.xml</strong> file and uncomment the line that includes:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">&lt;Manager pathname=&quot;&quot; /&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="java-heap-size-errors">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#java-heap-size-errors">#</doc-anchor-trigger>
+        <span>Java Heap Size errors</span>
+    </h3>
+</doc-anchor-target>
+<p>OpenMRS uses a lot of memory for caching. Certain tasks, such as exporting data, may cause a Java Heap Size error. You can mitigate this by increasing the default memory allocation in Tomcat.</p>
+<p>If you are starting Tomcat on the command line, you should pass the following parameters to increase the default memory allocation:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">-Xmx512m -Xms512m -XX:PermSize=256m -XX:MaxPermSize=256m -XX:NewSize=128m</code></pre>
+</doc-codeblock></div>
+<p>If you are running Tomcat as a Windows Service, you can increase the memory allocation by adding this same line to the list of start parameters. Make sure that you add this to the end of the existing parameters exactly. An extra space at the end of the line can prevent Tomcat from starting properly. You can find the list of start parameters in the Tomcat Monitor application, by going to <strong>Configure Tomcat &gt; Java &gt; Java Options</strong>, or via the <strong>Control Panel &gt; Services &gt; Apache Tomcat &gt; Properties &gt; Start Parameters</strong>.</p>
+<p>If you are running a 64-bit version of Tomcat as a Windows Service, you must edit the Windows Registry to add that line to the <strong>HKEY_LOCAL_MACHINE\SOFTWARE\Apache Software Foundation\Procrun 2.0\Tomcat5\Parameters\JavaJVM</strong> settings in the Registry.</p>
+<p>If you are running Tomcat on Ubuntu, edit its startup script such as <strong>/etc/init.d/tomcat6</strong> and make the following changes:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">if [ -z &quot;$JAVA_OPTS&quot; ]; then
+        JAVA_OPTS=&quot;-Djava.awt.headless=true -Xmx128M&quot;
+fi</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">if [ -z &quot;$JAVA_OPTS&quot; ]; then
+        JAVA_OPTS=&quot;-Djava.awt.headless=true -Xmx1024M -Xms1024M -XX:PermSize=256m -XX:MaxPermSize=256m -XX:NewSize=128m&quot;
+fi</code></pre>
+</doc-codeblock></div>
+<p>If you are running Tomcat as a Linux service, open the <strong>/etc/init.d/tomcat</strong> script and append change the <strong>CATALINA_OPTS</strong> variable:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">CATALINA_OPTS=&quot;-Djava.library.path=/opt/tomcat/lib/.libs -Xmx512m -Xms512m -XX:PermSize=256m -XX:MaxPermSize=256m -XX:NewSize=128m&quot;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="memory-leaks">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#memory-leaks">#</doc-anchor-trigger>
+        <span>Memory leaks</span>
+    </h3>
+</doc-anchor-target>
+<p>After troubleshooting, you may determine that Tomcat or OpenMRS is having problems with memory leaks.</p>
+<p>To mitigate memory leak problems in Tomcat, consider enabling pooling by adding the following element to the JSP servlet definition in the file <strong>&lt;TOMCAT_HOME&gt;/conf/web.xml</strong>:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">&lt;init-param&gt;&lt;param-name&gt;enablePooling&lt;/param-name&gt;&lt;param-value&gt;false&lt;/param-value&gt;&lt;/init-param&gt;</code></pre>
+</doc-codeblock></div>
+<p>If you believe you have discovered a memory leak in OpenMRS and are comfortable looking at the OpenMRS application code to identify where the leak is located, you may like to troubleshoot further to find out the cause. OpenMRS developers use YourKit Profiler to discover and debug memory and CPU consumption issues.</p>
+<p>YourKit is kindly supporting members of the OpenMRS community with its full-featured Java Profiler product. If you have development skills you may want to use this tool to understand why the application is leaking memory or consuming too many processor resources. As an active participant in the OpenMRS community, you can request a license by opening a support desk ticket:</p>
+<p><a href="https://help.openmrs.org/">https://help.openmrs.org/</a></p>
+<doc-anchor-target id="bugs-in-openmrs">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bugs-in-openmrs">#</doc-anchor-trigger>
+        <span>Bugs in OpenMRS</span>
+    </h2>
+</doc-anchor-target>
+<p>If you believe you have discovered a problem that may be a bug in OpenMRS, we encourage you to report that bug. The OpenMRS development team takes bug reports seriously and continually fixes as many bug reports as possible for future releases. Please see our bug report page on the OpenMRS wiki for further details and instructions:</p>
+<p><a href="https://issues.openmrs.org/">https://issues.openmrs.org/</a></p>
+
+                                
+                                <!-- Required only on API pages -->
+                                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+                            </div>
+                            <footer class="clear-both">
+                                <div class="flex flex-wrap items-center justify-between mt-14">
+                                    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/openmrs/openmrs-book-guide/blob/main/Administering OpenMRS/troubleshooting.md" target="_blank" rel="noopener">
+                                        <svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M20 12c-.55 0-1 .45-1 1v7c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h7c.55 0 1-.45 1-1s-.45-1-1-1H4C2.35 3 1 4.35 1 6v14c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-7c0-.55-.45-1-1-1z" /><path d="M22.21 1.79c-1.18-1.18-3.24-1.18-4.41 0l-9.5 9.5c-.13.13-.22.29-.26.46l-1 4c-.08.34.01.7.26.95.18.2.44.3.7.3.08 0 .16-.01.24-.03l4-1c.18-.04.34-.13.46-.26l9.5-9.5c1.22-1.22 1.22-3.2.01-4.42zm-1.42 3l-9.3 9.3-2.11.53.53-2.11 9.3-9.3c.42-.42 1.16-.42 1.59 0 .43.43.43 1.15-.01 1.58z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        <span>Edit this page</span>
+                                    </a>
+                                </div>
+                            
+                                <nav class="flex mt-14">
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../administering-openmrs/maintenance/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                                                <span class="block mt-1">Maintenance</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                            
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../administering-openmrs/getting-help-from-the-openmrs-community/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                                                <span class="block mt-1">Getting Help from the Community</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
+                                    </div>
+                                </nav>
+                            </footer>
+                        </main>
+                
+                        <div class="border-t dark:border-dark-650 pt-6 mb-8">
+                            <footer class="flex flex-wrap items-center justify-between">
+                                <div>
+                                    <ul class="flex flex-wrap items-center text-sm">
+                                    </ul>
+                                </div>
+                                <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© Copyright 2023 OpenMRS, Inc. All rights reserved.</p></div>
+                            </footer>
+                        </div>
+                    </div>
+                
+                    <!-- Rendered if sidebar right is enabled -->
+                    <!-- Sidebar right skeleton-->
+                    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-white border-gray-200 lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:transform-none sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton dark:bg-dark-850 dark:border-dark-650">
+                        <div class="pl-5">
+                            <div class="w-32 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-48 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-40 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                        </div>
+                    </div>
+                
+                    <!-- User should be able to hide sidebar right -->
+                    <doc-sidebar-right v-cloak></doc-sidebar-right>
+                </div>
+
+            </div>
+        </div>
+    
+        <doc-search-mobile></doc-search-mobile>
+        <doc-back-to-top></doc-back-to-top>
+    </div>
+
+
+    <div id="docs-overlay-target"></div>
+
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Troubleshooting Your Installation", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+</body>
+</html>

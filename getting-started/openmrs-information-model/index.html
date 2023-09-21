@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.748585574323">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 3.5.0">
+
+    <!-- Primary Meta Tags -->
+    <title>OpenMRS Information Model</title>
+    <meta name="title" content="OpenMRS Information Model">
+    <meta name="description" content="Reference books line a shelf in a rural African clinic.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="/getting-started/openmrs-information-model/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/getting-started/openmrs-information-model/">
+    <meta property="og:title" content="OpenMRS Information Model">
+    <meta property="og:description" content="Reference books line a shelf in a rural African clinic.">
+    <meta property="og:image" content="/assets/infomodel.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="/getting-started/openmrs-information-model/">
+    <meta property="twitter:title" content="OpenMRS Information Model">
+    <meta property="twitter:description" content="Reference books line a shelf in a rural African clinic.">
+    <meta property="twitter:image" content="/assets/infomodel.png">
+
+    <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
+
+    <link href="../../resources/css/retype.css?v=3.5.0.748585574323" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.748585574323" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.748585574323" data-turbo-eval="false" defer></script>
+</head>
+<body>
+    <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
+        <div class="absolute bottom-0 left-0 bg-gray-100 dark:bg-dark-800" style="top: 5rem; right: 50%"></div>
+    
+        <header id="docs-site-header" class="sticky top-0 z-30 flex w-full h-16 bg-white border-b border-gray-200 md:h-20 dark:bg-dark-850 dark:border-dark-650">
+            <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+                <!-- Mobile menu button skeleton -->
+                <button v-cloak class="skeleton docs-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+                <div v-cloak id="docs-sidebar-toggle"></div>
+        
+                <!-- Logo -->
+                <div class="flex items-center justify-between h-full py-2 md:w-75">
+                    <div class="flex items-center px-2 md:px-6">
+                        <a id="docs-site-logo" href="../../" class="flex items-center leading-snug text-xl">
+                            <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">OpenMRS Guide</span>
+                        </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">2.0</span>
+                    </div>
+        
+                    <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
+                </div>
+        
+                <div class="flex justify-between md:grow">
+                    <!-- Top Nav -->
+                    <nav class="hidden md:flex">
+                        <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://openmrs.org/">OpenMRS.org</a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://wiki.openmrs.org/">Wiki</a>
+                            </li>
+        
+                        </ul>
+                    </nav>
+        
+                    <!-- Header Right Skeleton -->
+                    <div v-cloak class="flex justify-end grow skeleton">
+        
+                        <!-- Search input mock -->
+                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                            </div>
+                            <input class="w-full h-10 placeholder-gray-400 transition-colors duration-200 ease-in bg-gray-200 border border-transparent rounded md:text-sm hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-dark-600 dark:border-dark-600 dark:placeholder-dark-400" style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search">
+                        </div>
+        
+                        <!-- Mobile search button -->
+                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                        </div>
+        
+                        <!-- Dark mode switch placeholder -->
+                        <div class="w-10 h-10 lg:ml-2"></div>
+        
+                        <!-- History button -->
+                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                        </div>
+                    </div>
+        
+                    <div v-cloak class="flex justify-end grow">
+                        <div id="docs-mobile-search-button"></div>
+                        <doc-search-desktop></doc-search-desktop>
+        
+                        <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                        <doc-history></doc-history>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <div class="container relative flex bg-white">
+            <!-- Sidebar Skeleton -->
+            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-gray-100 border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
+            
+                <!-- Render this div, if config.showSidebarFilter is `true` -->
+                <div class="flex items-center h-16 px-6">
+                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-white border border-gray-200 rounded shadow-none text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter">
+                </div>
+            
+                <div class="pl-6 mt-1 mb-4">
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                </div>
+            
+                <div class="shrink-0 mt-auto bg-transparent dark:border-dark-650">
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Sidebar component -->
+            <doc-sidebar v-cloak>
+                <template #sidebar-footer>
+                    <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-dark-650">
+            
+                        <div class="py-3 px-6 md:hidden border-b dark:border-dark-650">
+                            <nav>
+                                <ul class="flex flex-wrap justify-center items-center">
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://openmrs.org/">OpenMRS.org</a>
+                                    </li>
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://wiki.openmrs.org/">Wiki</a>
+                                    </li>
+            
+                                </ul>
+                            </nav>
+                        </div>
+            
+                        <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                            <span class="text-xs whitespace-nowrap">Powered by</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                        </a>
+                    </div>
+                </template>
+            </doc-sidebar>
+    
+            <div class="grow min-w-0 dark:bg-dark-850">
+                <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+                <div class="flex">
+                    <div class="min-w-0 p-4 grow md:px-16">
+                        <main class="relative pb-12 lg:pt-2">
+                            <div class="docs-markdown" id="docs-content">
+                                <!-- Rendered if sidebar right is enabled -->
+                                <div id="docs-sidebar-right-toggle"></div>
+                                <!-- Page content  -->
+<doc-anchor-target id="openmrs-information-model" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#openmrs-information-model">#</doc-anchor-trigger>
+        <span>OpenMRS Information Model</span>
+    </h1>
+</doc-anchor-target>
+<p><em>Reference books line a shelf in a rural African clinic.</em>
+<figure class="content-center">
+    <img src="../../assets/infomodel.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>This chapter explains terms and concepts which are useful to understand as you install and use OpenMRS.</p>
+<doc-anchor-target id="data">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#data">#</doc-anchor-trigger>
+        <span>Data</span>
+    </h2>
+</doc-anchor-target>
+<p>The actual information you want to record in OpenMRS is called <strong>Data</strong>. Examples of Data in OpenMRS are Patients, Encounters, and Observations. To support this data, and describe its meaning, you need additional <strong>Metadata</strong>.</p>
+<p>When a user deletes a piece of data in OpenMRS, the information actually remains in the database. It is marked as <strong>voided</strong>, so that it will not show up in the interface, but it is not immediately deleted from the database. If a user deletes a piece of data by accident, an administrator canunvoid it to return it to the system. To permanently delete data from the database, an administrator must <strong>purge</strong> that data. Typically, this should never be done in a production system.</p>
+<doc-anchor-target id="metadata">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#metadata">#</doc-anchor-trigger>
+        <span>Metadata</span>
+    </h2>
+</doc-anchor-target>
+<p>The fundamental expectation of OpenMRS&#x27;s design is that you will customize it for your clinical program&#x27;s use case. The system has no built-in idea of the patient&#x27;s weight or seeing the patient in an outpatient visit. Instead, you can configure these things yourself, to match your project&#x27;s workflow. Generally speaking, the things that you need to configure in order to describe the real patient information you will be capturing are referred to as <strong>metadata</strong>. An example of a piece of metadata is a Location that represents a hospital.</p>
+<p>An administrator may also <strong>retire</strong> metadata in OpenMRS. This does not mean that the metadata is deleted, but rather that it is not intended to be used going forward. Old information that refers to the retired metadata remains valid. An administrator may <strong>unretire</strong> metadata if it becomes relevant to active use again. If no actual data refers to a piece of metadata, an administrator may <strong>purge</strong> the metadata to permanently remove it from the database.</p>
+<p>For example, the hospital you refer patients to closes. Therefore, you can no longer refer patients there. This Location can now be retired in OpenMRS. This would not invalidate the fact that many patients were referred there in the past.</p>
+<doc-anchor-target id="concepts-and-concept-dictionary">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#concepts-and-concept-dictionary">#</doc-anchor-trigger>
+        <span>Concepts and concept dictionary</span>
+    </h2>
+</doc-anchor-target>
+<p>The most important part of the system&#x27;s metadata is the <strong>Concept Dictionary</strong>, which is a list of all the medical and program-related terms that you will use as questions and answers in Observations. This dictionary does not need to be complete when you begin using OpenMRS. You should expect new terms to be added and old terms to be retired as your use of the system evolves. It is better to start with a pre-populated Concept Dictionary, rather than starting from scratch yourself. See the chapter &quot;Sharing Concepts and Metadata&quot; for more details.</p>
+<p>Every question you ask about a patient needs to be defined by a <strong>Concept</strong>. (For example, to record a patient&#x27;s weight you need a concept like <strong>Weight in kilograms</strong>.)</p>
+<p>If you want to ask a question that has a fixed set of coded answers, those answers are also Concepts. (For example, the question concept <strong>Blood Type</strong> may have 4 different answer concepts: <strong>A, B, AB, <strong>and</strong> O</strong>)</p>
+<doc-anchor-target id="persons">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#persons">#</doc-anchor-trigger>
+        <span>Persons</span>
+    </h2>
+</doc-anchor-target>
+<p>Every individual who is referred to in a patient record in OpenMRS is stored in the system as a <strong>Person</strong>. These include Patients, any patient relative or caretaker, Providers, and Users.</p>
+<p>All Persons have these characteristics.</p>
+<doc-anchor-target id="names">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#names">#</doc-anchor-trigger>
+        <span>Names</span>
+    </h3>
+</doc-anchor-target>
+<p>A person can have one or more names, one of which must be marked as the <strong>preferred</strong> name. The preferred name will be displayed in search results and patient screens.</p>
+<doc-anchor-target id="addresses">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#addresses">#</doc-anchor-trigger>
+        <span>Addresses</span>
+    </h3>
+</doc-anchor-target>
+<p>A person may have zero or more contact addresses. You may configure the format of these addresses for your particular locale.</p>
+<doc-anchor-target id="person-attributes">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#person-attributes">#</doc-anchor-trigger>
+        <span>Person Attributes</span>
+    </h3>
+</doc-anchor-target>
+<p>To support your local needs, you can define additional pieces of information about the people in your system, on top of those that are natively supported by OpenMRS. You can define the datatype of a Person Attribute, as well as any constraints on the possible values, using metadata. This metadata is called a Person Attribute Type.</p>
+<p>Person Attributes are suitable for storing other information. But historical values of person attributes are not retained. For example, you should use a person attribute to record a patient&#x27;s contact telephone number. This information may change, but if it does so, the system need only store the most recent value, and need not retain previous values. It is not appropriate to use a person attribute to store something like the patient&#x27;s height, which is recorded at a given point in time, but can be expected to change and should be tracked as it does so.</p>
+<doc-anchor-target id="patients">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#patients">#</doc-anchor-trigger>
+        <span>Patients</span>
+    </h2>
+</doc-anchor-target>
+<p>Anyone who receives care in OpenMRS must be a <strong>Patient</strong> (for example, anyone who has an Encounter or who is enrolled in a Program). Every Patient must have at least one Identifier, which is explained below.</p>
+<p>A Patient is also a Person, meaning they must have at least one name and they may have addresses.</p>
+<doc-anchor-target id="patient-identifier">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#patient-identifier">#</doc-anchor-trigger>
+        <span>Patient Identifier</span>
+    </h3>
+</doc-anchor-target>
+<p>The Patient Identifier is a medical record number assigned by your facility, used to identify and re-identify the patient on subsequent visits.</p>
+<p>A <strong>Patient Identifier Type</strong> defines the format of a particular kind of patient identifier. For example, you might define thatAmani ID is an identifier type that is required for every patient; the format is 2 letters followed by 6 digits and uses a particular check digit algorithm.</p>
+<p>A <strong>Check Digit</strong> is an extra digit that is added to the end of an identifier, and depends on the rest of the identifier. It allows OpenMRS to determine whether an identifier has been mistyped. For example using a Luhn check digit, &quot;1234-1&quot; is valid, but &quot;1234-5&quot; is incorrect. It is a strongly recommended best practice to use check digits in all patient identifiers that you assign. For more information about check digits, see <a href="https://en.wikipedia.org/wiki/Check_digit">https://en.wikipedia.org/wiki/Check_digit</a>.</p>
+<doc-anchor-target id="relationships">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#relationships">#</doc-anchor-trigger>
+        <span>Relationships</span>
+    </h2>
+</doc-anchor-target>
+<p><figure class="content-center">
+    <img src="../../assets/case-study.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>A <strong>Relationship</strong> is a bidirectional link between two Persons in OpenMRS.</p>
+<p>The metadata that describes a particular kind of relationship is a <strong>Relationship Type</strong>. It defines the names of each direction of the relationship. Typical Relationship Types are Parent/Child and Doctor/Patient.</p>
+<p>At the Amani Clinic, it is necessary to use relationships to link a mother&#x27;s patient record to the patient record of her children. One might also use relationships to record the link between a patient and their primary care provider.</p>
+<doc-anchor-target id="visits">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#visits">#</doc-anchor-trigger>
+        <span>Visits</span>
+    </h2>
+</doc-anchor-target>
+<p>AVisit in OpenMRS represents exactly what it sounds like: a time period when a patient is actively interacting with the healthcare system, typically at a location. The metadata differentiating different types of visits is a <strong>Visit Type</strong>. Visit Types are displayed in the user interface, and can be searched against.</p>
+<p>A visit contains encounters, which store more granular data about treatments or services.</p>
+<p>At the Amani Clinic, a patient might typically check-in at registration, be seen by a doctor, and receives medication dispensed in the pharmacy. This would be recorded as one visit of type of <strong>Outpatient</strong>, and contain three encounters (<strong>Registration</strong>, <strong>Consultation</strong>, and <strong>Dispensing</strong>).</p>
+<doc-anchor-target id="encounters">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#encounters">#</doc-anchor-trigger>
+        <span>Encounters</span>
+    </h2>
+</doc-anchor-target>
+<p>A moment in time where a patient is seen by providers at a location, and data are captured. Generally speaking, every time you enter a form in OpenMRS this creates an <strong>Encounter</strong>. Encounters typically belong to a visit, but they may also stand alone.</p>
+<p>The metadata that describes a kind of encounter is an <strong>Encounter Type</strong>. These are displayed in the user interface, and you may also search against them.</p>
+<p>During a typical  Amani Clinic Outpatient Visit, a patient checks in at registration, is seen by a doctor, and receives meds dispensed in the pharmacy. This would be recorded as one visit containing three encounters, whose types are <strong>Registration</strong>, <strong>Consultation</strong>, and <strong>Dispensing</strong>.</p>
+<doc-anchor-target id="providers">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#providers">#</doc-anchor-trigger>
+        <span>Providers</span>
+    </h2>
+</doc-anchor-target>
+<p>A <strong>Provider</strong> is a person who  provides care or services to patients. A provider may be a clinician like a doctor or nurse, a social worker, or a lab tech. Generally speaking, any healthcare worker that a patient can have an encounter with is a provider.</p>
+<p>Providers may have full records in OpenMRS as persons, or they may just be a simple name and ID number.</p>
+<doc-anchor-target id="locations">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#locations">#</doc-anchor-trigger>
+        <span>Locations</span>
+    </h2>
+</doc-anchor-target>
+<p>A <strong>Location</strong> is a physical place where a patient may be seen.</p>
+<p>Locations may have a hierarchy, for example <strong>Children&#x27;s Ward</strong> might be a location within the location <strong>Amani Clinic</strong>.</p>
+<p>You might also store physical areas (for example <strong>Eastern Province</strong>, or <strong>California</strong>) as Locations. You should not use locations to represent logical ideas like <strong>All District Hospitals</strong>.</p>
+<doc-anchor-target id="observations">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#observations">#</doc-anchor-trigger>
+        <span>Observations</span>
+    </h2>
+</doc-anchor-target>
+<p>An <strong>Observation</strong> is one single piece of information that is recorded about a person at a moment in time.</p>
+<p>Every observation has a Concept as its question, and depending on the datatype of the concept, it has a value that is a number, date, text, Concept, etc.</p>
+<p>Most of the information you store in OpenMRS is in the form of Observations, and most Observations happen in an Encounter. When you enter a form in OpenMRS, typically one Encounter is created with anywhere between tens or hundreds of Observations.</p>
+<p>Note that an individual Observation is valid only at one moment in time, and it does not carry forward. You may query the system for the last observation for <strong>pregnancy status</strong> but this does not tell you whether or not the patient is pregnant at any point after the moment of that observation.</p>
+<p>Examples of observations include <strong>Serum Creatinine of 0.9mg/dL</strong> or <strong>Review of cardiopulmonary system is normal</strong>.</p>
+<doc-anchor-target id="observation-groups">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#observation-groups">#</doc-anchor-trigger>
+        <span>Observation groups</span>
+    </h3>
+</doc-anchor-target>
+<p>Sometimes a single Observation is not sufficient to capture an entire piece of patient information, and you need to use multiple Observations that are grouped together.</p>
+<p>For example, recording that a patient had a rash as an allergic reaction to penicillin would need to be stored as two observations plus a third one that groups the previous two together:</p>
+<ol>
+<li><p>Concept = &quot;Allergen&quot;, coded value = &quot;Penicillin&quot;, group = (3)</p>
+</li>
+<li><p>Concept = &quot;Reaction&quot;, coded value = &quot;Rash&quot;, group = (3)</p>
+</li>
+<li><p>Concept = &quot;Allergic Reaction Construct&quot;, group members = (1), (2)</p>
+</li>
+</ol>
+<doc-anchor-target id="orders">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#orders">#</doc-anchor-trigger>
+        <span>Orders</span>
+    </h2>
+</doc-anchor-target>
+<p>An <strong>Order</strong> is an action that a provider requests be taken regarding a patient.</p>
+<p>For example a provider could order a Complete Blood Count laboratory panel for a patient.</p>
+<p>An Order only records an intention, not whether or not the action is carried out. The results of an Order are typically recorded later as Observations.</p>
+<p>Prescribing a medication is a <strong>Drug Order</strong>. A drug order can be placed for a generic drug, represented by a Concept (for example, <strong>500mg of Ciprofloxacin, twice a day</strong>). If you are using OpenMRS to manage a formulary of specific medications (i.e., <strong>Drugs</strong> in OpenMRS), you may also record <strong>Drug Orders</strong> against those. For example, a drug order might be <strong>One 500mg tablet of Ciprofloxacin, twice a day</strong>.</p>
+<doc-anchor-target id="allergy-lists">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#allergy-lists">#</doc-anchor-trigger>
+        <span>Allergy lists</span>
+    </h2>
+</doc-anchor-target>
+<p>OpenMRS lets you manually maintain an <strong>Allergy List</strong> for a patient, including the allergen, reaction, severity, etc.</p>
+<p>This list is managed separately from Observations: observing an allergic reaction to a drug does not automatically add an Allergy to the list.</p>
+<p>Unlike an Observation (which happens at one moment in time), an Allergy is longitudinal data, with start and end dates.</p>
+<doc-anchor-target id="problem-lists">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#problem-lists">#</doc-anchor-trigger>
+        <span>Problem lists</span>
+    </h2>
+</doc-anchor-target>
+<p>OpenMRS lets you manually maintain a <strong>Problem List</strong> for a patient. This list is managed separately from Observations: observing that the patient has &quot;Diagnosis Present = Diabetes&quot; does not automatically add a problem to the list. Unlike an observation (which happens at one moment in time), a problem is longitudinal data, with start and end dates.</p>
+<doc-anchor-target id="program-enrollments-workflows-and-states">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#program-enrollments-workflows-and-states">#</doc-anchor-trigger>
+        <span>Program enrollments, workflows, and states</span>
+    </h2>
+</doc-anchor-target>
+<p>A <strong>Program</strong> represents an administrative program or study that a patient may be enrolled in (for example, <strong>Child Nutrition Study</strong> or <strong>DOTS Tuberculosis Treatment Program</strong>).</p>
+<p>A <strong>Program Enrollment</strong> represents the fact that a patient is enrolled in one of these programs over a time period at a Location. This is longitudinal data with a start date and end date.</p>
+<p>A Program can also define administrative <strong>Workflows</strong>, and possible <strong>States</strong> the patient may have within those workflows. An <strong>Initial State</strong> is one that a patient is allowed to start in when they are first enrolled in a program. A <strong>Terminal State</strong> is one that closes the program enrollment if the patient is placed in it.</p>
+<p>For example a research study on infant nutrition might have a workflow called <strong>Study Enrollment Status</strong> with the states:</p>
+<ul>
+<li><p>Patient Identified (initial)</p>
+</li>
+<li><p>Mother Consented to Study</p>
+</li>
+<li><p>Study Complete (terminal)</p>
+</li>
+<li><p>Lost to Followup (terminal)</p>
+</li>
+</ul>
+<p>These states are meant to represent administrative statuses, not clinical ones. For example putting a patient in a <strong>Loss to Followup</strong> state represents an official declaration and will not happen automatically even if no encounters are entered for the patient for several months.</p>
+<doc-anchor-target id="forms">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#forms">#</doc-anchor-trigger>
+        <span>Forms</span>
+    </h2>
+</doc-anchor-target>
+<p>A <strong>Form</strong> represents an electronic form that may be used for entering or viewing data. The basic OpenMRS system does not define a specific technology for entering forms. You will need to use one of the community-developed form entry modules. See the chapter &quot;Data Entry&quot; for more details.</p>
+<p>The Form Entry (Infopath) and XForms modules rely on a <strong>Form Schema</strong>, where you define which Concepts are used on the Form. The HTML Form Entry module does not require you to manage the schema.</p>
+<doc-anchor-target id="users-roles-and-privileges">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#users-roles-and-privileges">#</doc-anchor-trigger>
+        <span>Users, roles, and privileges</span>
+    </h2>
+</doc-anchor-target>
+<p>A <strong>User</strong> in OpenMRS is an account that a person may use to log into the system.</p>
+<p>The real-life person is represented by a Person record in OpenMRS, and a person may have more than one user account. If you want a patient to be able to view her own record in OpenMRS, then you need to create a user account and link it to the patient.</p>
+<p>A <strong>Role</strong> represents a group of privileges in the system. Roles may inherit privileges from other roles, and users may have one or more roles.</p>
+<p>A <strong>Privilege</strong> is an authorization to perform a particular action in the system. The list of available privileges are defined by the core system and by add-on modules (for example, <strong>Delete Patients</strong> and <strong>Manage Encounter Types</strong>), but you need to configure which roles have which privileges while you are configuring your system.</p>
+<doc-anchor-target id="the-information-model-in-use-at-amani-clinic">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#the-information-model-in-use-at-amani-clinic">#</doc-anchor-trigger>
+        <span>The information model in use at Amani Clinic</span>
+    </h2>
+</doc-anchor-target>
+<p><figure class="content-center">
+    <img src="../../assets/case-study.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>A patient named Asaba arrives at Amani Clinic, where the registration clerk James creates her electronic record and stores her contact phone number as 312-555-7890. On paper the Nurse, Kissa, records Asaba&#x27;s weight as 61.5kg and orders a pregnancy test. James enters these onto an electronic screen.</p>
+<p>From the perspective of the OpenMRS model, we have the following metadata:</p>
+<ul>
+<li>The nurse, Kissa (a Provider)</li>
+<li>The registration clerk, James (a User)</li>
+<li>Contact Phone Number (a Person Attribute Type)</li>
+<li>Weight, in kilograms (a Concept, with class <strong>Finding</strong> and datatype <strong>Numeric</strong>)</li>
+<li>Urine Pregnancy Test (a Concept, with class <strong>Test</strong>)</li>
+<li>Amani Clinic (a Location)</li>
+<li>Outpatient Visit (an Encounter Type)</li>
+<li>Outpatient Triage Form (a Form)</li>
+</ul>
+<p>When Asaba is first seen at the registration desk, James creates the following data:</p>
+<ul>
+<li>A Patient (Asaba)</li>
+<li>A Person Attribute (type = Contact Phone Number, value = 312-456-7890).</li>
+</ul>
+<p>After Asaba sees the nurse, who gives a paper form to James, he creates more data:</p>
+<ul>
+<li><p>An Encounter with:</p>
+<ul>
+<li>patient = Asaba</li>
+<li>type = Outpatient Visit</li>
+<li>form = Outpatient Triage Form</li>
+<li>location = Amani Clinic</li>
+<li>provider = Nurse Kissa</li>
+<li>creator = Registration Clerk James</li>
+</ul>
+</li>
+<li><p>An Observation (in that encounter), of <strong>Weight in kilograms</strong> = 61.5.</p>
+</li>
+<li><p>An Order (in that encounter), for <strong>Urine Pregnancy Test</strong></p>
+</li>
+</ul>
+
+                                
+                                <!-- Required only on API pages -->
+                                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+                            </div>
+                            <footer class="clear-both">
+                                <div class="flex flex-wrap items-center justify-between mt-14">
+                                    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/openmrs/openmrs-book-guide/blob/main/Getting Started/openmrs-information-model.md" target="_blank" rel="noopener">
+                                        <svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M20 12c-.55 0-1 .45-1 1v7c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h7c.55 0 1-.45 1-1s-.45-1-1-1H4C2.35 3 1 4.35 1 6v14c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-7c0-.55-.45-1-1-1z" /><path d="M22.21 1.79c-1.18-1.18-3.24-1.18-4.41 0l-9.5 9.5c-.13.13-.22.29-.26.46l-1 4c-.08.34.01.7.26.95.18.2.44.3.7.3.08 0 .16-.01.24-.03l4-1c.18-.04.34-.13.46-.26l9.5-9.5c1.22-1.22 1.22-3.2.01-4.42zm-1.42 3l-9.3 9.3-2.11.53.53-2.11 9.3-9.3c.42-.42 1.16-.42 1.59 0 .43.43.43 1.15-.01 1.58z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        <span>Edit this page</span>
+                                    </a>
+                                </div>
+                            
+                                <nav class="flex mt-14">
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../getting-started/installation-and-initial-setup/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                                                <span class="block mt-1">Installation and Initial Setup</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                            
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../getting-started/getting-around-the-user-interface/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                                                <span class="block mt-1">Getting Around the User Interface</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
+                                    </div>
+                                </nav>
+                            </footer>
+                        </main>
+                
+                        <div class="border-t dark:border-dark-650 pt-6 mb-8">
+                            <footer class="flex flex-wrap items-center justify-between">
+                                <div>
+                                    <ul class="flex flex-wrap items-center text-sm">
+                                    </ul>
+                                </div>
+                                <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© Copyright 2023 OpenMRS, Inc. All rights reserved.</p></div>
+                            </footer>
+                        </div>
+                    </div>
+                
+                    <!-- Rendered if sidebar right is enabled -->
+                    <!-- Sidebar right skeleton-->
+                    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-white border-gray-200 lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:transform-none sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton dark:bg-dark-850 dark:border-dark-650">
+                        <div class="pl-5">
+                            <div class="w-32 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-48 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-40 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                        </div>
+                    </div>
+                
+                    <!-- User should be able to hide sidebar right -->
+                    <doc-sidebar-right v-cloak></doc-sidebar-right>
+                </div>
+
+            </div>
+        </div>
+    
+        <doc-search-mobile></doc-search-mobile>
+        <doc-back-to-top></doc-back-to-top>
+    </div>
+
+
+    <div id="docs-overlay-target"></div>
+
+    <script data-cfasync="false">window.__DOCS__ = { "title": "OpenMRS Information Model", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+</body>
+</html>

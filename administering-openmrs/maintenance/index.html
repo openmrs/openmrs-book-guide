@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.748585574323">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 3.5.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Maintenance</title>
+    <meta name="title" content="Maintenance">
+    <meta name="description" content="OpenMRS server room in Webuye, Kenya.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="/administering-openmrs/maintenance/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/administering-openmrs/maintenance/">
+    <meta property="og:title" content="Maintenance">
+    <meta property="og:description" content="OpenMRS server room in Webuye, Kenya.">
+    <meta property="og:image" content="/assets/maintenance.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="/administering-openmrs/maintenance/">
+    <meta property="twitter:title" content="Maintenance">
+    <meta property="twitter:description" content="OpenMRS server room in Webuye, Kenya.">
+    <meta property="twitter:image" content="/assets/maintenance.png">
+
+    <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
+
+    <link href="../../resources/css/retype.css?v=3.5.0.748585574323" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.748585574323" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.748585574323" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.748585574323" defer></script>
+</head>
+<body>
+    <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
+        <div class="absolute bottom-0 left-0 bg-gray-100 dark:bg-dark-800" style="top: 5rem; right: 50%"></div>
+    
+        <header id="docs-site-header" class="sticky top-0 z-30 flex w-full h-16 bg-white border-b border-gray-200 md:h-20 dark:bg-dark-850 dark:border-dark-650">
+            <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+                <!-- Mobile menu button skeleton -->
+                <button v-cloak class="skeleton docs-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+                <div v-cloak id="docs-sidebar-toggle"></div>
+        
+                <!-- Logo -->
+                <div class="flex items-center justify-between h-full py-2 md:w-75">
+                    <div class="flex items-center px-2 md:px-6">
+                        <a id="docs-site-logo" href="../../" class="flex items-center leading-snug text-xl">
+                            <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">OpenMRS Guide</span>
+                        </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">2.0</span>
+                    </div>
+        
+                    <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
+                </div>
+        
+                <div class="flex justify-between md:grow">
+                    <!-- Top Nav -->
+                    <nav class="hidden md:flex">
+                        <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://openmrs.org/">OpenMRS.org</a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://wiki.openmrs.org/">Wiki</a>
+                            </li>
+        
+                        </ul>
+                    </nav>
+        
+                    <!-- Header Right Skeleton -->
+                    <div v-cloak class="flex justify-end grow skeleton">
+        
+                        <!-- Search input mock -->
+                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                            </div>
+                            <input class="w-full h-10 placeholder-gray-400 transition-colors duration-200 ease-in bg-gray-200 border border-transparent rounded md:text-sm hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-dark-600 dark:border-dark-600 dark:placeholder-dark-400" style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search">
+                        </div>
+        
+                        <!-- Mobile search button -->
+                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                        </div>
+        
+                        <!-- Dark mode switch placeholder -->
+                        <div class="w-10 h-10 lg:ml-2"></div>
+        
+                        <!-- History button -->
+                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                        </div>
+                    </div>
+        
+                    <div v-cloak class="flex justify-end grow">
+                        <div id="docs-mobile-search-button"></div>
+                        <doc-search-desktop></doc-search-desktop>
+        
+                        <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                        <doc-history></doc-history>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <div class="container relative flex bg-white">
+            <!-- Sidebar Skeleton -->
+            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-gray-100 border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
+            
+                <!-- Render this div, if config.showSidebarFilter is `true` -->
+                <div class="flex items-center h-16 px-6">
+                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-white border border-gray-200 rounded shadow-none text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter">
+                </div>
+            
+                <div class="pl-6 mt-1 mb-4">
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                </div>
+            
+                <div class="shrink-0 mt-auto bg-transparent dark:border-dark-650">
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Sidebar component -->
+            <doc-sidebar v-cloak>
+                <template #sidebar-footer>
+                    <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-dark-650">
+            
+                        <div class="py-3 px-6 md:hidden border-b dark:border-dark-650">
+                            <nav>
+                                <ul class="flex flex-wrap justify-center items-center">
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://openmrs.org/">OpenMRS.org</a>
+                                    </li>
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://wiki.openmrs.org/">Wiki</a>
+                                    </li>
+            
+                                </ul>
+                            </nav>
+                        </div>
+            
+                        <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                            <span class="text-xs whitespace-nowrap">Powered by</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                        </a>
+                    </div>
+                </template>
+            </doc-sidebar>
+    
+            <div class="grow min-w-0 dark:bg-dark-850">
+                <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+                <div class="flex">
+                    <div class="min-w-0 p-4 grow md:px-16">
+                        <main class="relative pb-12 lg:pt-2">
+                            <div class="docs-markdown" id="docs-content">
+                                <!-- Rendered if sidebar right is enabled -->
+                                <div id="docs-sidebar-right-toggle"></div>
+                                <!-- Page content  -->
+<doc-anchor-target id="maintenance" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#maintenance">#</doc-anchor-trigger>
+        <span>Maintenance</span>
+    </h1>
+</doc-anchor-target>
+<p><em>OpenMRS server room in Webuye, Kenya.</em>
+<figure class="content-center">
+    <img src="../../assets/maintenance.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>Once you have installed and configured OpenMRS and it is being used to support day-to-day clinical operations, there is still work to be done. To ensure the system runs smoothly and error-free, use the following tips as a starting point to create a maintenance plan for your OpenMRS installation. We recommend documenting this plan and reviewing it regularly.</p>
+<doc-anchor-target id="server-management">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#server-management">#</doc-anchor-trigger>
+        <span>Server management</span>
+    </h2>
+</doc-anchor-target>
+<p>Although outside the scope of this book, it is important to keep both your OpenMRS server(s) and client systems updated with the latest security patches. In Windows, you should use the Windows Update tool to review and install critical system updates. If you use Linux, use either <strong>apt-get upgrade</strong> or <strong>yum update</strong>, depending on what distribution of Linux you use.</p>
+<p>Before upgrading MySQL, Java, or Apache Tomcat (and of course, OpenMRS) you should check with the OpenMRS community to see how those upgrades might effect how OpenMRS runs on your server. See the &quot;Getting Help&quot; section for more information.</p>
+<p>You should also periodically check to ensure your server has plenty of free disk space. Additionally, if you are running a Windows server, ensure your system has anti-virus software installed and it is up-to-date.</p>
+<doc-anchor-target id="backups">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#backups">#</doc-anchor-trigger>
+        <span>Backups</span>
+    </h2>
+</doc-anchor-target>
+<p>You should ensure your system has a backup strategy. Much has been written on this subject and general knowledge about backups is beyond the scope of this book. However, there are some specific items to consider when backing up your OpenMRS server.</p>
+<p>Most importantly, you need to create a backup strategy for your MySQL database. Perhaps the simplest way to do this is by using the <strong>mysqldump</strong> utility that ships with the database. Ideally, you will want to shut down OpenMRS before backing up, and restart it once the backup has completed. If you are not able to do so, or wish to have the system remain in a &quot;read-only&quot; mode, you may want to use the options of <strong>mysqldump</strong> to lock tables. Consult the MySQL documentation for details.</p>
+<p>You should also ensure you are backing up the <strong>.OpenMRS</strong> directory. This directory, which stores modules and configuration files, is stored in the home directory of the user that runs the Tomcat server on Windows or Linux.</p>
+<doc-anchor-target id="performance-tuning">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#performance-tuning">#</doc-anchor-trigger>
+        <span>Performance tuning</span>
+    </h2>
+</doc-anchor-target>
+<p>Over the past several years, implementers of OpenMRS around the world have compiled information about improving the performance of their systems. There are several components of the system that may need to be tuned to ensure optimal performance. Please use the information in the following sections as a guide and a starting point -- you will need to explore what settings work best for your system.</p>
+<doc-anchor-target id="openmrs-settings">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#openmrs-settings">#</doc-anchor-trigger>
+        <span>OpenMRS settings</span>
+    </h3>
+</doc-anchor-target>
+<p>Note:From version 1.9 and above, &quot;global properties&quot; will be referred to as &quot;settings&quot; in the guide.</p>
+<p>You may need to adjust some settings in OpenMRS. To do this, use the <strong>Maintenance &gt; Advanced Settings</strong> page under the OpenMRS <strong>Administration</strong> section, find the desired setting and clear or change its value as described in the following tips, then click the <strong>Save</strong> button at the bottom of the page.</p>
+<p><figure class="content-center">
+    <img src="../../assets/globalprop-regex.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<ul>
+<li><p>Clear out the <strong>patient.identifierRegex</strong> setting to disable regular expression identifier searches.</p>
+</li>
+<li><p>Clear out the <strong>patient.identifierPrefix</strong> and <strong>patient.identifierSuffix</strong> settings to disable &quot;like&quot; identifier searches.</p>
+</li>
+<li><p>Make sure that the <strong>dashboard.regimen.displayDrugSetIds</strong> setting has concept ID numbers and not names. In other words, use &quot;1085,1159&quot; instead of &quot;ANTIRETROVIRAL DRUGS,TUBERCULOSIS TREATMENT DRUGS&quot;.</p>
+</li>
+<li><p>Set the <strong>searchWidget.batchSize</strong>, <strong>searchWidget.runInSerialMode</strong> and <strong>searchWidget.searchDelayInterval</strong> settings to tune your searches for better performance and suit your implementation&#x27;s environment. You may wish to consider the speed of your network connection, typing skills and average number of simultaneous users on a typical work day. You might also consider reducing the value of the settings person.searchMaxResults and <strong>searchWidget.batchSize</strong> to reduce the load on the search widgets and server for better performance.</p>
+</li>
+</ul>
+<doc-anchor-target id="apache-tomcat">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#apache-tomcat">#</doc-anchor-trigger>
+        <span>Apache Tomcat</span>
+    </h3>
+</doc-anchor-target>
+<p>Tomcat has several settings that may be adjusted to optimize its use of memory:</p>
+<ul>
+<li><p>Experience has shown it is best to install Tomcat from the download section at <a href="http://tomcat.apache.org/">http://tomcat.apache.org/</a> rather than any other source. If using Ubuntu Linux, we do not recommend using the apt-get installer.</p>
+</li>
+<li><p>Increase the amount of memory allocated for Tomcat. Depending on how you start or run Tomcat, use one of the following methods:</p>
+<ul>
+<li><p>If running Tomcat from the command line, add the following parameters:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">-Xmx512m -Xms512m -XX:PermSize=256m -XX:MaxPermSize=256m -XX:NewSize=128m</code></pre>
+</doc-codeblock></div>
+</li>
+<li><p>If running Tomcat as a Windows service, launch the Tomcat Monitor application. Go to Configure &gt; Java &gt; Java Options and add the following to the listed settings:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">-Xmx512m -Xms512m -XX:PermSize=256m -XX:MaxPermSize=256m -XX:NewSize=128m</code></pre>
+</doc-codeblock></div>
+</li>
+<li><p>If running Tomcat as a Linux service, edit the <strong>/etc/init.d/tomcat</strong> (or equivalent) script and modify the line for <strong>CATALINA_OPTS</strong> to read as follows:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">CATALINA_OPTS=&quot;-Djava.library.path=/opt/tomcat/lib/.libs  -Xmx512m -Xms512m -XX:PermSize=256m -XX:MaxPermSize=256m  -XX:NewSize=128m&quot;</code></pre>
+</doc-codeblock></div>
+</li>
+</ul>
+</li>
+<li><p>Adjust Tomcat to prevent potential memory leaks. Tomcat has a default setting that often causes memory leaks. To turn it off, open the configuration file.</p>
+<blockquote>
+<p>&lt;TOMCAT_HOME&gt;/conf/web.xml</p>
+</blockquote>
+<p>In JSP servlet definition add the following element:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-markup"><code v-pre class="language-markup">&lt;init-param&gt;
+&lt;param-name&gt;enablePooling&lt;/param-name&gt;
+&lt;param-value&gt;false&lt;/param-value&gt;
+&lt;/init-param&gt;</code></pre>
+</doc-codeblock></div>
+</li>
+<li><p>Experiment with better garbage collection in Tomcat to prevent PermGen out of memory errors. To use a newer version of Tomcat garbage collection, you need to add the following to <strong>CATALINA_OPTS</strong>, as was shown above in the previous step.</p>
+</li>
+</ul>
+<doc-anchor-target id="mysql">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mysql">#</doc-anchor-trigger>
+        <span>MySQL</span>
+    </h3>
+</doc-anchor-target>
+<p>Optimizing MySQL database settings will help OpenMRS to run more efficiently, especially as your installation grows in the size of data you are storing.</p>
+<p>Increase theinnodb_buffer_pool_size. It is the size in bytes of the memory buffer InnoDB uses to cache data and indexes of its tables. The larger you set this value, the less disk I/O is needed to access data in tables. On a dedicated database server, you may set this to up to 80% of the machine physical memory size. However, do not set it too large because competition for physical memory might cause paging in the operating system. Modify the following in MySQL&#x27;smy.inifile, or add it if it is not present.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">max_allowed_packet=64M</code></pre>
+</doc-codeblock></div>
+<p>Increase themax_allowed_packet size. When MySQL attempts to work with a packet of data larger than specified, it causes apacket too largeerror and closes the connection, causing OpenMRS to stop working. Increasing this value allows MySQL to handle larger sets of data. Modify the following in MySQL&#x27;smy.inifile, or add it if it is not present.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">innodb_buffer_pool_size=3G</code></pre>
+</doc-codeblock></div>
+<p>You may also consider running a MySQL performance-tuning script and making adjustments to your MySQL configuration file based on its suggestions. One such script is available here:</p>
+<p><a href="https://wiki.openmrs.org/display/docs/Performance+Tuning">https://wiki.openmrs.org/display/docs/Performance+Tuning</a></p>
+<doc-anchor-target id="replication-options">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#replication-options">#</doc-anchor-trigger>
+        <span>Replication options</span>
+    </h2>
+</doc-anchor-target>
+<p>Replication of your OpenMRS installation across multiple servers or multiple sites is an advanced topic that is outside the scope of this book. However, you should be aware that several options exist if you require access to your OpenMRS data from alternate locations.</p>
+<doc-anchor-target id="mysql-replication">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mysql-replication">#</doc-anchor-trigger>
+        <span>MySQL replication</span>
+    </h3>
+</doc-anchor-target>
+<p>The MySQL database offers methods for replicating your database across multiple servers, meaning it is possible to have multiple synchronized copies of your OpenMRS data. Please consult the MySQL documentation for details. If you point an identically-configured OpenMRS server at this replicated database, you will have a mirrored instance of OpenMRS. It is important to ensure that if you make changes to the primary system, those same changes take place on all servers.</p>
+<doc-anchor-target id="sync-module">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#sync-module">#</doc-anchor-trigger>
+        <span>Sync module</span>
+    </h3>
+</doc-anchor-target>
+<p>Another option is available for OpenMRS installations with multiple sites. The community-developed <strong>Sync</strong> module is available from the OpenMRS module repository, and allows data to be synchronized across a network (or external data storage) using tools within OpenMRS itself. Please search the OpenMRS Wiki for more information about the <strong>Sync</strong> module.</p>
+<doc-anchor-target id="upgrading-openmrs">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#upgrading-openmrs">#</doc-anchor-trigger>
+        <span>Upgrading OpenMRS</span>
+    </h2>
+</doc-anchor-target>
+<p>The OpenMRS implementer and developer communities provide application and customization support via mailing lists, IRC, and other means. See &quot;Getting Help from the OpenMRS Community&quot; for more information.</p>
+<p>When the development team release a new upgrade for OpenMRS, they will provide either a new version of the OpenMRS Standalone installer or the OpenMRS Enterprise installer file to run on your server. If using the Standalone version, follow the upgrade instructions included with the application. If using the Enterprise version, you should be able to undeploy the OpenMRS webapp in Apache Tomcat, and deploy the new version.</p>
+<p>Be sure to test any upgrades on a server other than the primary server you use for normal clinical support. Always be sure to back up your system before upgrading.</p>
+<doc-anchor-target id="updating-modules">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#updating-modules">#</doc-anchor-trigger>
+        <span>Updating modules</span>
+    </h2>
+</doc-anchor-target>
+<p>Supported community-developed OpenMRS modules are regularly updated, and those new versions are published in the OpenMRS module repository. You should check for upgraded modules regularly. Go to <a href="http://modules.openmrs.org/">http://modules.openmrs.org/</a> or view the &quot;Manage Modules&quot; page from the OpenMRS <strong>Administration</strong> page. From there, you can upgrade a module with updates automatically by clicking <strong>Install Update</strong>, or you may manually upload the new version by following the instructions on the page.</p>
+<doc-anchor-target id="amanis-maintenance-plan">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#amanis-maintenance-plan">#</doc-anchor-trigger>
+        <span>Amani&#x27;s maintenance plan</span>
+    </h2>
+</doc-anchor-target>
+<p><figure class="content-center">
+    <img src="../../assets/case-study.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>As part of his responsibilities as ICT infrastructure manager for the clinic, Daniel created a written maintenance plan. In this document, he has included daily, weekly, and monthly tasks. The only daily task is an automated one -- Daniel created a script on his Ubuntu server to stop OpenMRS, backup MySQL and other OpenMRS files, and restart the application. This script runs overnight while the clinic is closed. Weekly, Claudine manually checks the disk space and runs <code v-pre>apt-get upgrade</code> to update system components. Every month, Claudine checks the OpenMRS web site for OpenMRS upgrades and upgrades to the modules the clinic uses.</p>
+
+                                
+                                <!-- Required only on API pages -->
+                                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+                            </div>
+                            <footer class="clear-both">
+                                <div class="flex flex-wrap items-center justify-between mt-14">
+                                    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/openmrs/openmrs-book-guide/blob/main/Administering OpenMRS/maintenance.md" target="_blank" rel="noopener">
+                                        <svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M20 12c-.55 0-1 .45-1 1v7c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h7c.55 0 1-.45 1-1s-.45-1-1-1H4C2.35 3 1 4.35 1 6v14c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-7c0-.55-.45-1-1-1z" /><path d="M22.21 1.79c-1.18-1.18-3.24-1.18-4.41 0l-9.5 9.5c-.13.13-.22.29-.26.46l-1 4c-.08.34.01.7.26.95.18.2.44.3.7.3.08 0 .16-.01.24-.03l4-1c.18-.04.34-.13.46-.26l9.5-9.5c1.22-1.22 1.22-3.2.01-4.42zm-1.42 3l-9.3 9.3-2.11.53.53-2.11 9.3-9.3c.42-.42 1.16-.42 1.59 0 .43.43.43 1.15-.01 1.58z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        <span>Edit this page</span>
+                                    </a>
+                                </div>
+                            
+                                <nav class="flex mt-14">
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../administering-openmrs/user-management-and-access-control/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                                                <span class="block mt-1">User Management and Access Control</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                            
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../administering-openmrs/troubleshooting/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                                                <span class="block mt-1">Troubleshooting Your Installation</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
+                                    </div>
+                                </nav>
+                            </footer>
+                        </main>
+                
+                        <div class="border-t dark:border-dark-650 pt-6 mb-8">
+                            <footer class="flex flex-wrap items-center justify-between">
+                                <div>
+                                    <ul class="flex flex-wrap items-center text-sm">
+                                    </ul>
+                                </div>
+                                <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© Copyright 2023 OpenMRS, Inc. All rights reserved.</p></div>
+                            </footer>
+                        </div>
+                    </div>
+                
+                    <!-- Rendered if sidebar right is enabled -->
+                    <!-- Sidebar right skeleton-->
+                    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-white border-gray-200 lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:transform-none sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton dark:bg-dark-850 dark:border-dark-650">
+                        <div class="pl-5">
+                            <div class="w-32 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-48 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-40 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                        </div>
+                    </div>
+                
+                    <!-- User should be able to hide sidebar right -->
+                    <doc-sidebar-right v-cloak></doc-sidebar-right>
+                </div>
+
+            </div>
+        </div>
+    
+        <doc-search-mobile></doc-search-mobile>
+        <doc-back-to-top></doc-back-to-top>
+    </div>
+
+
+    <div id="docs-overlay-target"></div>
+
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Maintenance", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+</body>
+</html>
