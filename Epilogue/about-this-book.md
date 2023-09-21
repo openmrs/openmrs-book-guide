@@ -34,6 +34,6 @@ In 2016, the guide was transferred from a FLOSS manual to a [GitBook](https://ww
 In 2018, GitBook [deprecated their command line interface (CLI) tool](https://github.com/GitbookIO/gitbook#%EF%B8%8F-deprecation-warning) 
 that was used to maintain the GitBook form of this guide.
 
-### Version 2.0
+### Version 1.2
 
 In 2023, the guide was converted to use [Retype](https://retype.com/).

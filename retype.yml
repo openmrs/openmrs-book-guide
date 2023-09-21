@@ -5,7 +5,7 @@ start:
 url: https://guide.openmrs.org/
 branding:
   title: OpenMRS Guide
-  label: 2.0
+  label: 1.2
 search:
   hotkeys:
     - "/"
