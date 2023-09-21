@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.748586019096">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.748640762589">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -30,12 +30,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.5.0.748586019096" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.5.0.748640762589" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.748586019096" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.748640762589" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.748586019096" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.5.0.748586019096" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.748640762589" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.5.0.748640762589" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -201,6 +201,16 @@ for this guide. It&#x27;s basically simple <a href="https://retype.com/guides/fo
 </doc-anchor-target>
 <p>If you plan to perform more extensive edits of the guide, you can clone the repository, make multiple edits and submit
 those changes through a pull request. This requires some basic knowledge of working with <a href="https://www.w3schools.com/git/">git</a>.</p>
+<doc-anchor-target id="fork-the-repository">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fork-the-repository">#</doc-anchor-trigger>
+        <span>Fork the repository</span>
+    </h3>
+</doc-anchor-target>
+<p>The first step is to fork the repository on GitHub. Visit the <a href="https://github.com/openmrs/openmrs-book-guide">openmrs/openmrs-book-guide</a>
+repository and click the &quot;Fork&quot; button at the top right to create a fork of the repository under your own GitHub account. Your fork will
+be located at <code v-pre>https://github.com/{your GitHub username}/openmrs-book-guide</code>. For the steps that follow (either using gitpod or Docker,
+you will want to the address of <em>your</em> fork of the repository.</p>
 <doc-anchor-target id="using-gitpodio">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#using-gitpodio">#</doc-anchor-trigger>
@@ -214,7 +224,8 @@ the VS Code editor. Once the environment is running, you can start Retype within
 <pre class="language-bash"><code v-pre class="language-bash">npm install retypeapp --global 
 retype start</code></pre>
 </doc-codeblock></div>
-<p>This should start Retype and run the guide on port 5000 at a URL you can load in your browser for testing.</p>
+<p>This should start Retype and run the guide on port 5000 at a URL you can load in your browser for testing. Once you are done making
+changes, you can use the VS Code editor&#x27;s GitHub feature to commit any changes and sync those with your account on GitHub.</p>
 <doc-anchor-target id="using-docker">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#using-docker">#</doc-anchor-trigger>
@@ -224,12 +235,30 @@ retype start</code></pre>
 <p>If you have <a href="https://git-scm.com/">Git</a> and <a href="https://docker.com/">Docker</a> installed, you can clone the guide locally and make &amp; test
 changes locally.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">git clone https://github.com/openmrs/openmrs-book-guide
+<pre class="language-bash"><code v-pre class="language-bash">git clone https://github.com/{your GitHub username}/openmrs-book-guide
 cd openmrs-book-guide
 docker run --rm -it -p 5000:5000 -v &quot;$PWD:/app&quot; -w /app retypeapp/retype retype start</code></pre>
 </doc-codeblock></div>
-<p>The guide should be running at the URL displayed by Retype until you press <code v-pre>Ctrl-C</code> to quit. While Retype is running, any changes made
-to the files should show up nearly instantly in your browser.</p>
+<p>The guide should be running at the URL displayed by Retype until you press <code v-pre>Ctrl-C</code> to quit. In this mode, Retype lets you edit
+pages directly in your browser. If you make changes in the file system, While Retype is running, any changes made
+to the files directly should trigger your browser to reload and show those changes nearly instantaneously.</p>
+<p>Once you are done making changes, you can commit those changes and push them to your repository (replacing &quot;Brief summary of
+changes&quot; below with a brief description of the changes you made):</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">git add .
+git commit -m &quot;Brief summary of changes&quot;
+git push</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="creating-a-pull-request">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#creating-a-pull-request">#</doc-anchor-trigger>
+        <span>Creating a pull request</span>
+    </h3>
+</doc-anchor-target>
+<p>After you&#x27;ve committed changes to your fork of the repository. Browse to your fork (using the URL based on your GitHub
+username, which should look like <code v-pre>https://github.com/{your GitHub username}/openmrs-book-guide</code>). Just above the list of
+files, you should see a line that says something like &quot;This branch is 1 commit ahead openmrs:main.&quot; followed by a
+&quot;Contribute&quot; button to the right that will guide you through creating a pull request.</p>
 <doc-anchor-target id="questions">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#questions">#</doc-anchor-trigger>
