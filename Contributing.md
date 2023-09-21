@@ -75,7 +75,7 @@ files, you should see a line that says something like "This branch is 1 commit a
 
 If you have questions, join the community in [OpenMRS Talk](https://talk.openmrs.org/) or [Slack](http://om.rs/slack).
 
-!!!
-**NOTE**: The guide was written for OpenMRS 1.9 in 2012 and needs to be updated. We would appreciate any help in updating the 
+!!!warning NOTE
+The guide was written for OpenMRS 1.9 in 2012 and needs to be updated. We would appreciate any help in updating the 
 guide to cover OpenMRS 2.x and OpenMRS 3.x.
 !!!
