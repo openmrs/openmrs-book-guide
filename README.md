@@ -2,16 +2,16 @@
 title: OpenMRS Guide
 icon: home
 ---
+!!!warning NOTE
+The guide was written for OpenMRS 1.9 in 2012 and needs to be updated. We would appreciate any help in updating the 
+guide to cover OpenMRS 2.x and OpenMRS 3.x.
+!!!
+
 ![](assets/OpenMRS-cross.png)
 <center><h1> Welcome To OpenMRS </h1></center>
 <center><h2> Write Code, Save Lives </h2></center>
 
 This is the OpenMRS Guide. It is an introduction to [OpenMRS](https://openmrs.org) for people who are interested in learning about OpenMRS or implementing OpenMRS.
-
-!!!
-**NOTE**: The guide was written for OpenMRS 1.9 in 2012 and needs to be updated. We would appreciate any help in updating the 
-guide to cover OpenMRS 2.x and OpenMRS 3.x.
-!!!
 
 ### View the Guide
 
