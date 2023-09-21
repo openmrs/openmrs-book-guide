@@ -2,7 +2,7 @@ input: .
 output: .retype
 start:
   pro: true
-url: #https://guide.openmrs.org/
+url: https://guide.openmrs.org/
 branding:
   title: OpenMRS Guide
   label: 2.0
