@@ -69,7 +69,7 @@ git push
 After you've committed changes to your fork of the repository. Browse to your fork (using the URL based on your GitHub 
 username, which should look like `https://github.com/{your GitHub username}/openmrs-book-guide`). Just above the list of 
 files, you should see a line that says something like "This branch is 1 commit ahead openmrs:main." followed by a 
-"Contribute" button to the right that will guide you through creating a pull request.
+":icon-git-pull-request: Contribute" button to the right that will guide you through creating a pull request.
 
 ## Questions?
 
