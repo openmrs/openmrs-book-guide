@@ -3,9 +3,6 @@ order: 60
 ---
 # Sharing Concepts and Metadata
 
-_Working with OpenMRS forms at Hôpital Albert Schweitzer, Deschapelles, Haiti._
-![](/assets/forms.png)
-
 Instead of creating concepts, forms and other metadata yourself, you are highly encouraged to use some which are publicly available. You can use complete concept dictionaries like MCL or MVP as well as metadata packages which include just a fraction of dictionaries, forms, locations, etc.
 
 Sharing forms entails sharing associated concepts and other metadata. To facilitate this task, the **Metadata Sharing** module was created. It allows all kinds of metadata \(concepts, forms, locations, roles, programs, etc.\) to be exchanged between different OpenMRS installations.

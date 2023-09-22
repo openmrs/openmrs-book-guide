@@ -3,8 +3,7 @@ order: 1000
 ---
 # OpenMRS Around the World
 
-_OpenMRS clinical and research locations as of 2016_  
-![](/assets/openmrs_atlas_2016.png)
+![_OpenMRS clinical and research locations as of 2016_](/assets/openmrs_atlas_2016.png)
 
 > **This is _your_ book. Simply scroll to the top of any page and click the EDIT link to contribute changes. Want to contribute more than small edits? Learn more about [how to contribute](https://github.com/openmrs/openmrs-book-guide/blob/master/CONTRIBUTING.md).**
 
@@ -20,8 +19,7 @@ And indeed, organizations around the world are doing just that. OpenMRS is now i
 
 OpenMRS is not only in use in many different places, but it is also being used to meet many different needs. In Kenya, it is used to support health care delivery for hundreds of thousands of patients at a network of over 50 clinics--some connected by typical networks, but many where the connection requires offline synchronization to external storage that can be physically transported between sites. Another NGO uses a central OpenMRS server connected to clinics in multiple countries via satellite Internet connections. In Malawi, creative individuals with a talent for technology have built a mobile cart running OpenMRS that physicians roll around their clinic, interacting with the system using a touchscreen. In Rwanda, the national ministry of health has worked to roll out a connected national health care system using OpenMRS. In the United States, OpenMRS is used to track patients at large sporting events, for mobile providers of health care to homeless people, and as a personal health record that allows cancer patients to share treatment and home health care information with caregivers and family members.
 
-_OpenMRS in use at TRAC Plus Clinic in Kigali, Rwanda._  
-![](/assets/openmrs-2011.png)
+![_OpenMRS in use at TRAC Plus Clinic in Kigali, Rwanda._](/assets/openmrs-2011.png)
 
 In the last several years, use of mobile technology has increased dramatically, particularly in the developing world. In some developing countries, there are more mobile phones than people! Facilitated by other open source projects, OpenMRS can be integrated with SMS messaging, allowing community health workers to add information about adherence to medication regimens to a patient's record, as they make rounds through villages in rural Africa. Elsewhere, mobile phone applications are used to guide these community volunteers in home-based HIV testing and counseling, enrolling prospective patients from the comfort of their own homes.
 

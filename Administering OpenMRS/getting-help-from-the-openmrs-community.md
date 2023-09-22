@@ -4,8 +4,7 @@ title: Getting Help from the Community
 ---
 # Getting Help from the OpenMRS Community
 
-_A 2011 meeting of the OpenMRS community in Kigali, Rwanda._
-![](/assets/implementers-2011.png)
+![_A 2011 meeting of the OpenMRS community in Kigali, Rwanda._](/assets/implementers-2011.png)
 
 OpenMRS is supported by a vibrant community. Whether you need help installing, using, updating or extending OpenMRS, you can find help in a variety of places.
 

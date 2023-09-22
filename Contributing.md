@@ -2,6 +2,11 @@
 order: 10
 icon: repo-push
 ---
+!!!warning NOTE
+The guide was written for OpenMRS 1.9 in 2012 and needs to be updated. We would appreciate any help in updating the 
+guide to cover OpenMRS 2.x and OpenMRS 3.x.
+!!!
+
 The OpenMRS Guide is hosted at [https://github.com/openmrs/openmrs-book-guide](https://github.com/openmrs/openmrs-book-guide). 
 Anyone is welcome to help us improve the guide by contributing pull requests to this repository. We use [Retype](https://retype.com/) 
 for this guide. It's basically simple [Markdown formatting](https://retype.com/guides/formatting/).

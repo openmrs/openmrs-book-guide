@@ -3,8 +3,7 @@ order: 900
 ---
 # A Brief History
 
-_One of OpenMRS' birthplaces &ndash; Moi University Teaching and Referral Hospital in Eldoret, Kenya (2004)_
-![](/assets/AMPATH-2004.png)
+![_One of OpenMRS' birthplaces &ndash; Moi University Teaching and Referral Hospital in Eldoret, Kenya (2004)_](/assets/AMPATH-2004.png)
 
 Throughout the 1990s, an academic partnership flourished between Indiana University School of Medicine in the United States and Moi University in Eldoret, Kenya, providing Kenyan medical students with access to health care training. This program continued to grow for several years until a severe outbreak of HIV/AIDS in Western Kenya caused the program to rethink its goals, at which point the Academic Model for Prevention and Treatment of HIV/AIDS \(AMPATH\) was created. The number of patients in Kenya continued to grow, and basic IT systems including Microsoft Access were used to monitor patient care.
 
@@ -40,8 +39,7 @@ As both the OpenMRS application and open source community grew, they gathered th
 
 In an effort to broaden participation in the project around the world, OpenMRS began participating in the Google Summer of Code \(GSoC\) program in 2007. GSoC provides university students who wish to participate in open source development projects with a stipend and a close mentoring relationship with an experienced project team member. Participation in the program has continued since then--OpenMRS is now one of the larger open source projects in the program, boasting a large class of alumni, a number of whom continue to contribute to the project. Many of these alumni come from the developing world, and some have gone on to successful software development careers.
 
-_The inaugural OpenMRS Implementers Meeting in Cape Town, South Africa._
-![](/assets/implementers-early.png)
+![_The inaugural OpenMRS Implementers Meeting in Cape Town, South Africa._](/assets/implementers-early.png)
 
 One of the aims of the OpenMRS community is to help build local capacity in the places where it is used. To that end, participants in the community are encouraged to develop programs and processes that encourage entrepreneurship and the creation of partnerships to grow the field of medical informatics, particularly in the developing world. For example, in Kigali, Rwanda, Partners In Health jump-started a local training program known as E-Health Software Development and Implementation \(EHSDI\). This 9-month course conducted in partnership with the Rwanda Development Board and the Kigali Institute of Science and Technology \(KIST\) was designed to teach students to develop medical information systems. It includes extensive training in using the OpenMRS platform.
 

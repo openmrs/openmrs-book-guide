@@ -3,8 +3,7 @@ order: 10
 ---
 # Transitioning to OpenMRS
 
-_A paper-based patient register book at an African OpenMRS clinic._
-![](/assets/transitioning.png)
+![_A paper-based patient register book at an African OpenMRS clinic._](/assets/transitioning.png)
 
 This chapter outlines steps that typically make up a OpenMRS project, and should be read by people about to embark on a OpenMRS implementation. Some of this information may be obvious to experienced project managers. A comprehensive guide to project management is beyond the scope of this book, but we have included some high-level process considerations to get you started thinking about what needs to happen.
 
@@ -106,4 +105,3 @@ Introducing an electronic medical record system will cause changes in workflow a
 To help, give people time to accept and support each change so that they share in ownership of the new system, rather than feeling as if something has been forced on them. Focus on simple tasks at the beginning of deployment and introduce more difficult tasks as people start to better understand OpenMRS. Show staff how the new system will make their work easier and where their feedback has been incorporated.
 
 Good planning can minimize the risks around change, but it is important to be flexible within your plan. Unforeseen things often occur, and a plan that is too rigid could prevent you from reaching the best solution.
-

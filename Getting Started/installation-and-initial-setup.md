@@ -3,8 +3,7 @@ order: 100
 ---
 # Installation and Initial Setup
 
-_An OpenMRS server in Uganda._
-![](/assets/installing.png)
+![_An OpenMRS server in Uganda._](/assets/installing.png)
 
 You can download OpenMRS from the OpenMRS web site:
 

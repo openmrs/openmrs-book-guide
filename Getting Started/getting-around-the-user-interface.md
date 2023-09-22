@@ -3,8 +3,7 @@ order: 10
 ---
 # Getting Around the User Interface
 
-_An OpenMRS implementer-programmer gives a demonstration of the system as his clinic._
-![](/assets/gettingaround.png)
+![_An OpenMRS implementer-programmer gives a demonstration of the system as his clinic._](/assets/gettingaround.png)
 
 This chapter gives a brief overview of key parts of the OpenMRS user interface, which will be helpful as you read the chapters to follow.
 

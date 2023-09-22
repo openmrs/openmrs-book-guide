@@ -3,8 +3,7 @@ order: 80
 ---
 # Maintenance
 
-_OpenMRS server room in Webuye, Kenya._
-![](/assets/maintenance.png)
+![_OpenMRS server room in Webuye, Kenya._](/assets/maintenance.png)
 
 Once you have installed and configured OpenMRS and it is being used to support day-to-day clinical operations, there is still work to be done. To ensure the system runs smoothly and error-free, use the following tips as a starting point to create a maintenance plan for your OpenMRS installation. We recommend documenting this plan and reviewing it regularly.
 

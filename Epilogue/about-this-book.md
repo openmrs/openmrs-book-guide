@@ -9,7 +9,9 @@ order: 10
 
 OpenMRS is open source. That means anyone in the world can help improve the code. Likewise, this electronic book is open source as well, meaning anyone is welcome to help improve this Implementers Guide too \(see below on how to contribute\)! The source for this book is hosted on GitHub.
 
-> See an error? Want to suggest updates or help improve the guide? Learn [how to contribute](https://github.com/openmrs/openmrs-book-guide/blob/master/Contributing.md).
+!!!
+See an error? Want to suggest updates or help improve the guide? Learn [how to contribute](https://github.com/openmrs/openmrs-book-guide/blob/master/Contributing.md).
+!!!
 
 ## History of this book
 

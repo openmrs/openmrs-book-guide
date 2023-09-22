@@ -3,8 +3,7 @@ order: 50
 ---
 # OpenMRS Information Model
 
-_Reference books line a shelf in a rural African clinic._
-![](/assets/infomodel.png)
+![_Reference books line a shelf in a rural African clinic._](/assets/infomodel.png)
 
 This chapter explains terms and concepts which are useful to understand as you install and use OpenMRS.
 

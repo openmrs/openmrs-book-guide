@@ -3,8 +3,7 @@ order: 50
 ---
 # Identifying Your Needs
 
-_Discussing requirements and needs at TRAC Plus clinic in Kigali._
-![](/assets/needs.png)
+![_Discussing requirements and needs at TRAC Plus clinic in Kigali._](/assets/needs.png)
 
 This chapter covers some basic strategies for identifying your organizational needs, and how OpenMRS might help. It does not go into detail about what OpenMRS does or how it stores data -- you will find that in other chapters. Instead, we encourage you to first take a step back and think about your organization.
 

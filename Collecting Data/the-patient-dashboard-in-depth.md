@@ -7,8 +7,6 @@ The Patient Dashboard is the place to view or edit a patient record, and add new
 
 The Patient Dashboard appearance may be changed by modules. This chapter will show the dashboard as it looks without modules.  
 
-
-
 ## Finding or Creating a Patient
 
 To begin, we must find or create a patient. This is done from the Find/Create Patient link on the top menu.
@@ -23,11 +21,9 @@ Creating patients is explained in the [Registering Patients](registering-patient
 
 ![](/assets/patient_dashboard_header_1.png)
 
-
 ## Overview Tab
 
-_The Overview tab on the Patient Dashboard._
-![](/assets/patient_dashboard_overview.png)
+![_The Overview tab on the Patient Dashboard._](/assets/patient_dashboard_overview.png)
 
 The Overview tab gives access to several patient features. 
 
@@ -43,15 +39,13 @@ Use the **Problem List** to highlight ongoing health problems.
 
 ## Regimens Tab
 
-_The Regimens tab on the Patient Dashboard._
-![](/assets/patient_dashboard_regimens_tab.png)
+![_The Regimens tab on the Patient Dashboard._](/assets/patient_dashboard_regimens_tab.png)
 
 The Regimens tab shows a patient's current and completed treatment regimens. 
 
 ## Visits/Encounters Tab
 
-_The Visits/Encounters tab on the Patient Dashboard._
-![](/assets/patient_dashboard_visits_tab.png)
+![_The Visits/Encounters tab on the Patient Dashboard._](/assets/patient_dashboard_visits_tab.png)
 
 The Visits tab shows all of the patient's encounters, grouped into visits. If the Visits feature is disabled, the tab will be named Encounters.  
 
@@ -59,22 +53,19 @@ To start a new visit, click the **Add Visit** link in the Visits tab, or the **S
 
 To view a visit, click the link with the visit's name. If a user has editing privileges, the visit will open in edit mode. 
 
-_A visit, opened in edit mode._
-![](/assets/visit_edit_visit.png)
+![_A visit, opened in edit mode._](/assets/visit_edit_visit.png)
 
 In edit mode, you can add or remove encounters from the visit.
 
 To view an encounter, return to Patient Dashboard  &gt; Visits tab. Click on the View icon to the left of the encounter. If a user has editing privileges, the encounter will open in edit mode. 
 
-_An encounter opened in edit mode. For this example, we used the FormEntry module to create and display the encounter._
-![](/assets/encounter_edit_encounter.png)
+![_An encounter opened in edit mode. For this example, we used the FormEntry module to create and display the encounter._](/assets/encounter_edit_encounter.png)
 
 ## Demographics Tab
 
 View the patient's address and names from the Demographics tab. The **Edit Patient** links will let you edit the patient's information, including identifiers, birth and death dates, and relationships.
 
-_The Demographics tab on the Patient Dashboard._
-![](/assets/patient_dashboard_demographics.png)
+![_The Demographics tab on the Patient Dashboard._](/assets/patient_dashboard_demographics.png)
 
 ## Graphs Tab
 
@@ -82,8 +73,7 @@ _The Demographics tab on the Patient Dashboard._
 
 ## Form Entry Tab
 
-_The Form Entry tab on the Patient Dashboard._
-![](/assets/patient_dashboard_form_entry_tab.png)
+![_The Form Entry tab on the Patient Dashboard._](/assets/patient_dashboard_form_entry_tab.png)
 
 To add or edit encounters, select the **Form** tab. The last three encounters are listed at the top.
 
