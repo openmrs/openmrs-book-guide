@@ -106,7 +106,7 @@ Check digits helps to reduce the likelihood of errors by introducing a final dig
 
 ## Internationalization
 
-Concepts can be easily internationalized; that is you can enter different concept names for every allowed locale. The list of allowed locales is stored in a setting **locale.allowed.list** as comma separated language codes \(for instanceen,fr, orde\). You can edit the setting from **Administration &gt; Maintenance &gt; Settings**. See this link for the full list of ISO 639.2 language codes:
+Concepts can be easily internationalized; that is you can enter different concept names for every allowed locale. The list of allowed locales is stored in a setting **locale.allowed.list** as comma separated language codes \(for instance en,fr, orde\). You can edit the setting from **Administration &gt; Maintenance &gt; Settings**. See this link for the full list of ISO 639.2 language codes:
 
 [https://wiki.openmrs.org/display/docs/Localization+and+Languages](https://wiki.openmrs.org/display/docs/Localization+and+Languages)
 
