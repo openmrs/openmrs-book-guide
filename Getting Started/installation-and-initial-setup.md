@@ -21,7 +21,7 @@ To install the standalone version, download the ZIP file and decompress it, then
 
 During setup, there is an option to install demo data. You may choose to install a demo concept dictionary, which can jump-start your form creation process.  You may also install demo patient data, which will provide a better demonstration of patient encounters and demographics.
 
-**Do not delete or rename any files or folders **after decompressing the ZIP file. These files and folders are required by the standalone installer.
+**Do not delete or rename any files or folders** after decompressing the ZIP file. These files and folders are required by the standalone installer.
 
 Alternatively, from the command line, you can navigate to the decompressed folder and run the following command:
 
@@ -72,7 +72,7 @@ Before you change certain preferences, such as the port on which MySQL or Tomcat
 
 To stop the application, use the **Stop** button in the user interface, or choose **File &gt; Quit**. Alternatively, run the JAR file on the command line with a **-stop** parameter.
 
-You can restart the GUI by clicking **Start**, or double-clicking on the JAR file again. Alternatively, you can run the JAR file with a-startparameter.
+You can restart the GUI by clicking **Start**, or double-clicking on the JAR file again. Alternatively, you can run the JAR file with a -start parameter.
 
 By default, OpenMRS runs the MySQL database on port 3316, and the Tomcat server on port 8081. To use a different port, stop the application, then change the port number in the** openmrs-standalone-runtime.properties **file or in the GUI, and restart. To override the port from the command line, run the JAR file with a **-tomcatport** or **-mysqlport** parameter.
 
@@ -94,7 +94,7 @@ http://localhost:8080/manager/html
 
 Browse to the location of the **openmrs.war** package, and deploy it.
 
-The initial setup which follows may take some time. At the end of the process, the Web Application Manager will refresh, and/openmrsshould be displayed in the list of applications. Tomcat should also start the application \(Running = True\).
+The initial setup which follows may take some time. At the end of the process, the Web Application Manager will refresh, and/openmrs should be displayed in the list of applications. Tomcat should also start the application \(Running = True\).
 
 Open the OpenMRS web application to complete the initial setup process.
 
