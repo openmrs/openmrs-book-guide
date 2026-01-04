@@ -23,7 +23,6 @@ As both the OpenMRS application and open source community grew, they gathered th
 
 * The United States Center for Disease Control \(CDC\)
 
-* The United States Center for Disease Control \(CDC\)
 
 * Canada's International Development Research Centre \(IDRC\)
 
