@@ -3,8 +3,9 @@ order: 10
 icon: repo-push
 ---
 !!!warning NOTE
-The guide was written for OpenMRS 1.9 in 2012 and needs to be updated. We would appreciate any help in updating the 
-guide to cover OpenMRS 2.x and OpenMRS 3.x.
+This guide was originally written for OpenMRS 1.9 (2012) and may be outdated.  
+Some instructions may differ for OpenMRS 2.x and OpenMRS 3.x.  
+Contributions to update this guide are welcome.
 !!!
 
 The OpenMRS Guide is hosted at [https://github.com/openmrs/openmrs-book-guide](https://github.com/openmrs/openmrs-book-guide). 
