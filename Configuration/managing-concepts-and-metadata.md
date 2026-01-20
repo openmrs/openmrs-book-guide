@@ -11,7 +11,8 @@ You can either enter concepts on your own manually or use a tool like the Metada
 
 ## Concept class
 
-To start with you will need to setup **Concept Classes**. The standard installation includes around 15 predefined concept classes. To view them enter the **Administration** page &gt; **Manage Concept Classes**.
+To start with you will need to setup **Concept Classes**. The standard installation includes around 15 predefined concept classes.To view them, go to:
+Administration → Manage Concept Classes.
 
 ![](/assets/concept_classes.png)
 
@@ -29,7 +30,8 @@ You will see a list with names and descriptions. You can edit them by clicking o
 
 ## Concept
 
-To view concepts available in your system click **Dictionary** in the top menu. You will be able to search for particular concepts by name or ID. There is also a check-box that allows to search for retired concepts which are not supposed to be used anymore or are replaced with new ones. You can also enter a new concept from here clicking **Add new Concept**.
+To view the available concepts:
+Click Dictionary in the top menu. You will be able to search for particular concepts by name or ID. There is also a check-box that allows to search for retired concepts which are not supposed to be used anymore or are replaced with new ones. You can also enter a new concept from here clicking **Add new Concept**.
 
 ![](/assets/concept_dictionary.png)
 
